@@ -7,6 +7,8 @@ import { bounce } from 'react-animations';
 import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
 
+import Propject1 from './projetc/project';
+
 
 const duration = 2000;
 const defaultStyle = {
@@ -31,7 +33,8 @@ const SectionProjects = () => {
     return(
 
         <section className={s.section_projects}>
-            <h1>Projects</h1>
+           <h1 data-lang="Мои проекты"  className={s.heading}><span className={s.brackets}></span>My projects<span className={s.brackets}></span></h1>
+           <Propject1/>
         </section>
     )
 }

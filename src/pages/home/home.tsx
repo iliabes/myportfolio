@@ -1,10 +1,10 @@
 
 import s from './home.module.sass'
 
-import SectionAbout from './components/sectionAbout/sectionAbout'
-import SectionProjects from './components/sectionProjects/sectionProjects'
-import SectionSckills from './components/sectionSkills/sectionSkills.module'
-import SectionContacts from './components/sectionContacts/sectionContacts.module'
+import SectionAbout from './sections/sectionAbout/sectionAbout'
+import SectionProjects from './sections/sectionProjects/sectionProjects'
+import SectionSckills from './sections/sectionSkills/sectionSkills.module'
+import SectionContacts from './sections/sectionContacts/sectionContacts.module'
 
 const Home = () => {
     return(
