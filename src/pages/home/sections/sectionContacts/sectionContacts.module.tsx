@@ -24,23 +24,42 @@ const transitionStyles = {
 
 const SectionContacts = () => {
 
-    const [inProp, setInProp] = useState(false);
-    useEffect(()=>{
-        setInProp(true)
-    })
-    function test(){
-        console.log(inProp);
-        
-        setInProp(!inProp)
-    }
+
 
 
     return(
 
-        <section className={s.section_contacts}>
-            <h1>Contacts</h1>
+        <section className={s.contacts}>
+            <div  className={s.cont}>
+                <div  className={s.heading}><span className={s.brackets}></span>Contacts<span className={s.brackets}></span></div>
+                 <p  className={s.quet}>Have a question or want to work together?</p>
+                <div   className={s.cont_input}>
+                    <input placeholder="Your name"  className={s.text_inp} type="text"/>
+                </div>
+
+                <div   className={s.cont_input}>
+                    <input placeholder="Your emeil"  className={s.text_inp} type="text"/>
+                </div>
+
+                <div   className={s.cont_input}>
+                    <input placeholder="Your message"  className='text-inp area' type="text"/>
+                </div>
+
+                <div   className={s.cont_input}>
+                    <button className={s.submit}>Submit</button>
+                </div>
+            </div>
+
         </section>
+
+
+        
     )
 }
+
+
+
+
+
 
 export default  SectionContacts

@@ -1,7 +1,9 @@
 
 import s from './project.module.sass'
-import img3 from '../../../../../assets/img/3.png'
 
+import classNames from 'classnames';
+
+import img1 from '../../../../assets/img/1.png'
 import { Transition } from 'react-transition-group';
 import { bounce } from 'react-animations';
 
@@ -25,37 +27,37 @@ const transitionStyles = {
 
 
 
-const Propject1 = () => {
+const Propject = (props:any) => {
 
 
 
     return(
-        <div   className={s.pojects_cont_right}>
-        <div data-order="0" data-anim="proj-img-right" className={s.cont_img}>
-            <div className="hoverCurtain">
-            <img   className={s.img_portfolio} src={img3} alt=""/>
-            <div className="curtain curtain-left"></div>
-            <div className="curtain curtain-right"></div>
+        <div   className={classNames(s.projects_cont)}>
+        <div className={s.cont_img}>
+            <div className={s.hoverCurtain}>
+            <img   className={s.img_portfolio} src={props.image} alt=""/>
+            <div className={classNames(s.curtain, s.curtain_left)}></div>
+            <div className={classNames(s.curtain, s.curtain_right)}></div>
                 <figcaption>
-                    <h2>Lynn  <span> Reyes</span></h2>
+                    <h2><span>{props.title}</span></h2>
             </figcaption>
             </div>
             
 
         </div>
 
-        <div data-order="3" data-anim="proj-sign-right" className="cont-sign">
-        <p className="sign-project"><span className="gold"> Drop todo </span> - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
-        <div className="cont-techologi">
-          <div className="techologi"><p className="text-techo">React</p></div>
-          <div className="techologi"><p className="text-techo">NodeJS</p></div>
-          <div className="techologi"><p className="text-techo">Bootstrap </p></div>
-          <div className="techologi"><p className="text-techo">React</p></div>
-          <div className="techologi"><p className="text-techo">Css</p></div>
+        <div data-order="3" data-anim="proj-sign-right" className={s.cont_sign}>
+        <p className={s.sign_project}><span className={s.gold}>{props.title}</span>{props.text}</p>
+        <div className={s.cont_techologi}>
+          <div className={s.techologi}><p className={s.text_techo}>React</p></div>
+          <div className={s.techologi}><p className={s.text_techo}>NodeJS</p></div>
+          <div className={s.techologi}><p className={s.text_techo}>Bootstrap </p></div>
+          <div className={s.techologi}><p className={s.text_techo}>React</p></div>
+          <div className={s.techologi}><p className={s.text_techo}>Css</p></div>
         </div>  
       </div>
       </div>
     )
 }
 
-export default  Propject1
+export default  Propject
