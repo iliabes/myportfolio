@@ -6,7 +6,7 @@ import { bounce } from 'react-animations';
 import portr from '../../../../assets/img/portret.webp'
 import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
-
+import Title from '../../../../global/Title/Title'
 
 const duration = 2000;
 const defaultStyle = {
@@ -40,9 +40,8 @@ const SectionAbout = () => {
     return(
 
         <section className={s.section_about}>
-            {/* <Canvas/> */}
-
-            <h1 data-lang="Обо мне" className={s.heading}><span className='brackets'></span>About me<span className='brackets'></span></h1>
+            <Canvas/>
+            <Title title='About me'/>
             <div  className={s.cont_header}>
             <Transition in={inProp} timeout={duration}>
                 {state => (

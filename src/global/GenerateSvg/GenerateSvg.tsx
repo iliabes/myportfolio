@@ -191,7 +191,20 @@ case 'telega':
  </svg>
 
 
-
+  case 'dark':
+    return <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+    width="32.000000pt" height="32.000000pt" viewBox="0 0 32.000000 32.000000"
+    preserveAspectRatio="xMidYMid meet">
+   
+   <g transform="translate(0.000000,32.000000) scale(0.100000,-0.100000)"
+   fill="#000000" stroke="none">
+   <path d="M105 281 c-11 -5 -31 -21 -45 -36 -21 -22 -25 -37 -25 -86 0 -53 3
+   -62 33 -91 29 -30 38 -33 92 -33 86 0 125 39 125 125 0 54 -3 63 -32 91 -25
+   25 -41 32 -80 35 -26 2 -57 0 -68 -5z m108 -22 c39 -20 57 -51 57 -101 0 -39
+   -5 -52 -31 -77 -17 -18 -41 -31 -55 -31 -24 0 -24 0 -24 110 0 118 3 124 53
+   99z"/>
+   </g>
+   </svg>
 
 
     default: return <svg></svg>

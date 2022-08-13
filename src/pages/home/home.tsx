@@ -3,7 +3,7 @@ import s from './home.module.sass'
 
 import SectionAbout from './sections/sectionAbout/sectionAbout'
 import SectionProjects from './sections/sectionProjects/sectionProjects'
-import SectionSckills from './sections/sectionSkills/sectionSkills.module'
+import SectionSckills from './sections/sectionSkills/sectionSkills'
 import SectionContacts from './sections/sectionContacts/sectionContacts.module'
 
 const Home = () => {

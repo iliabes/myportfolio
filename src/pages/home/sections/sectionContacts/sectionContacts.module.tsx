@@ -4,7 +4,8 @@ import { Transition } from 'react-transition-group';
 import { bounce } from 'react-animations';
 import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
-
+import classNames from 'classnames';
+import Title from '../../../../global/Title/Title'
 
 const duration = 2000;
 const defaultStyle = {
@@ -31,7 +32,7 @@ const SectionContacts = () => {
 
         <section className={s.contacts}>
             <div  className={s.cont}>
-                <div  className={s.heading}><span className={s.brackets}></span>Contacts<span className={s.brackets}></span></div>
+                <Title title='Contacts'/>
                  <p  className={s.quet}>Have a question or want to work together?</p>
                 <div   className={s.cont_input}>
                     <input placeholder="Your name"  className={s.text_inp} type="text"/>
@@ -42,7 +43,7 @@ const SectionContacts = () => {
                 </div>
 
                 <div   className={s.cont_input}>
-                    <input placeholder="Your message"  className='text-inp area' type="text"/>
+                    <input placeholder="Your message"  className={classNames(s.text_inp ,  s.area)} type="text"/>
                 </div>
 
                 <div   className={s.cont_input}>

@@ -1,5 +1,4 @@
 .section_about
-    display: grid
     height: 100vh
     width: 100%
     // background-color: #40a994
@@ -10,14 +9,15 @@
     flex-direction: column
     justify-content: flex-start
     align-items: center
-    .heading
-        font-size: 45px
-        color: #fff
+    // .heading
+    //     font-size: 45px
+    //     color: #fff
     .cont_header
         margin-top: 5%
         z-index: 2
         display: flex
-        justify-content: space-around
+        flex-direction: row
+        justify-content: flex-end
         .cont_curcle_img
             width: 300px
             height: 370px
@@ -36,9 +36,10 @@
                     cursor: pointer
                     animation: bounceOut .4s linear 
     .cont_text
-        width: 48%
-        // height: 71%
+        width: 25vw
+
         .block_text
+            width: 100%
             .text_header
                 line-height: 6vh    
                 letter-spacing: .4vh
@@ -56,19 +57,17 @@
                     font-family: "Heimdall" , serif
 
 
-@keyframes bounceOut 
-        0% 
-            box-shadow: 0 0 0 4px rgb(221, 45, 224)
-            opacity:1
-        25%
-            box-shadow: 0 0 0 1px rgb(221, 45, 224)
-            opacity:1
-        50%
-            box-shadow: 0 0 0 7px rgb(221, 45, 224)
-            opacity:1
-        75%
-            box-shadow: 0 0 0 4px rgb(221, 45, 224)
-            opacity:1
-        100%
-            box-shadow: 0 0 0 5px rgb(221, 45, 224)
-            opacity:1
+@media (max-width: 400px)
+    .section_about
+        padding-top: 60px
+        .cont_header
+            flex-direction: column
+            .cont_curcle_img
+                width: 250px
+                height: 300px
+            .cont_text
+                width: 100%
+                margin-top: 25px
+                .text_header
+                    font-size: 40px
+                    line-height: 7vh

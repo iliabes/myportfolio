@@ -32,7 +32,7 @@ const Propject = (props:any) => {
 
 
     return(
-        <div   className={classNames(s.projects_cont)}>
+        <div   className={props.left ? classNames(s.projects_cont) : classNames(s.projects_cont, s.left)}>
         <div className={s.cont_img}>
             <div className={s.hoverCurtain}>
             <img   className={s.img_portfolio} src={props.image} alt=""/>
@@ -46,17 +46,17 @@ const Propject = (props:any) => {
 
         </div>
 
-        <div data-order="3" data-anim="proj-sign-right" className={s.cont_sign}>
+        <div  className={s.cont_sign}>
         <p className={s.sign_project}><span className={s.gold}>{props.title}</span>{props.text}</p>
         <div className={s.cont_techologi}>
-          <div className={s.techologi}><p className={s.text_techo}>React</p></div>
-          <div className={s.techologi}><p className={s.text_techo}>NodeJS</p></div>
-          <div className={s.techologi}><p className={s.text_techo}>Bootstrap </p></div>
-          <div className={s.techologi}><p className={s.text_techo}>React</p></div>
-          <div className={s.techologi}><p className={s.text_techo}>Css</p></div>
+            <div className={s.techologi}><p className={s.text_techo}>React</p></div>
+            <div className={s.techologi}><p className={s.text_techo}>NodeJS</p></div>
+            <div className={s.techologi}><p className={s.text_techo}>Bootstrap </p></div>
+            <div className={s.techologi}><p className={s.text_techo}>React</p></div>
+            <div className={s.techologi}><p className={s.text_techo}>Css</p></div>
         </div>  
-      </div>
-      </div>
+        </div>
+        </div>
     )
 }
 

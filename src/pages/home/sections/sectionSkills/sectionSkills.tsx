@@ -5,6 +5,9 @@ import { bounce } from 'react-animations';
 import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
 
+import Title from '../../../../global/Title/Title';
+import SkillCss from './skillCss/skillCss';
+import SkillHtml from './skillHtml/skillHtml';
 
 const duration = 2000;
 const defaultStyle = {
@@ -28,8 +31,10 @@ const SectionSckills = () => {
 
     return(
 
-        <section className={s.section_Skills}>
-            <h1>skills</h1>
+        <section className={s.scils}>
+            <Title title='Skills'/>
+            <SkillCss/>
+            <SkillHtml/>
         </section>
     )
 }
