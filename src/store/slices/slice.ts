@@ -1,15 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
-interface CounterState {value: number}
+interface CounterState {value: any}
 const initialState:CounterState = { 
-    value: 6
+    projectsVisivle: false,
+    projectsSkills: false,
+    projectsContact: false,
 }
   
 export const counterSlice = createSlice({
 name: 'counter',
 initialState,
 reducers: {
+    visibleProject(state, action: PayloadAction<boolean>) {
+        state.projectsVisivle = action.payload;
+
+    },
     increment(state) {
     console.log('state')
     state.value++

@@ -10,6 +10,7 @@ import Typed from 'react-typed';
 import Propject from './projetc/project';
 
 
+
 import img1 from '../../../../assets/img/1.jpg'
 import img2 from '../../../../assets/img/2.jpg'
 import img3 from '../../../../assets/img/3.png'
@@ -32,6 +33,9 @@ const transitionStyles = {
 
 
 const SectionProjects = () => {
+    let {visible , isVisible} = useState(false)
+
+
     return(
         <section className={s.section_projects}>
             <h1 data-lang="Мои проекты"  className={s.heading}><span className={s.brackets}></span>My projects<span className={s.brackets}></span></h1>

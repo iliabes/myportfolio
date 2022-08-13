@@ -1,13 +1,20 @@
 .scils
     z-index: 3
     background-color: rgb(13,17,23)
-    grid-gap: 1vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 5%
+    height: 100vh
+    width: 100%
+    box-sizing: border-box
     .set_skil
         opacity: 1
         display: flex
         flex-direction: column
         gap: 1vh
         .cont_title
+            display: inline-block
             background-color: violet
             width: 9vw
             height: 4vh
@@ -18,6 +25,7 @@
             &:hover
                 box-shadow: 0 0 10px 0 violet inset, 0 0 10px 4px violet
             .title_ckil
+                display: inline-block
                 font-size: 1.5rem
         .skill_bar
             height: 4px
@@ -48,8 +56,6 @@
                     width: 2vw
                     height: 3.5vh
                     margin: 11px
-
-
             .cont_dis
                 display: inline-block
                 margin-left: 5%
@@ -108,23 +114,17 @@
                         margin: 5px
 
 @media (max-width: 400px)
-    .scils .cont 
-            .heading
-                margin-top: 2vh
-            .set-skil 
-                .cont-title
-                    width: 20vw
-                .cont-technologis .cont-techno .technologi
-                        width: 12px
-                        height: 2.3vh
-                        margin: 5px
+    .scils .set_skil  .cont_technologis .cont_techno .technologi
+        width: 9vw
+        height: 5vh
+        margin: 5px
 
 @media (max-width: 300px)
     .scils .cont 
-            .set-skil 
-                .cont-title
+            .set_skil 
+                .cont_title
                     width: 20vw
-                .cont-technologis .cont-techno .technologi
+                .cont_technologis .cont_techno .technologi
                         width: 11px
                         height: 2.3vh
                         margin: 5px

@@ -6,8 +6,12 @@ import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
 
 import Title from '../../../../global/Title/Title';
+
+
 import SkillCss from './skillCss/skillCss';
 import SkillHtml from './skillHtml/skillHtml';
+import SkillBuild from './skillBuild/skillBuild';
+import SkillJs from './skillJs/skillJs'
 
 const duration = 2000;
 const defaultStyle = {
@@ -33,8 +37,10 @@ const SectionSckills = () => {
 
         <section className={s.scils}>
             <Title title='Skills'/>
-            <SkillCss/>
             <SkillHtml/>
+            <SkillCss/>
+            <SkillJs/>
+            <SkillBuild/>
         </section>
     )
 }

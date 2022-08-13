@@ -25,10 +25,16 @@ const transitionStyles = {
 };
 
 
-
+            // <Transition in={visible} timeout={duration}>
+            //     {state => (
+            //         <div style={{...defaultStyle,...transitionStyles[state]}} className={s.cont_curcle_img}>
+            //             <img onClick={test} className={s.img_aftar} src={portr}/>
+            //         </div>
+            //     )}
+            // </Transition>
 
 const Propject = (props:any) => {
-
+    // let [visible, setVisible] = useState(useCustomSelector((state)=>(state.counterSlice.projectsVisivle)))
 
 
     return(

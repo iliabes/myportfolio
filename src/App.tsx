@@ -14,12 +14,12 @@ function App() {
   let days:any = useAppSelector(state => state.sliceWeather.dayly)
   let current_wetaher:any = useAppSelector(state => state.sliceWeather.current)
 
-
+  
 
   return (
     <div className='App' >
  
-    <Header/>
+    {/*<Header/>*/}
     <Routes>
       
       <Route path="/" element={<Home/>}/>
