@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
 import Title from '../../../../global/Title/Title'
 
+
 const duration = 2000;
 const defaultStyle = {
     transition: `${duration}ms ease-in-out`,

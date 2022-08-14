@@ -7,7 +7,10 @@ import SectionSckills from './sections/sectionSkills/sectionSkills'
 import SectionContacts from './sections/sectionContacts/sectionContacts.module'
 
 // import { useCustomDispatch, useCustomSelector } from '../../hooks/store';
+import {visibleProject} from '../../store/slices/slice'
+import { useAppDispatch } from '../../hooks/store'
 
+const dispatch = useAppDispatch()
 import React, { useState } from 'react';
 
 const Home = () => {
@@ -20,25 +23,29 @@ const Home = () => {
 
     useState(()=>{
 
-        window.addEventListener('scroll', function(e) {
-            // console.log(window.pageYOffset)
-                if(window.pageYOffset >= 250){
-                    console.log('1')
-                    // dispath(counterSlice(true))
-                }if(window.pageYOffset >= 350){
-                    // dispath(counterSlice(false))
-                }
-        });
- 
+        // window.addEventListener('scroll', function(e) {
+        //     // console.log(window.pageYOffset)
+        //         if(window.pageYOffset >= 100){
+        //             // console.log('1')
+        //             visibleProject(true)
+        //         }else if(window.pageYOffset < 100){
+        //             // dispath(counterSlice(false))
+        //             visibleProject(false)
+        //         }
+        // });
+        window.addEventListener('click', function(e){
+            
+            dispatch(visibleProject(true))
+        })
     })
 
 
     return(
         <div className={s.home}>
-            {/*<SectionAbout/>*/}
+            <SectionAbout/>
             <SectionProjects/>
-            <SectionSckills/>
-            <SectionContacts/>
+            {/* <SectionSckills/>
+            <SectionContacts/> */}
         </div>
     )
 }

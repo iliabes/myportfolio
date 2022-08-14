@@ -1,18 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
-interface CounterState {value: any}
+interface CounterState {
+    projectsVisivle: boolean,
+    projectsSkills: boolean,
+    projectsContact: boolean,
+}
 const initialState:CounterState = { 
     projectsVisivle: false,
     projectsSkills: false,
     projectsContact: false,
 }
-  
+
 export const counterSlice = createSlice({
 name: 'counter',
 initialState,
 reducers: {
     visibleProject(state, action: PayloadAction<boolean>) {
+        console.log(action)
         state.projectsVisivle = action.payload;
 
     },
@@ -30,5 +35,5 @@ reducers: {
 })
 
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { increment, decrement, incrementByAmount ,visibleProject} = counterSlice.actions
 export default counterSlice.reducer
