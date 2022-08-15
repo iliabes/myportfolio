@@ -44,24 +44,24 @@ const SectionAbout = () => {
             <Canvas/>
             <Title title='About me'/>
             <div  className={s.cont_header}>
-            <Transition in={inProp} timeout={duration}>
-                {state => (
-                    <div style={{...defaultStyle,...transitionStyles[state]}} className={s.cont_curcle_img}>
-                        <img onClick={test} className={s.img_aftar} src={portr}/>
+                <Transition in={inProp} timeout={duration}>
+                    {state => (
+                        <div style={{...defaultStyle,...transitionStyles[state]}} className={s.cont_curcle_img}>
+                            <img onClick={test} className={s.img_aftar} src={portr}/>
+                        </div>
+                    )}
+                </Transition>
+                <div  className={s.cont_text}>
+                        <div  className={s.block_text}>
+                        <p id="element" className={s.text_header} >
+                        <Typed
+                            strings={[`Helloy`,`I'm Ilya, I'm a  frontEnd developer`,`I'm Ilya, I'm a  front-end developer`]}
+                            typeSpeed={20}
+                            />
+                        </p>
                     </div>
-                )}
-            </Transition>
-            <div  className={s.cont_text}>
-                    <div  className={s.block_text}>
-                    <p id="element" className={s.text_header} >
-                    <Typed
-                        strings={[`Helloy`,`I'm Ilya, I'm a  frontEnd developer`,`I'm Ilya, I'm a  front-end developer`]}
-                        typeSpeed={20}
-                        />
-                    </p>
                 </div>
             </div>
-        </div>
         </section>
     )
 }

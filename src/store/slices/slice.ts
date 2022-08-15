@@ -23,13 +23,13 @@ reducers: {
     },
     increment(state) {
     console.log('state')
-    state.value++
+
     },
     decrement(state) {
-    state.value--
+
     },
     incrementByAmount(state, action: PayloadAction<number>) {
-    state.value += action.payload
+
     },
     },
 })

@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
 
 import Propject from './projetc/project';
+import Title from '../../../../global/Title/Title';
 
 import { useAppSelector } from '../../../../hooks/store';
 
@@ -43,7 +44,7 @@ const SectionProjects = () => {
         <Transition in={visible} timeout={duration}>
             {state => (
                 <section style={{...defaultStyle,...transitionStyles[state]}} className={s.section_projects}>
-                    <h1 data-lang="Мои проекты"  className={s.heading}><span className={s.brackets}></span>My projects<span className={s.brackets}></span></h1>
+                    <Title title='Мои проекты'/>
                     <Propject left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img1} title='changeBook'/>
                     <Propject left={false}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img2} title='changeBook'/>
                     <Propject left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img3} title='changeBook'/>

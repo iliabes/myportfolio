@@ -2,7 +2,8 @@
     height: 20vh
     width: 100%
     display: flex
-    justify-content: space-between
+    justify-content: space-around
+    // align-items: center
     margin-top: 4vh
     .cont_img
         width: 25vw
@@ -23,7 +24,7 @@
             &:hover .img_portfolio 
                 transform: scale(1.2)
             .curtain
-                transition: all 0.8s ease-out
+                // transition: all 0.8s ease-out
                 content: ''
                 position: absolute
                 opacity: .6
@@ -36,7 +37,7 @@
             .curtain_right
                 background-color: gold
                 right: -50%
-            figcaption
+            .fig
                 transition: all 0.8s ease-out
                 font-family: 'Raleway', Arial, sans-serif
                 position: absolute
@@ -129,147 +130,157 @@
 
 
 
-@media (min-width: 1024px) and (max-width: 1240px)
-    .potrfolio
-        .pojects-cont-right , .pojects-cont-left
-            .cont-sign
-                width: 35vw
-                .sign-project
-                    font-size: 1.3rem
-            .cont-img
-                width: 35vw
+// @media (min-width: 1024px) and (max-width: 1240px)
+//     .potrfolio
+//         .pojects-cont-right , .pojects-cont-left
+//             .cont-sign
+//                 width: 35vw
+//                 .sign-project
+//                     font-size: 1.3rem
+//             .cont-img
+//                 width: 35vw
 
-@media (min-width: 768px) and (max-width: 1024px)
-    .potrfolio
-        .pojects-cont-right , .pojects-cont-left
-            .cont-sign
-                width: 40vw
-                .sign-project
-                    font-size: 1.3rem
-            .cont-img
-                width: 40vw
+// @media (min-width: 768px) and (max-width: 1024px)
+//     .potrfolio
+//         .pojects-cont-right , .pojects-cont-left
+//             .cont-sign
+//                 width: 40vw
+//                 .sign-project
+//                     font-size: 1.3rem
+//             .cont-img
+//                 width: 40vw
 
 
-@media (min-width: 568px) and (max-width: 768px)
-    .potrfolio
-        .pojects-cont-right , .pojects-cont-left
-            .cont-sign
-                width: 40vw
-                .sign-project
-                    font-size: 1.1rem
-                .cont-techologi .techologi .text-techo
-                    font-size: 0.8rem
-            .cont-img
-                width: 40vw
+// @media (min-width: 568px) and (max-width: 768px)
+//     .potrfolio
+//         .pojects-cont-right , .pojects-cont-left
+//             .cont-sign
+//                 width: 40vw
+//                 .sign-project
+//                     font-size: 1.1rem
+//                 .cont-techologi .techologi .text-techo
+//                     font-size: 0.8rem
+//             .cont-img
+//                 width: 40vw
 
-@media (max-width: 568px)
-    .potrfolio
-        .pojects-cont-right , .pojects-cont-left
-            .cont-sign
-                width: 43vw
-                .sign-project
-                    font-size: 1rem
-                .cont-techologi
-                    .text-techo
-                        font-size: 0.5rem
-            .cont-img
-                width: 43vw
+// @media (max-width: 568px)
+//     .potrfolio
+//         .pojects-cont-right , .pojects-cont-left
+//             .cont-sign
+//                 width: 43vw
+//                 .sign-project
+//                     font-size: 1rem
+//                 .cont-techologi
+//                     .text-techo
+//                         font-size: 0.5rem
+//             .cont-img
+//                 width: 43vw
+
+// @media (max-width: 400px)
+//     .potrfolio
+//         .heading
+//             margin-top: 3vh
+//         .pojects-cont-right , .pojects-cont-left
+//             .cont-sign
+//                 width: 43vw
+//                 .sign-project
+//                     font-size: .9rem
+//                 .cont-techologi .techologi .text-techo
+//                     font-size: 0.3rem
+//             .cont-img
+//                 width: 43vw
+//                 .overlay .sign-img
+//                     font-size: 1rem
+
+// @media (max-width: 300px)
+//     .potrfolio
+//         .pojects-cont-right , .pojects-cont-left
+//             .cont-sign
+//                 width: 43vw
+//                 .sign-project
+//                     font-size: 1rem
+//                 .cont-techologi .techologi .text-techo
+//                     font-size: 0.3rem
+//             .cont-img
+//                 width: 43vw
+//                 .overlay .sign-img
+//                     font-size: 1rem
+
+// @media (max-width: 250px)
+//     .potrfolio
+//         .pojects-cont-right , .pojects-cont-left
+//             .cont-sign
+//                 width: 40vw
+//                 .sign-project
+//                     font-size: .8rem
+//                 .cont-techologi .techologi .text-techo
+//                     font-size: 0.3rem
+//             .cont-img
+//                 width:40vw
+//                 .overlay .sign-img
+//                     font-size: 1rem
+
+// @media (orientation: landscape) and (max-width: 900px) 
+//     .potrfolio
+//         .heading
+//             font-size: 1.2rem
+//         .pojects-cont-right , .pojects-cont-left
+//             .cont_sign
+//                 width: 30vw
+//                 .sign-project
+//                     font-size: .8rem
+//                 .cont-techologi .techologi .text-techo
+//                     font-size: 0.5rem
+//             .cont_img
+//                 width: 30vw
+//                 .sign-img
+//                     font-size: 1.8rem
+
+
+    // .cont_text
+    //     width: 48%
+    //     // height: 71%
+    //     .block_text
+    //         .text_header
+    //             line-height: 6vh    
+    //             letter-spacing: .4vh
+    //             font-size: 4.25rem
+    //             color: rgb(221, 45, 224)
+    //             color: #fff
+    //             margin: 0
+    //             height: 100%
+    //             &:hover .name
+    //                 text-shadow: 2px 3px 8px gold, 0 0 1px gold
+    //             .name
+    //                 transition: all .4s ease-out
+    //                 color: gold
+    //                 font-size: 4.5rem   
+    //                 font-family: "Heimdall" , serif
+
 
 @media (max-width: 400px)
-    .potrfolio
-        .heading
-            margin-top: 3vh
-        .pojects-cont-right , .pojects-cont-left
-            .cont-sign
-                width: 43vw
-                .sign-project
-                    font-size: .9rem
-                .cont-techologi .techologi .text-techo
-                    font-size: 0.3rem
-            .cont-img
-                width: 43vw
-                .overlay .sign-img
-                    font-size: 1rem
-
-@media (max-width: 300px)
-    .potrfolio
-        .pojects-cont-right , .pojects-cont-left
-            .cont-sign
-                width: 43vw
-                .sign-project
-                    font-size: 1rem
-                .cont-techologi .techologi .text-techo
-                    font-size: 0.3rem
-            .cont-img
-                width: 43vw
-                .overlay .sign-img
-                    font-size: 1rem
-
-@media (max-width: 250px)
-    .potrfolio
-        .pojects-cont-right , .pojects-cont-left
-            .cont-sign
-                width: 40vw
-                .sign-project
-                    font-size: .8rem
-                .cont-techologi .techologi .text-techo
-                    font-size: 0.3rem
-            .cont-img
-                width:40vw
-                .overlay .sign-img
-                    font-size: 1rem
-
-@media (orientation: landscape) and (max-width: 900px) 
-    .potrfolio
-        .heading
-            font-size: 1.2rem
-        .pojects-cont-right , .pojects-cont-left
-            .cont_sign
-                width: 30vw
-                .sign-project
-                    font-size: .8rem
-                .cont-techologi .techologi .text-techo
-                    font-size: 0.5rem
-            .cont_img
-                width: 30vw
-                .sign-img
-                    font-size: 1.8rem
-
-
-    .cont_text
-        width: 48%
-        // height: 71%
-        .block_text
-            .text_header
-                line-height: 6vh    
-                letter-spacing: .4vh
-                font-size: 4.25rem
-                color: rgb(221, 45, 224)
-                color: #fff
-                margin: 0
-                height: 100%
-                &:hover .name
-                    text-shadow: 2px 3px 8px gold, 0 0 1px gold
-                .name
-                    transition: all .4s ease-out
-                    color: gold
-                    font-size: 4.5rem   
-                    font-family: "Heimdall" , serif
-
-
-@keyframes bounceOut 
-        0% 
-            box-shadow: 0 0 0 4px rgb(221, 45, 224)
-            opacity:1
-        25%
-            box-shadow: 0 0 0 1px rgb(221, 45, 224)
-            opacity:1
-        50%
-            box-shadow: 0 0 0 7px rgb(221, 45, 224)
-            opacity:1
-        75%
-            box-shadow: 0 0 0 4px rgb(221, 45, 224)
-            opacity:1
-        100%
-            box-shadow: 0 0 0 5px rgb(221, 45, 224)
-            opacity:1
+    .projects_cont
+        .cont_sign
+            width: 43vw
+            .sign_project
+                font-size: .9rem
+                .gold
+                    font-size: 1.7rem
+            .cont_techologi .techologi .text_techo
+                font-size: .5rem
+        .cont_img
+            width: 43vw
+            .hoverCurtain
+                .fig
+                    display: inline-block
+                    min-width: 20vw
+                    max-width: 42vw
+                    margin: 0
+                    left: 0
+                    top: 16vh
+                    h2
+                        font-size: 10px
+                        display: inline-block
+                        width: 40%
+                .overlay .sign_img
+                            font-size: 1rem

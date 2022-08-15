@@ -1,6 +1,11 @@
 @import '../../style/variable.sass'
     
 .footer
+    position: absolute
+    width: 100vw
+    left: 0
+    bottom: 0
+    border: none 
     background-color: #e8a567
     background-color: var(--compponent-default)
     height: 80px
@@ -10,30 +15,36 @@
     justify-content: center
     flex: 0 0 auto
     transition: 1s
+    box-sizing: border-box
+    background-color: red
     svg
         background-color: #fff
         width: 30px
         height: 30px
 
 
-@media (min-width: 576px) 
+@media (max-width: 400px) 
     .footer
-        border: 5px solid #63482e
+        height: 40px
+
+// @media (min-width: 576px) 
+//     .footer
+//         // border: 5px solid #63482e
 
 
 
-@media (min-width: 768px)
-    .footer
-        border: 5px solid #1d140b
+// @media (min-width: 768px)
+//     .footer
+//         // border: 5px solid #1d140b
 
 
-@media (min-width: 992px)
-    .footer
-        border: 5px solid #e8994f
+// @media (min-width: 992px)
+//     .footer
+//         // border: 5px solid #e8994f
 
 
 
-@media (min-width: 1200px)
-    .footer
-        border: 5px solid #e87f1e
+// @media (min-width: 1200px)
+//     .footer
+//         // border: 5px solid #e87f1e    
  

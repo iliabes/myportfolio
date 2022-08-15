@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
 import classNames from 'classnames';
 import Title from '../../../../global/Title/Title'
+import Footer from '../../../../global/Footer/Footer'
 
 const duration = 2000;
 const defaultStyle = {
@@ -50,6 +51,7 @@ const SectionContacts = () => {
                     <button className={s.submit}>Submit</button>
                 </div>
             </div>
+            <Footer/>
 
         </section>
 
