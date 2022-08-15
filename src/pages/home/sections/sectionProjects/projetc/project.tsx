@@ -42,13 +42,15 @@ const Propject = (props:any) => {
         <div className={s.cont_img}>
             <div className={s.hoverCurtain}>
             <img className={s.img_portfolio} src={props.image} alt=""/>
-            <div className={classNames(s.curtain, s.curtain_left)}></div>
-            <div className={classNames(s.curtain, s.curtain_right)}></div>
-            <figcaption className={s.fig}>
-                    <h2><span>{props.title}</span></h2>
-            </figcaption>
+            <div className={classNames(s.curtain, s.curtain_left)}>
+
             </div>
-            
+            <div className={classNames(s.curtain, s.curtain_right)}></div>
+                    <figcaption className={s.fig}>
+                    <h2><span>{props.title}</span></h2>
+                    </figcaption>
+            </div>
+
 
         </div>
 

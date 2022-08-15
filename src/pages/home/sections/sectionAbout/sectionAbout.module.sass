@@ -1,4 +1,5 @@
 .section_about
+    box-sizing: border-box
     z-index: 1
     height: 100vh
     width: 100%
@@ -10,9 +11,6 @@
     flex-direction: column
     justify-content: flex-start
     align-items: center
-    // .heading
-    //     font-size: 45px
-    //     color: #fff
     .cont_header
         margin-top: 5%
         z-index: 1
@@ -21,6 +19,8 @@
         justify-content: center
         .cont_curcle_img
             width: 300px
+            min-width: 30vw
+            max-width: 57vw
             height: 370px
             grid-area: curcleImg
             display: inline-block
@@ -37,8 +37,8 @@
                     cursor: pointer
                     animation: bounceOut .4s linear 
     .cont_text
+        margin-left: 1vw
         width: 25vw
-
         .block_text
             width: 100%
             .text_header
@@ -58,20 +58,57 @@
                     font-family: "Heimdall" , serif
 
 
-@media (max-width: 480px)
+
+
+@media (max-width: 1024px)
+    .section_about
+        padding-top: 60px
+        .cont_header
+            align-items: center
+            .cont_curcle_img
+                margin-top: 4vh
+                width: 60vw
+                height: 45vh
+            .cont_text
+                margin-left: 1vw
+                margin-top: 7vh
+                width: 100%
+                text-align: center
+                .text_header
+                    font-size: 40px
+                    line-height: 7vh
+
+@media (max-width: 769px)
     .section_about
         padding-top: 60px
         .cont_header
             flex-direction: column
             align-items: center
             .cont_curcle_img
-                margin-top: 5vh
-                width: 70vw
-                height: 35vh
+                margin-top: 4vh
+                width: 60vw
+                height: 45vh
             .cont_text
-                margin-top: 5vh
+                margin-top: 7vh
                 width: 100%
-                margin-top: 25px
+                text-align: center
+                .text_header
+                    font-size: 40px
+                    line-height: 7vh
+
+@media (max-width: 769px)
+    .section_about
+        padding-top: 60px
+        .cont_header
+            flex-direction: column
+            align-items: center
+            .cont_curcle_img
+                margin-top: 4vh
+                width: 60vw
+                height: 45vh
+            .cont_text
+                margin-top: 7vh
+                width: 100%
                 text-align: center
                 .text_header
                     font-size: 40px
@@ -79,7 +116,7 @@
 
 
 
-@media (max-width: 400px)
+@media (max-width: 480px)
     .section_about
         padding-top: 60px
         .cont_header
@@ -90,7 +127,7 @@
                 height: 300px
             .cont_text
                 width: 100%
-                margin-top: 25px
+                margin-top: 9vh
                 text-align: center
                 .text_header
                     font-size: 40px

@@ -24,7 +24,7 @@
             &:hover .img_portfolio 
                 transform: scale(1.2)
             .curtain
-                // transition: all 0.8s ease-out
+                transition: all 0.8s ease-out
                 content: ''
                 position: absolute
                 opacity: .6
@@ -37,38 +37,38 @@
             .curtain_right
                 background-color: gold
                 right: -50%
-            .fig
-                transition: all 0.8s ease-out
-                font-family: 'Raleway', Arial, sans-serif
-                position: absolute
-                overflow: hidden
-                margin: 10px
-                min-width: 220px
-                max-width: 310px
-                max-height: 220px
-                width: 100%
-                background: #000000
-                color: #ffffff
-                text-align: center
-                box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
-                top: 10vh
-                .h2
-                    position: absolute
-                    left: 40px
-                    right: 40px
-                    display: inline-block
-                    background: #000000
-                    transform: skew(-10deg) rotate(-10deg) translate(0, -50%)
-                    padding: 12px 5px
-                    margin: 0
-                    top: 50%
-                    text-transform: uppercase
-                    font-weight: 400
             .img_portfolio 
                 height: 20vh
                 width: 100%
                 border-radius: 15px
                 transition: all 1s ease-out
+        .fig
+            transition: all 0.8s ease-out
+            font-family: 'Raleway', Arial, sans-serif
+            position: absolute
+            overflow: hidden
+            min-width: 220px
+            max-width: 310px
+            max-height: 220px
+            width: 100%
+            background: #000000
+            color: #ffffff
+            text-align: center
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+            bottom: 0
+            .h2
+                position: absolute
+                left: 40px
+                right: 40px
+                display: inline-block
+                background: #000000
+                transform: skew(-10deg) rotate(-10deg) translate(0, -50%)
+                padding: 12px 5px
+                margin: 00.5rem
+                top: 50%
+                text-transform: uppercase
+                font-weight: 400
+
 
 
     .cont_sign
@@ -129,6 +129,94 @@
     transition: 1s
 
 
+
+
+
+@media (max-width: 768px)
+    .projects_cont
+        .cont_sign
+            width: 43vw
+            .sign_project
+                font-size: 1.3rem
+                .gold
+                    font-size: 2.3rem
+            .cont_techologi .techologi .text_techo
+                font-size: .8rem
+        .cont_img
+            width: 43vw
+            .hoverCurtain
+                position: relative
+            .fig
+                display: inline-block
+                min-width: 20vw
+                max-width: 42vw
+                margin: 0
+                left: 0
+                height: 15px
+                bottom: 0
+                h2
+                    font-size: 10px
+                    display: inline-block
+                    width: 40%
+            .overlay .sign_img
+                        font-size: 1rem
+
+
+@media (max-width: 481px)
+    .projects_cont
+        .cont_sign
+            width: 43vw
+            .sign_project
+                font-size: .9rem
+                .gold
+                    font-size: 1.7rem
+            .cont_techologi .techologi .text_techo
+                font-size: .5rem
+        .cont_img
+            width: 43vw
+            .hoverCurtain
+                .fig
+                    display: inline-block
+                    min-width: 20vw
+                    max-width: 42vw
+                    margin: 0
+                    left: 0
+                    // top: 16vh
+                    bottom: 0
+                    h2
+                        font-size: 10px
+                        display: inline-block
+                        width: 40%
+                .overlay .sign_img
+                            font-size: 1rem
+
+
+@media (max-width: 320px)
+    .projects_cont
+        .cont_sign
+            width: 43vw
+            .sign_project
+                font-size: .9rem
+                .gold
+                    font-size: 1.7rem
+            .cont_techologi .techologi .text_techo
+                font-size: .5rem
+        .cont_img
+            width: 43vw
+            .hoverCurtain
+                .fig
+                    display: inline-block
+                    min-width: 20vw
+                    max-width: 42vw
+                    margin: 0
+                    left: 0
+                    bottom: 0
+                    h2
+                        font-size: 10px
+                        display: inline-block
+                        width: 40%
+                .overlay .sign_img
+                            font-size: 1rem
 
 // @media (min-width: 1024px) and (max-width: 1240px)
 //     .potrfolio
@@ -257,30 +345,3 @@
     //                 font-size: 4.5rem   
     //                 font-family: "Heimdall" , serif
 
-
-@media (max-width: 400px)
-    .projects_cont
-        .cont_sign
-            width: 43vw
-            .sign_project
-                font-size: .9rem
-                .gold
-                    font-size: 1.7rem
-            .cont_techologi .techologi .text_techo
-                font-size: .5rem
-        .cont_img
-            width: 43vw
-            .hoverCurtain
-                .fig
-                    display: inline-block
-                    min-width: 20vw
-                    max-width: 42vw
-                    margin: 0
-                    left: 0
-                    top: 16vh
-                    h2
-                        font-size: 10px
-                        display: inline-block
-                        width: 40%
-                .overlay .sign_img
-                            font-size: 1rem

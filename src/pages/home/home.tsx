@@ -24,10 +24,10 @@ const Home = () => {
 
     return(
         <div className={s.home}>
-            <SectionAbout/> 
+            {/*<SectionAbout/> */}
             <SectionProjects/> 
             <SectionSckills/>
-            <SectionContacts/>  
+            {/*<SectionContacts/>  */}
         </div>
     )
 }

@@ -41,7 +41,7 @@ const SectionAbout = () => {
     return(
 
         <section className={s.section_about}>
-            <Canvas/>
+            {/*<Canvas/>*/}
             <Title title='About me'/>
             <div  className={s.cont_header}>
                 <Transition in={inProp} timeout={duration}>
