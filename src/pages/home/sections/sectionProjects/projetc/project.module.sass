@@ -3,8 +3,8 @@
     width: 100%
     display: flex
     justify-content: space-around
-    // align-items: center
-    margin-top: 4vh
+    align-items: flex-start
+    margin-top: 5vh
     .cont_img
         width: 25vw
         overflow: hidden
@@ -61,33 +61,36 @@
             align-items: center
             width: 100%
             h2
-                position: absolute
-                left: 40px
-                right: 40px
+                // position: absolute
+                // left: 40px
+                // right: 40px
                 display: inline-block
                 background: #000000
-                transform: skew(-10deg) rotate(-10deg) translate(0, -50%)
+                // transform: skew(-10deg) rotate(-10deg) translate(0, -50%)
                 padding: 12px 5px
                 margin: 00.5rem
                 // top: 50%
                 bottom: 0
                 text-transform: uppercase
                 font-weight: 400
-                padding: 3px
+                // padding: 3px
                 font-size: 24px
-                color: red
+                // color: red
+                margin: 0
+                padding: 0
 
 
 
 
     .cont_sign
-        padding: 1vh
+        // padding: 1vh
         box-sizing: border-box
         width: 25vw
         display: flex
         flex-direction: column
         justify-content: space-around
-        justify-content: space-between
+        align-items: flex-end
+        // justify-content: space-between
         opacity: 1
         .sign_project
             margin: 0
@@ -138,7 +141,33 @@
     transition: 1s
 
 
-
+@media (max-width: 1024px)
+    .projects_cont
+        .cont_sign
+            width: 36vw
+            .sign_project
+                font-size: 1.4rem
+                .gold
+                    font-size: 2rem
+            .cont_techologi .techologi .text_techo
+                font-size: .8rem
+        .cont_img
+            width: 36vw
+            .hoverCurtain
+                position: relative
+            .fig
+                min-width: 20vw
+                max-width: 42vw
+                margin: 0
+                left: 0
+                height: 18px
+                bottom: 0
+                h2
+                    font-size: 20px
+                    display: inline-block
+                    width: 40%
+            .overlay .sign_img
+                        font-size: 1rem
 
 
 @media (max-width: 768px)

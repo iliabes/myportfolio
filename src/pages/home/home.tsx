@@ -25,9 +25,9 @@ const Home = () => {
     return(
         <div className={s.home}>
             {/*<SectionAbout/> */}
-            <SectionProjects/> 
-            <SectionSckills/>
-            {/*<SectionContacts/>  */}
+{/*            <SectionProjects/> 
+            <SectionSckills/>*/}
+            <SectionContacts/>  
         </div>
     )
 }

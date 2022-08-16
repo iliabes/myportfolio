@@ -3,24 +3,46 @@
 .footer
     position: absolute
     width: 100vw
+    
     left: 0
     bottom: 0
     border: none 
     background-color: #e8a567
     background-color: var(--compponent-default)
-    height: 80px
+    // height: 80px
     width: 100%
     display: flex
+    flex-direction: column
     align-items: center
     justify-content: center
     flex: 0 0 auto
     transition: 1s
     box-sizing: border-box
-    background-color: red
-    svg
-        background-color: #fff
-        width: 30px
-        height: 30px
+    background-color: black
+    .cont_icon
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 30vw
+            .footer_icon
+                svg
+                    background-color: #fff
+                    width: 30px
+                    height: 30px
+    .buttonUp
+        width: 10px
+        height: 10px
+        // position: absolute
+        height: 50px
+        width: 37px
+        background: linear-gradient(64deg, transparent 51%, #f66 35%, #f66 65%, transparent 65%),linear-gradient(-64deg, transparent 51%, #f66 35%, #f66 65%, transparent 65%)
+        background-position: 100% 0, 0 0
+        background-repeat: repeat-y
+        background-size: 1.8em 1.8em
+        display: block
+        // margin: 100px
+        border: 1px solid #f66
+        border-radius: 2px
 
 
 @media (max-width: 400px) 
