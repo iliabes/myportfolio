@@ -47,7 +47,7 @@ const Propject = (props:any) => {
             </div>
             <div className={classNames(s.curtain, s.curtain_right)}></div>
                     <figcaption className={s.fig}>
-                    <h2><span>{props.title}</span></h2>
+                    <h2>{props.title}</h2>
                     </figcaption>
             </div>
 
