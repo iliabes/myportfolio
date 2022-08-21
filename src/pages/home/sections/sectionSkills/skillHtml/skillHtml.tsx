@@ -31,9 +31,7 @@ const transitionStyles = {
 const SkillHtml = () => {
     return(
         <div className={s.set_skil}>
-            <span className={s.cont_title}>
-                <p className={s.title_ckil}>Html</p>
-            </span>
+                <p className={s.cont_title }><span className={s.title_ckil }>HTML</span></p>
             <div className={s.skill_bar}>
                 <div  className={s.skill_active}></div>
             </div>

@@ -31,12 +31,13 @@ const transitionStyles = {
 const SkillBuild = () => {
     return(
         <div className={s.set_skil}>
-            <span className={s.cont_title}>
-                <p className={s.title_ckil}>Build</p>
-            </span>
-            <div className={s.skill_bar}>
-                <div  className={s.skill_active}></div>
-            </div>
+                
+                    <p className={s.cont_title }><span className={s.title_ckil }>Build</span></p>
+                
+                
+                <div className={s.skill_bar}>
+                    <div  className={s.skill_active}></div>
+                </div>
 
                 <div className={s.cont_technologis}>
 

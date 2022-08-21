@@ -1,17 +1,17 @@
 .projects_cont 
-    height: 20vh
+    height: 25vh
     width: 100%
     display: flex
     justify-content: space-around
     align-items: flex-start
     margin-top: 5vh
+    gap: 10px
     .cont_img
-        width: 25vw
+        width: 20vw
         overflow: hidden
         border-radius: 15px
         position: relative
         .hoverCurtain
-            position: absolute
             width: 100%
             height: 100%
             top: 0
@@ -47,9 +47,7 @@
             font-family: 'Raleway', Arial, sans-serif
             position: absolute
             overflow: hidden
-            // min-width: 220px
-            // max-width: 310px
-            // max-height: 220px
+
             width: 100%
             background: #000000
             color: #ffffff
@@ -94,7 +92,7 @@
         opacity: 1
         .sign_project
             margin: 0
-            font-size: 1.5rem
+            font-size: 2rem
             color: #fff
             &:hover
                 text-shadow: 1px 1px 1px #C73838, 0 0 0 gold
@@ -103,7 +101,7 @@
             .gold
                 transition: all .4s ease-out
                 color: gold
-                font-size: 2.1rem
+                font-size: 2.3rem
                 font-family: 'Heimdall' ,serif 
         .cont_techologi
             display: flex
@@ -141,14 +139,15 @@
     transition: 1s
 
 
-@media (max-width: 1024px)
+
+@media (max-width: 1240px)
     .projects_cont
         .cont_sign
             width: 36vw
             .sign_project
-                font-size: 1.4rem
+                font-size: 1.7rem
                 .gold
-                    font-size: 2rem
+                    font-size: 2.5rem
             .cont_techologi .techologi .text_techo
                 font-size: .8rem
         .cont_img
@@ -159,12 +158,34 @@
                 min-width: 20vw
                 max-width: 42vw
                 margin: 0
-                left: 0
-                height: 18px
-                bottom: 0
                 h2
                     font-size: 20px
-                    display: inline-block
+    
+                    width: 40%
+            .overlay .sign_img
+                        font-size: 1rem
+
+@media (max-width: 1024px)
+    .projects_cont
+        .cont_sign
+            width: 36vw
+            .sign_project
+                font-size: 1.7rem
+                .gold
+                    font-size: 2.5rem
+            .cont_techologi .techologi .text_techo
+                font-size: .8rem
+        .cont_img
+            width: 36vw
+            .hoverCurtain
+                position: relative
+            .fig
+                min-width: 20vw
+                max-width: 42vw
+                margin: 0
+                h2
+                    font-size: 20px
+    
                     width: 40%
             .overlay .sign_img
                         font-size: 1rem
@@ -172,6 +193,7 @@
 
 @media (max-width: 768px)
     .projects_cont
+        gap: 15px
         .cont_sign
             width: 43vw
             .sign_project
@@ -188,12 +210,8 @@
                 min-width: 20vw
                 max-width: 42vw
                 margin: 0
-                left: 0
-                height: 15px
-                bottom: 0
                 h2
                     font-size: 10px
-                    display: inline-block
                     width: 40%
             .overlay .sign_img
                         font-size: 1rem
@@ -202,6 +220,7 @@
 @media (max-width: 481px)
     .projects_cont
         .cont_sign
+            margin: 15px
             width: 43vw
             .sign_project
                 font-size: .9rem
@@ -210,21 +229,15 @@
             .cont_techologi .techologi .text_techo
                 font-size: .5rem
         .cont_img
+            height: 18vh
             width: 43vw
             .hoverCurtain
                 .fig
                     display: flex
                     align-items: center
                     justify-content: center
-                    min-width: 20vw
-                    max-width: 42vw
-                    margin: 0
-                    left: 0
-                    // top: 16vh
-                    bottom: 0
                     h2
                         font-size: 10px
-                        display: inline-block
                         width: 40%
                 .overlay .sign_img
                             font-size: 1rem
@@ -232,154 +245,26 @@
 
 @media (max-width: 320px)
     .projects_cont
+        gap: 5px
+        align-items: center
         .cont_sign
-            width: 43vw
+            width: 41vw
             .sign_project
                 font-size: .9rem
                 .gold
-                    font-size: 1.7rem
+                    font-size: 1.4rem
             .cont_techologi .techologi .text_techo
                 font-size: .5rem
         .cont_img
             width: 43vw
             .hoverCurtain
+                width: 100%
                 .fig
-                    min-width: 20vw
-                    max-width: 42vw
-                    margin: 0
-                    left: 0
-                    bottom: 0
+
                     h2
                         font-size: 10px
                         display: inline-block
-                        width: 40%
+                        width: 90%
                 .overlay .sign_img
                             font-size: 1rem
-
-// @media (min-width: 1024px) and (max-width: 1240px)
-//     .potrfolio
-//         .pojects-cont-right , .pojects-cont-left
-//             .cont-sign
-//                 width: 35vw
-//                 .sign-project
-//                     font-size: 1.3rem
-//             .cont-img
-//                 width: 35vw
-
-// @media (min-width: 768px) and (max-width: 1024px)
-//     .potrfolio
-//         .pojects-cont-right , .pojects-cont-left
-//             .cont-sign
-//                 width: 40vw
-//                 .sign-project
-//                     font-size: 1.3rem
-//             .cont-img
-//                 width: 40vw
-
-
-// @media (min-width: 568px) and (max-width: 768px)
-//     .potrfolio
-//         .pojects-cont-right , .pojects-cont-left
-//             .cont-sign
-//                 width: 40vw
-//                 .sign-project
-//                     font-size: 1.1rem
-//                 .cont-techologi .techologi .text-techo
-//                     font-size: 0.8rem
-//             .cont-img
-//                 width: 40vw
-
-// @media (max-width: 568px)
-//     .potrfolio
-//         .pojects-cont-right , .pojects-cont-left
-//             .cont-sign
-//                 width: 43vw
-//                 .sign-project
-//                     font-size: 1rem
-//                 .cont-techologi
-//                     .text-techo
-//                         font-size: 0.5rem
-//             .cont-img
-//                 width: 43vw
-
-// @media (max-width: 400px)
-//     .potrfolio
-//         .heading
-//             margin-top: 3vh
-//         .pojects-cont-right , .pojects-cont-left
-//             .cont-sign
-//                 width: 43vw
-//                 .sign-project
-//                     font-size: .9rem
-//                 .cont-techologi .techologi .text-techo
-//                     font-size: 0.3rem
-//             .cont-img
-//                 width: 43vw
-//                 .overlay .sign-img
-//                     font-size: 1rem
-
-// @media (max-width: 300px)
-//     .potrfolio
-//         .pojects-cont-right , .pojects-cont-left
-//             .cont-sign
-//                 width: 43vw
-//                 .sign-project
-//                     font-size: 1rem
-//                 .cont-techologi .techologi .text-techo
-//                     font-size: 0.3rem
-//             .cont-img
-//                 width: 43vw
-//                 .overlay .sign-img
-//                     font-size: 1rem
-
-// @media (max-width: 250px)
-//     .potrfolio
-//         .pojects-cont-right , .pojects-cont-left
-//             .cont-sign
-//                 width: 40vw
-//                 .sign-project
-//                     font-size: .8rem
-//                 .cont-techologi .techologi .text-techo
-//                     font-size: 0.3rem
-//             .cont-img
-//                 width:40vw
-//                 .overlay .sign-img
-//                     font-size: 1rem
-
-// @media (orientation: landscape) and (max-width: 900px) 
-//     .potrfolio
-//         .heading
-//             font-size: 1.2rem
-//         .pojects-cont-right , .pojects-cont-left
-//             .cont_sign
-//                 width: 30vw
-//                 .sign-project
-//                     font-size: .8rem
-//                 .cont-techologi .techologi .text-techo
-//                     font-size: 0.5rem
-//             .cont_img
-//                 width: 30vw
-//                 .sign-img
-//                     font-size: 1.8rem
-
-
-    // .cont_text
-    //     width: 48%
-    //     // height: 71%
-    //     .block_text
-    //         .text_header
-    //             line-height: 6vh    
-    //             letter-spacing: .4vh
-    //             font-size: 4.25rem
-    //             color: rgb(221, 45, 224)
-    //             color: #fff
-    //             margin: 0
-    //             height: 100%
-    //             &:hover .name
-    //                 text-shadow: 2px 3px 8px gold, 0 0 1px gold
-    //             .name
-    //                 transition: all .4s ease-out
-    //                 color: gold
-    //                 font-size: 4.5rem   
-    //                 font-family: "Heimdall" , serif
 

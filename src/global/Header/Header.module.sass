@@ -1,24 +1,27 @@
 @import '../../style/variable.sass'
     
 .top_menu
-    position: fixed
+    position: absolute
+    top: 0
     width: 100vw
     height: 8vh
-    z-index: 9
+    z-index: 1
     background-color: #131313
     display: flex
     justify-content: space-between
     padding: 0 8%
     box-sizing: border-box
     align-items: center
-    .humb-menu-icon
-        font-size: 1rem
-        color: $white
-        .svg-inline--fa.fa-w-16
-            width: 2rem
+    .humb_menu_icon
+        display: none
+        svg
+            padding: 0 20px
+        
+        
+
     .logo,.burger
         font-size: 1.3rem
-        color: $white
+        color: white
         background-color: none
         svg
             // display: none
@@ -63,26 +66,97 @@
         fill: red
         // background-color: #1d1b1b
 
+.humb_menu
+    top: 0
+    left: 0
+    transition: 1s
+    opacity: 1
+    // display: none
+    position: absolute
+    width: 100vw
+    height: 100vh
+    background-color: #020202
+    z-index: 999
 
 
-@media (min-width: 1240px)
-    .top_menu 
-        .humb_menu_icon
-            display: none
-        .top_item 
+    .top_line
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 5vh
+        padding: 10px
+        .logo
+            font-size: 20px
+            color: white
+        .icon
+            color: white
+            font-size: 30px
+
+    .cont_humb
+        box-sizing: border-box
+        padding: 5% 16%
+        width: 100%
+        height: 100%
+
+        .cont_point
+            height: 10vh
+            padding: 2vh
             display: flex
-        .logo .devil 
-            display: inline-block
-        .btn
-            // box-shadow: 0 0 40px 40px #e74c3c inset, 0 0 0 0 #e74c3c
-            border: 2px solid #e74c3c
+            justify-content: center
+            align-items: center
+            // text-align: center
+            transition: 1s
+            &:hover
+                background-color: #373232
+                .points
+                    font-size: 31px
+                    color: #ffffff
+            .points
+                transition: 1s
+                align-items: center
+                font-size: 24px
+                color: gold
+                padding: 3vh 0
+                .white-points
+                    color: #fff
+            .cancel
+                height: 50px
+                width:  50px
+                // position: absolute
+                top: 0
+                left: 0
+                z-index: 10
+                background-color: #fff
+                svg
+                    font-size: 20px
+                    fill: gold
 
-
-@media (max-width: 400px)
+@media (max-width: 769px)
     .top_menu 
         padding:  0
-        .btn 
+        .top_item
             display: none
-        .logo,.burger
+        .humb_menu_icon
+            // font-size: 1rem
+            display: block
+
+
+@media (max-width: 480px)
+    .top_menu 
+        padding:  0
+        .top_item
+            display: none
+        .humb_menu_icon
+            // font-size: 1rem
+            display: block
+
+
+
+@media (max-width: 320px)
+    .top_menu 
+        padding:  0
+        .top_item
+            display: none
+        .humb_menu_icon
             // font-size: 1rem
             display: block
