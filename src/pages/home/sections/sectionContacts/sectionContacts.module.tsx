@@ -8,37 +8,56 @@ import classNames from 'classnames';
 import Title from '../../../../global/Title/Title'
 import Footer from '../../../../global/Footer/Footer'
 
-const duration = 2000;
+
+const duration = 1000;
 const defaultStyle = {
     transition: `${duration}ms ease-in-out`,
-    transform: 'translateX(-1000px)'
+    transform: 'translateY(1000px)'
 }
 
-const transitionStyles = {
-    entering: {transform: 'translateX(0)'},
-    entered:  {transform: 'translateX(0)'},
-    // exiting:  {transform: 'translateX(-500px)'},
-    // exited:  {transform: 'translateX(-1000px)'},
+const defaultStyle2 = {
+    transition: `${3000}ms ease-in-out`,
+    transform: 'translateX(1000px)'
+}
+
+
+const transitionLeft = {
+    entering: { transform: 'translateX(0)' },
+    entered:  { transform: 'translateX(0)' },
+  };
+
+const transitionUp = {
+  entering: { transform: 'translateY(0)' },
+  entered:  { transform: 'translateY(0)' },
 };
 
 
 
 
 const SectionContacts = () => {
+let [visible , setVisible] = useState(true)
 
-
-
+function test(){
+    setVisible(!visible)
+}
 
     return(
-
-        <section className={s.contacts}>
+        <Transition in={visible} timeout={duration}>
+            
+            {state => (
+                <>
+                <button onClick={()=>{test()}}>211231</button>
+        <section style={{...defaultStyle,...transitionLeft[state]}}  className={s.contacts}>
             <div  className={s.cont}>
-                <Title title='Contacts'/>
-                 <p  className={s.quet}>Have a question or want to work together?</p>
-                <div   className={s.cont_input}>
+                <Title  title='Contacts'/>
+                <p  className={s.quet}>Have a question or want to work together?</p>
+                <Transition in={visible} timeout={3000}>
+                {state => (
+                <div style={{...defaultStyle2,...transitionUp[state]}}   className={s.cont_input}>
                     <input placeholder="Your name"  className={s.text_inp} type="text"/>
                 </div>
-
+                )}
+                </Transition>
                 <div   className={s.cont_input}>
                     <input placeholder="Your emeil"  className={s.text_inp} type="text"/>
                 </div>
@@ -54,7 +73,9 @@ const SectionContacts = () => {
             <Footer/>
 
         </section>
-
+        </>
+    )}
+        </Transition>
 
         
     )
