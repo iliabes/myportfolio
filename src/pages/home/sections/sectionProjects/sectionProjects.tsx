@@ -20,13 +20,13 @@ import img3 from '../../../../assets/img/3.png'
 const duration = 2000;
 const defaultStyle = {
     transition: `${duration}ms ease-in-out`,
-    transform: 'translateX(0)',
+    transform: 'translateY(1225px)',
     
 }
 
 const transitionStyles = {
-    entering: {transform: 'translateY(-1225px)'},
-    entered:  {transform: 'translateY(-1225px)'},
+    entering: {transform: 'translateY(0)'},
+    entered:  {transform: 'translateY(0)'},
     // exiting:  {transform: 'translateX(-500px)'},
     // exited:  {transform: 'translateX(-1000px)'},
 };
@@ -35,20 +35,27 @@ const transitionStyles = {
 
 
 const SectionProjects = () => {
-    // let [visible , isVisible] = useState(true)
-    let visible = useAppSelector(state => (state.counterSlice.projectsVisivle))
+    function test(){
+        setVisible(!visible)
+    }
+    let [visible , setVisible] = useState(useAppSelector(state => (state.counterSlice.projectsVisivle)))
+
     console.log(visible);
     
 
     return(
         <Transition in={visible} timeout={duration}>
+            
             {state => (
+                <>
+                <button onClick={()=>{test()}}>211231</button>
                 <section style={{...defaultStyle,...transitionStyles[state]}} className={s.section_projects}>
                     <Title title='Мои проекты'/>
                     <Propject left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img1} title='changeBook'/>
                     <Propject left={false}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img2} title='changeBook'/>
                     <Propject left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img3} title='changeBook'/>
                 </section>
+                </>
             )}
         </Transition>
     )
