@@ -26,8 +26,8 @@ const Home = () => {
         <div className={s.home}>
              {/* <SectionAbout/> */}
             {/* <SectionProjects/>   */}
-            {/* <SectionSckills/>   */}
-            <SectionContacts/>  
+            <SectionSckills/>  
+            {/* <SectionContacts/>   */}
         </div>
     )
 }

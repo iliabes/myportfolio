@@ -17,21 +17,7 @@ import img2 from '../../../../assets/img/2.jpg'
 import img3 from '../../../../assets/img/3.png'
 
 
-const duration = 2000;
-const defaultStyle = {
-    transition: `${duration}ms ease-in-out`,
-    transform: 'translateY(1225px)',
-    
-}
-
-const transitionStyles = {
-    entering: {transform: 'translateY(0)'},
-    entered:  {transform: 'translateY(0)'},
-    // exiting:  {transform: 'translateX(-500px)'},
-    // exited:  {transform: 'translateX(-1000px)'},
-};
-
-
+import { defaultStyleSection, transitionY } from '../../../../aniamate/animate';
 
 
 const SectionProjects = () => {
@@ -44,12 +30,12 @@ const SectionProjects = () => {
     
 
     return(
-        <Transition in={visible} timeout={duration}>
+        <Transition in={visible} timeout={1000}>
             
             {state => (
                 <>
                 <button onClick={()=>{test()}}>211231</button>
-                <section style={{...defaultStyle,...transitionStyles[state]}} className={s.section_projects}>
+                <section style={{...defaultStyleSection,...transitionY[state]}} className={s.section_projects}>
                     <Title title='Мои проекты'/>
                     <Propject left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img1} title='changeBook'/>
                     <Propject left={false}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img2} title='changeBook'/>
