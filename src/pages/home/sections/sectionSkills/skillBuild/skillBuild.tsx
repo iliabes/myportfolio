@@ -10,32 +10,30 @@ import { Transition } from 'react-transition-group';
 import { bounce } from 'react-animations';
 import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
-import { defaultStyleField, trasitonX } from '../../../../../aniamate/animate';
+import { defaultStyleField, trasitonX, defaultStyleSkillBar } from '../../../../../aniamate/animate';
 
-
+import SkillBar from '../skillBar/skillBar';
 
 
 const SkillBuild = (props:any) => {
+    let [visible, setVisible] = useState(true)
     return(
         <Transition in={props.visible} timeout={1000}>
             {state => (
             <div style={{...defaultStyleField,...{'transition-delay': '1.6s'},...trasitonX[state]}} className={s.set_skil}>
                     <p className={s.cont_title }><span className={s.title_ckil }>Build</span></p>
-                    <div className={s.skill_bar}>
-                        <div  className={s.skill_active}></div>
-                    </div>
+                    <SkillBar visible={props.visible} number={67}/>
+                    <div  className={s.cont_technologis}>
 
-                    <div className={s.cont_technologis}>
-
-                    <div className={s.cont_techno}>
+                    <div style={{...defaultStyleSkillBar,...{'transition-delay': '2.6s'},...trasitonX[state]}} className={s.cont_techno}>
                         <img className={s.technologi} src={gulp} alt="" />
                     </div>
 
-                    <div   className={s.cont_techno}>
+                    <div style={{...defaultStyleSkillBar,...{'transition-delay': '2.8s'},...trasitonX[state]}}  className={s.cont_techno}>
                         <img className={s.technologi} src={webpack} alt=""/>
                     </div>
 
-                    <div  className={s.cont_techno}>
+                    <div style={{...defaultStyleSkillBar,...{'transition-delay': '3.0s'},...trasitonX[state]}}  className={s.cont_techno}>
                         <img className={s.technologi} src={grunt} alt=""/>
                     </div>
 

@@ -3,12 +3,24 @@ export const defaultStyleSection = {
     transform: 'translateY(1000px)'
 }
 
+export const defaultStyleSkillBar = {
+  transition: `${1000}ms ease-in-out`,
+  transform: 'translateY(1000px)'
+}
 
 export  const defaultStyleField = {
     'transition-timing-function': `ease-in-out`,
     'transition-duration':'1200ms',
     transform: 'translateX(2500px)',
 }
+
+
+export  const defaultStyleSkillImg = {
+  'transition-timing-function': `ease-in-out`,
+  'transition-duration':'1200ms',
+  transform: 'translateX(-2500px)',
+}
+
 
 export  const defaultStyleTitle = {
   'transition-timing-function': `ease-in-out`,
