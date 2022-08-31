@@ -7,8 +7,8 @@ const Canvas = () => {
     let ref = useRef(null)
     useEffect(()=>{
         const config = {
-            curvesNum    : 40,
-            waveSpeed    : .5,
+            curvesNum    : 10,
+            waveSpeed    : .4,
             wavesToBlend : 4,  //waves count to blend 
             framesToMove : 120 //frames count to change type placement
         }
@@ -56,8 +56,9 @@ const Canvas = () => {
 
         // colorLight:string = '#c4c0d3'
         colorLight:string = '#fff'
-        colorDark:string = '#000'
-        colorNow:string = 'dark'
+        colorDark:string = '#c4c0d3'
+        // colorNow:string = 'dark'
+        colorNow:string = 'red'
 
         constructor() {
         }
@@ -72,6 +73,9 @@ const Canvas = () => {
 
         createCanvas() {
         this.ctx = this.cnv.getContext('2d');
+        this.ctx.fillStyle = '#c4c0d3';
+        this.ctx.fill();
+
         this.setCanvasSize();
         window.addEventListener(`resize`, () => this.setCanvasSize());
         }
@@ -149,7 +153,7 @@ const Canvas = () => {
 
         drawCurve({startX, startY, controlX1, controlY1, controlX2, controlY2, endX, endY, alpha, hue}) {
             this.ctx.lineWidth = 3;
-            this.ctx.strokeStyle = `hsla(${hue}, 100%, 50%, ${alpha})`;
+            this.ctx.strokeStyle = `hsla(${hue}, 100%, 50%, ${alpha})`; 
             this.ctx.beginPath();
             this.ctx.moveTo(startX, startY);
             this.ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY);
@@ -157,8 +161,7 @@ const Canvas = () => {
         }
 
         updateCanvas() {
-            // this.ctx.fillStyle = `rgb(22, 22, 25)`;
-        this.ctx.fillRect(0, 0, this.size.w, this.size.h);
+        this.ctx.clearRect(0, 0, this.size.w, this.size.h);
         }
         
         updateFrameCounter() {
@@ -182,7 +185,7 @@ const Canvas = () => {
 
     let anim = new Animation()
     anim.init()
-    console.log(anim)
+    // console.log(anim)
 
     })
 

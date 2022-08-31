@@ -17,16 +17,24 @@ import img2 from '../../../../assets/img/2.jpg'
 import img3 from '../../../../assets/img/3.png'
 
 
-import { defaultStyleSection, transitionY } from '../../../../aniamate/animate';
+import { defaultStyleSection, transitionY } from '../../../../animate/animate';
 
 
 const SectionProjects = () => {
+    let sectionState = useAppSelector(state => (state.counterSlice.visProj))
+    let [visible , setVisible] = useState(useAppSelector(state => (state.counterSlice.visProj)))
+    useEffect(()=>{
+        if (sectionState != visible){
+            setVisible(sectionState)
+        }
+    })
+    
+    // let [visible , setVisible] = useState(true)
     function test(){
         setVisible(!visible)
     }
-    let [visible , setVisible] = useState(useAppSelector(state => (state.counterSlice.projectsVisivle)))
+    
 
-    console.log(visible);
     
 
     return(
@@ -34,12 +42,12 @@ const SectionProjects = () => {
             
             {state => (
                 <>
-                <button onClick={()=>{test()}}>211231</button>
+                {/* <button onClick={()=>{test()}}>211231</button> */}
                 <section style={{...defaultStyleSection,...transitionY[state]}} className={s.section_projects}>
                     <Title title='Мои проекты'/>
-                    <Propject left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img1} title='changeBook'/>
-                    <Propject left={false}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img2} title='changeBook'/>
-                    <Propject left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img3} title='changeBook'/>
+                    <Propject visible={visible} left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img1} title='changeBook'/>
+                    <Propject visible={visible} left={false}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img2} title='changeBook'/>
+                    <Propject visible={visible} left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img3} title='changeBook'/>
                 </section>
                 </>
             )}

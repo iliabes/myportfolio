@@ -13,12 +13,25 @@ import SkillHtml from './skillHtml/skillHtml';
 import SkillBuild from './skillBuild/skillBuild';
 import SkillJs from './skillJs/skillJs'
 
-import { defaultStyleSection, transitionY } from '../../../../aniamate/animate';
+import { defaultStyleSection, transitionY } from '../../../../animate/animate';
+import { useAppSelector } from '../../../../hooks/store';
+
+
+
+
+
+
 
 
 const SectionSckills = () => {
-    let [visible , setVisible] = useState(false)
+    let sectionState = useAppSelector(state => (state.counterSlice.visSkills))
+    let [visible , setVisible] = useState(useAppSelector(state => (state.counterSlice.visSkills)))
 
+    useEffect(()=>{
+        if (sectionState != visible){
+            setVisible(sectionState)
+        }
+    })
 
     function test(){
         setVisible(!visible)
@@ -29,7 +42,7 @@ const SectionSckills = () => {
         <Transition in={visible} timeout={1000}>
             {state => (
             <>
-                <button onClick={()=>{test()}}>211231</button>
+                {/* <button onClick={()=>{test()}}>211231</button> */}
                 <section  style={{...defaultStyleSection,...transitionY[state]}} className={s.scils}>
                     <Title visible={visible} title='Skills'/>
                     <SkillHtml visible={visible}/>

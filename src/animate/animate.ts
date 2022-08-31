@@ -14,6 +14,11 @@ export  const defaultStyleField = {
     transform: 'translateX(2500px)',
 }
 
+export  const defaultStyleFieldRight = {
+  'transition-timing-function': `ease-in-out`,
+  'transition-duration':'1200ms',
+  transform: 'translateX(-2500px)',
+}
 
 export  const defaultStyleSkillImg = {
   'transition-timing-function': `ease-in-out`,

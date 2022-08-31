@@ -1,12 +1,12 @@
 
 import s from './sectionContacts.module.sass'
 import { Transition } from 'react-transition-group';
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import classNames from 'classnames';
 import Title from '../../../../global/Title/Title'
 import Footer from '../../../../global/Footer/Footer'
-import { defaultStyleSection , trasitonX, transitionY ,defaultStyleField} from '../../../../aniamate/animate';
-
+import { defaultStyleSection , trasitonX, transitionY ,defaultStyleField} from '../../../../animate/animate';
+import { useAppSelector } from '../../../../hooks/store';
 
 
 
@@ -14,7 +14,15 @@ import { defaultStyleSection , trasitonX, transitionY ,defaultStyleField} from '
 
 
 const SectionContacts = () => {
-let [visible , setVisible] = useState(false)
+let sectionState = useAppSelector(state => (state.counterSlice.visContact))
+let [visible , setVisible] = useState(useAppSelector(state => (state.counterSlice.visContact)))
+
+useEffect(()=>{
+    if (sectionState != visible){
+        setVisible(sectionState)
+    }
+})
+
 
 function test(){
     setVisible(!visible)
@@ -25,7 +33,7 @@ function test(){
             
             {state => (
                 <>
-                <button onClick={()=>{test()}}>+++</button>
+                {/* <button onClick={()=>{test()}}>+++</button> */}
                 <section style={{...defaultStyleSection,...transitionY[state]}}  className={s.contacts}>
                     <div  className={s.cont}>
            

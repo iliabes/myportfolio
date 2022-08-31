@@ -12,6 +12,9 @@
     align-items: center
     gap: 10px
     overflow: hidden
+    background: var(--compponent-bg1-default)
+    transition: background 2s
+    color: var(--compponent-text-default)
     .cont_header
         margin-top: 5%
         z-index: 0
@@ -35,6 +38,7 @@
                 &:hover 
                     cursor: pointer
                     animation: bounceOut .4s linear 
+                    
     .cont_text
         margin-left: 1vw
         width: 25vw
@@ -44,8 +48,8 @@
                 line-height: 6vh    
                 letter-spacing: .4vh
                 font-size: 4.25rem
-                color: rgb(221, 45, 224)
-                color: #fff
+                color: var(--compponent-text-default)
+                // color: #fff
                 margin: 0
                 height: 100%
                 &:hover .name

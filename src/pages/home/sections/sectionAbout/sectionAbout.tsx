@@ -41,7 +41,6 @@ const SectionAbout = () => {
         setInProp(true)
     })
     function test(){
-        console.log(inProp);
         
         setInProp(!inProp)
     }
@@ -53,7 +52,7 @@ const SectionAbout = () => {
             <section className={s.section_about}>
                 <Header/>
                 <Canvas/>
-                <Title style={{...defaultStyle,...transitionStyles[state]}} title='About me'/>
+                <Title visible={true} title='About me'/>
                 <div  className={s.cont_header}>
 
                             <div style={{...defaultStyle,...transitionStyles[state]}} className={s.cont_curcle_img}>

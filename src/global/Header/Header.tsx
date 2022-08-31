@@ -8,11 +8,16 @@ import {ImCancelCircle} from 'react-icons/im'
 import { Transition } from 'react-transition-group';
 import { useState } from 'react'
 
+
+import {useAppDispatch} from '../../hooks/store'
+import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
+
 function Header () {
 
 
     
     // let [theme, setTheme] = useState('light')
+    const dispatch = useAppDispatch()
     const theme = useTheme()
     let [visible,setVisible] = useState(false)
 
@@ -44,9 +49,9 @@ function Header () {
         <button onClick={()=>{humbMenu()}} className={classNames(s.btn ,s.humb_menu_icon,s.cont_icon_bmenu)} id='buttonMenu' ><GenerateSvg id='dark'/></button>
         <div className={s.top_item}>
             <button id='topAbout' className={s.btn}>About </button>
-            <button id='topProjects' className={s.btn}>Projects</button>
-            <button id='topSkils' className={s.btn}>Skils</button>
-            <button id='topContacts' className={s.btn}>Contacts</button>
+            <button onClick={()=>{dispatch(visibleProject(true))}} id='topProjects' className={s.btn}>Projects</button>
+            <button onClick={()=>{dispatch(visibleSkills(true))}} id='topSkils' className={s.btn}>Skils</button>
+            <button onClick={()=>{dispatch(visibleContacts(true))}} id='topContacts' className={s.btn}>Contacts</button>
             <button id='topLang' className={s.btn}>Ru</button>
             <button onClick={()=>{switchMode()}} id='darkMode' className={s.btn}><GenerateSvg id='dark'/></button>
         </div>

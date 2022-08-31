@@ -5,7 +5,7 @@ import { Transition } from 'react-transition-group';
 
 import { useState } from 'react';
 import Typed from 'react-typed';
-import Title from '../../../../../global/Title/Title'
+import Title from '../../../../../../global/Title/Title'
 
 interface IskillBar {
     number: number
