@@ -40,29 +40,29 @@ function test(){
                      <Title visible={visible}  title='Contacts'/>
                     
                     <Transition in={visible} timeout={1000}>
-                        <p style={{...defaultStyleField,...{'transition-delay': '1s'},...trasitonX[state]}} className={s.quet}>Have a question or want to work together?</p>
+                        <p style={{...defaultStyleField,...{'transitiondelay': '1s'},...trasitonX[state]}} className={s.quet}>Have a question or want to work together?</p>
                     </Transition>
                     <Transition in={visible} timeout={1000}>
                         {state => (
-                        <div style={{...defaultStyleField,...{'transition-delay': '1.2s'},...trasitonX[state]}}   className={s.cont_input}>
+                        <div style={{...defaultStyleField,...{'transitiondelay': '1.2s'},...trasitonX[state]}}   className={s.cont_input}>
                             <input placeholder="Your name"  className={s.text_inp} type="text"/>
                         </div>
                         )}
                     </Transition>
 
                     <Transition in={visible} timeout={1000}>
-                        <div style={{...defaultStyleField,...{'transition-delay': '1.4s'},...trasitonX[state]}}   className={s.cont_input}>
+                        <div style={{...defaultStyleField,...{'transitiondelay': '1.4s'},...trasitonX[state]}}   className={s.cont_input}>
                             <input placeholder="Your emeil"  className={s.text_inp} type="text"/>
                         </div>
                     </Transition>
                     
                     <Transition in={visible} timeout={1000}>
-                        <div style={{...defaultStyleField,...{'transition-delay': '1.6s'},...trasitonX[state]}}  className={s.cont_input}>
+                        <div style={{...defaultStyleField,...{'transitiondelay': '1.6s'},...trasitonX[state]}}  className={s.cont_input}>
                             <input placeholder="Your message"  className={classNames(s.text_inp ,  s.area)} type="text"/>
                         </div>
                     </Transition>
                     <Transition in={visible} timeout={1000}>
-                        <div style={{...defaultStyleField,...{'transition-delay': '1.8s'},...trasitonX[state]}}   className={s.cont_input}>
+                        <div style={{...defaultStyleField,...{'transitiondelay': '1.8s'},...trasitonX[state]}}   className={s.cont_input}>
                             <button className={s.submit}>Submit</button>
                         </div>
                     </Transition>

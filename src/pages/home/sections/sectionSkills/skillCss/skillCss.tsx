@@ -18,28 +18,28 @@ const SkillCss = (props:any) => {
     return(
         <Transition in={props.visible} timeout={1000}>
         {state => (
-        <div style={{...defaultStyleField,...{'transition-delay': '1.2s'},...trasitonX[state]}} className={s.set_skil}>
+        <div style={{...defaultStyleField,...{'transitionDelay': '1.2s'},...trasitonX[state]}} className={s.set_skil}>
             <SkillBarTitle title="CSS"/>
                 <SkillBar visible={props.visible} number={70}/>
-                <div style={{...defaultStyleSkillBar,...{'transition-delay': '2.6s'},...trasitonX[state]}} className={s.cont_technologis}>
+                <div style={{...defaultStyleSkillBar,...{'transitionDelay': '2.6s'},...trasitonX[state]}} className={s.cont_technologis}>
                     <div className={s.cont_techno}>
                         <img className={s.technologi} src={css} alt="" />
                     </div>
 
-                    <div style={{...defaultStyleSkillBar,...{'transition-delay': '2.8s'},...trasitonX[state]}}  className={s.cont_techno}>
+                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '2.8s'},...trasitonX[state]}}  className={s.cont_techno}>
                         <img className={s.technologi} src={bootstrap} alt=""/>
                     </div>
 
-                    <div style={{...defaultStyleSkillBar,...{'transition-delay': '3s'},...trasitonX[state]}} className={s.cont_techno}>
+                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3s'},...trasitonX[state]}} className={s.cont_techno}>
                         <img className={s.technologi} src={sass} alt=""/>
                     </div>
 
-                    <div style={{...defaultStyleSkillBar,...{'transition-delay': '3.2s'},...trasitonX[state]}}  className={s.cont_techno}>
+                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.2s'},...trasitonX[state]}}  className={s.cont_techno}>
                         <img className={s.technologi} src={materialize} alt=""/>
                     </div>
 
 
-                    <div style={{...defaultStyleSkillBar,...{'transition-delay': '3.4s'},...trasitonX[state]}} className={s.cont_techno}>
+                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.4s'},...trasitonX[state]}} className={s.cont_techno}>
                         <img className={s.technologi} src={sass} alt=""/>
                     </div>
                 </div>

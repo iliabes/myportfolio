@@ -44,7 +44,7 @@ const SectionProjects = () => {
                 <>
                 {/* <button onClick={()=>{test()}}>211231</button> */}
                 <section style={{...defaultStyleSection,...transitionY[state]}} className={s.section_projects}>
-                    <Title title='Мои проекты'/>
+                    <Title visible={visible} title='Мои проекты'/>
                     <Propject visible={visible} left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img1} title='changeBook'/>
                     <Propject visible={visible} left={false}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img2} title='changeBook'/>
                     <Propject visible={visible} left={true}  text=' - прилолжения для планирования bla bla bla bla bla bla bla bla' image={img3} title='changeBook'/>

@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 
-  <React.StrictMode>
+  // <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
         <ThemeProvider>
@@ -21,7 +21,7 @@ root.render(
         </ThemeProvider>
       </Provider>
     </BrowserRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 
 );
 

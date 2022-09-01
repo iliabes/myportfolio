@@ -19,20 +19,20 @@ const SkillBuild = (props:any) => {
     return(
         <Transition in={props.visible} timeout={1000}>
             {state => (
-            <div style={{...defaultStyleField,...{'transition-delay': '1.6s'},...trasitonX[state]}} className={s.set_skil}>
+            <div style={{...defaultStyleField,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={s.set_skil}>
                     <SkillBarTitle title="BUILD"/>
                     <SkillBar visible={props.visible} number={67}/>
                     <div  className={s.cont_technologis}>
 
-                        <div style={{...defaultStyleSkillBar,...{'transition-delay': '2.6s'},...trasitonX[state]}} className={s.cont_techno}>
+                        <div style={{...defaultStyleSkillBar,...{'transitionDelay': '2.6s'},...trasitonX[state]}} className={s.cont_techno}>
                             <img className={s.technologi} src={gulp} alt="" />
                         </div>
 
-                        <div style={{...defaultStyleSkillBar,...{'transition-delay': '2.8s'},...trasitonX[state]}}  className={s.cont_techno}>
+                        <div style={{...defaultStyleSkillBar,...{'transitionDelay': '2.8s'},...trasitonX[state]}}  className={s.cont_techno}>
                             <img className={s.technologi} src={webpack} alt=""/>
                         </div>
 
-                        <div style={{...defaultStyleSkillBar,...{'transition-delay': '3.0s'},...trasitonX[state]}}  className={s.cont_techno}>
+                        <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.0s'},...trasitonX[state]}}  className={s.cont_techno}>
                             <img className={s.technologi} src={grunt} alt=""/>
                         </div>
 

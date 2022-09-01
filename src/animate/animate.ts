@@ -9,35 +9,35 @@ export const defaultStyleSkillBar = {
 }
 
 export  const defaultStyleField = {
-    'transition-timing-function': `ease-in-out`,
-    'transition-duration':'1200ms',
+    'transitionTimingFunction': `ease-in-out`,
+    'transitionDuration':'1200ms',
     transform: 'translateX(2500px)',
 }
 
 export  const defaultStyleFieldRight = {
-  'transition-timing-function': `ease-in-out`,
-  'transition-duration':'1200ms',
+  'transitionTimingFunction': `ease-in-out`,
+  'transitionDuration':'1200ms',
   transform: 'translateX(-2500px)',
 }
 
 export  const defaultStyleSkillImg = {
-  'transition-timing-function': `ease-in-out`,
-  'transition-duration':'1200ms',
+  'transitionTimingFunction': `ease-in-out`,
+  'transitionDuration':'1200ms',
   transform: 'translateX(-2500px)',
 }
 
 
 export  const defaultStyleTitle = {
-  'transition-timing-function': `ease-in-out`,
-  'transition-duration':'1200ms',
+  'transitionTimingFunction': `ease-in-out`,
+  'transitionDuration':'1200ms',
   transform: 'translateX(-2500px)',
 }
 
 
 
 export  const defaultStyleFooter = {
-  'transition-timing-function': `ease-in-out`,
-  'transition-duration':'1200ms',
+  'transitionTimingFunction': `ease-in-out`,
+  'transitionDuration':'1200ms',
   transform: 'translateX(2500px)',
 }
 
@@ -50,5 +50,6 @@ export const trasitonX = {
 export  const transitionY = {
     entering: { transform: 'translateY(0)' },
     entered:  { transform: 'translateY(0)' },
+
 };
   

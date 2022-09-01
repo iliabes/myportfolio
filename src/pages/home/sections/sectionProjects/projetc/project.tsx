@@ -27,7 +27,7 @@ const Propject = (props:any) => {
         {state => (
             
         <div   className={props.left ? classNames(s.projects_cont) : classNames(s.projects_cont, s.left)}>
-        <div style={{...defStyleImg,...{'transition-delay': '1.6s'},...trasitonX[state]}} className={s.cont_img}>
+        <div style={{...defStyleImg,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={s.cont_img}>
             <div className={s.hoverCurtain}>
             <img className={s.img_portfolio} src={props.image} alt=""/>
             <div className={classNames(s.curtain, s.curtain_left)}>
@@ -42,7 +42,7 @@ const Propject = (props:any) => {
 
         </div>
 
-        <div style={{...defStyleSign,...{'transition-delay': '1.6s'},...trasitonX[state]}} className={s.cont_sign}>
+        <div style={{...defStyleSign,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={s.cont_sign}>
             <p className={s.sign_project}><span className={s.gold}>{props.title}</span>{props.text}</p>
             <div className={s.cont_techologi}>
                 <div className={s.techologi}><p className={s.text_techo}>React</p></div>

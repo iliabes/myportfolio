@@ -13,7 +13,7 @@ function Footer(props:any) {
     return (
       <Transition  in={props.visible} timeout={1000}>
         {state => (
-      <footer style={{...defaultStyleFooter,...{'transition-delay': '2.2s'},...transitionY[state]}} className={s.footer}>
+      <footer style={{...defaultStyleFooter,...{'transitionDelay': '2.2s'},...transitionY[state]}} className={s.footer}>
        <a  id='buttonUp' className={s.buttonUp} href="#"></a>
         <div className={s.cont_icon}>
             <div className={s.footer_icon}> <GenerateSvg id='vk'/></div>

@@ -27,7 +27,7 @@ const defaultStyleSkillBar = {
 
 
 const SkillBar = (props:any) => {
-    console.log(props.number);
+
     
     let [visible , setVisible] = useState(false)
     const transitionStyles = {
