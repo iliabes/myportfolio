@@ -1,6 +1,6 @@
 
 import s from './sectionAbout.module.sass'
-import Header from '../../../../global/Header/Header'
+// import Header from '../../../../global/Header/Header'
 import Canvas from './canvas/canvas'
 import { Transition } from 'react-transition-group';
 import { bounce } from 'react-animations';
@@ -50,7 +50,7 @@ const SectionAbout = () => {
         <Transition in={inProp} timeout={duration}>
         {state => (
             <section className={s.section_about}>
-                <Header/>
+                {/* <Header/> */}
                 <Canvas/>
                 <Title visible={true} title='About me'/>
                 <div  className={s.cont_header}>

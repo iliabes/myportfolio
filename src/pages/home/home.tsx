@@ -12,6 +12,8 @@ import { useAppDispatch } from '../../hooks/store'
 import { visibleContacts,visibleProject,visibleSkills} from '../../store/slices/slice'
 
 import React, { useEffect, useState , useRef} from 'react';
+import Header from '../../global/Header/Header'
+
 
 const Home = () => {
     console.log('home')
@@ -33,9 +35,8 @@ const Home = () => {
 
     return(
         <div className={s.home}>
-            
+            <Header/>
             <SectionAbout/>
-
             <SectionProjects/>   
             <SectionSckills/>  
             <SectionContacts/>   
