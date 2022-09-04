@@ -7,7 +7,7 @@ import { FaAdjust } from 'react-icons/fa';
 import {ImCancelCircle} from 'react-icons/im'
 import { Transition } from 'react-transition-group';
 import { useState, useEffect } from 'react'
-
+import {CgDarkMode} from 'react-icons/cg';
 
 import {useAppDispatch} from '../../hooks/store'
 import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
@@ -116,14 +116,14 @@ function Header () {
     const duration = 300;
 
     const defaultStyle = {
-        transform: 'translateX(-1500)',
+        transform: 'translateX(-1500px)',
         opacity:0
     }
 
 
     const transitionStyles = {
         entered: {transform: 'translateX(0)',opacity:1 },
-        exited:  { transform: 'translateX(-1500px)',opacity:0},
+        exited:  { transform: 'translateX(-1800px)',opacity:0},
 }
 
 
@@ -136,8 +136,8 @@ function Header () {
             <button onClick={()=>{changeSlide(1);humbMenuCancel()}} id='topProjects' className={s.btn}>Projects</button>
             <button onClick={()=>{changeSlide(2);humbMenuCancel()}} id='topSkils' className={s.btn}>Skils</button>
             <button onClick={()=>{changeSlide(3);humbMenuCancel()}} id='topContacts' className={s.btn}>Contacts</button>
-            <button id='topLang' className={s.btn}>Ru</button>
-            <button onClick={()=>{switchMode()}} id='darkMode' className={s.btn}><GenerateSvg id='dark'/></button>
+            {/* <button id='topLang' className={s.btn}>Ru</button>} */}
+            <button onClick={()=>{switchMode()}} id='darkMode' className={s.btn}><CgDarkMode/></button>
         </div>
         
         <Transition in={visible} timeout={duration}>
@@ -160,9 +160,9 @@ function Header () {
                 <div onClick={()=>{humbMenu(); changeSlide(3)}}  className={s.cont_point}>
                     <p id='hambContacts' className={s.points}><span className={s.white_points}></span>Contacts<span className={s.white_points}></span></p>
                 </div>
-                <div className={s.cont_point}>
+                /*<div className={s.cont_point}>
                     <p id='hambSwitchLang' className={s.points}><span className={s.white_points}></span>Ru<span className={s.white_points}></span></p>
-                </div>
+                </div>*/
                 <div className={s.cont_point}>
                     <p id='hambSwithDark' className={s.points}><span className={s.white_points}></span><FaAdjust /><span className={s.white_points}></span></p>
                 </div>

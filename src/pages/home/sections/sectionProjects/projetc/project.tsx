@@ -46,10 +46,10 @@ const Propject = (props:any) => {
             <p className={s.sign_project}><span className={s.gold}>{props.title}</span>{props.text}</p>
             <div className={s.cont_techologi}>
                 <div className={s.techologi}><p className={s.text_techo}>React</p></div>
-                <div className={s.techologi}><p className={s.text_techo}>NodeJS</p></div>
-                <div className={s.techologi}><p className={s.text_techo}>Bootstrap </p></div>
-                <div className={s.techologi}><p className={s.text_techo}>React</p></div>
-                <div className={s.techologi}><p className={s.text_techo}>Css</p></div>
+                <div className={s.techologi}><p className={s.text_techo}>Redux</p></div>
+                <div className={s.techologi}><p className={s.text_techo}>Typescript</p></div>
+                <div className={s.techologi}><p className={s.text_techo}>ReduxTooolkit</p></div>
+                <div className={s.techologi}><p className={s.text_techo}>Sass</p></div>
             </div>  
         </div>
         </div>

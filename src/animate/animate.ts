@@ -1,6 +1,6 @@
 export const defaultStyleSection = {
     transition: `${1000}ms ease-in-out`,
-    transform: 'translateY(1000px)'
+    transform: 'translateY(2000px)'
 }
 
 export const defaultStyleSkillBar = {
