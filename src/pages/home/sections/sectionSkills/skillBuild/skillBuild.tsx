@@ -3,8 +3,8 @@ import s from '../sectionSkills.module.sass'
 import gulp from '../../../../../assets/img/gulp.png'
 import webpack from '../../../../../assets/img/webpack.png'
 import grunt from '../../../../../assets/img/grunt.png'
-
-
+import vim from '../../../../../assets/img/vim.png'
+import bash from '../../../../../assets/img/bash.png'
 
 import { Transition } from 'react-transition-group';
 import { useEffect, useState } from 'react';
@@ -36,6 +36,14 @@ const SkillBuild = (props:any) => {
                             <img className={s.technologi} src={grunt} alt=""/>
                         </div>
 
+                        <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.0s'},...trasitonX[state]}}  className={s.cont_techno}>
+                            <img className={s.technologi} src={vim} alt=""/>
+                        </div>
+
+
+                        <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.0s'},...trasitonX[state]}}  className={s.cont_techno}>
+                            <img className={s.technologi} src={bash} alt=""/>
+                        </div>
                     </div>
             </div>
         )}

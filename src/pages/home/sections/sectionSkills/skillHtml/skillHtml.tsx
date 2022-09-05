@@ -40,11 +40,6 @@ const SkillHtml = (props:any) => {
                     <div  style={{...defaultStyleSkillBar,...{'transitionDelay': '3.2s'},...trasitonX[state]}}  className={s.cont_techno}>
                         <img className={s.technologi} src={materialize} alt=""/>
                     </div>
-
-
-                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.4s'},...trasitonX[state]}}  className={s.cont_techno}>
-                        <img className={s.technologi} src={jade} alt=""/>
-                    </div>
                 </div>
         </div>
         )}

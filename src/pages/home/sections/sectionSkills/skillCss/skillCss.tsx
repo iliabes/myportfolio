@@ -26,22 +26,20 @@ const SkillCss = (props:any) => {
                         <img className={s.technologi} src={css} alt="" />
                     </div>
 
+                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3s'},...trasitonX[state]}} className={s.cont_techno}>
+                        <img className={s.technologi} src={sass} alt=""/>
+                    </div>
+
                     <div style={{...defaultStyleSkillBar,...{'transitionDelay': '2.8s'},...trasitonX[state]}}  className={s.cont_techno}>
                         <img className={s.technologi} src={bootstrap} alt=""/>
                     </div>
 
-                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3s'},...trasitonX[state]}} className={s.cont_techno}>
-                        <img className={s.technologi} src={sass} alt=""/>
-                    </div>
 
                     <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.2s'},...trasitonX[state]}}  className={s.cont_techno}>
                         <img className={s.technologi} src={materialize} alt=""/>
                     </div>
 
 
-                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.4s'},...trasitonX[state]}} className={s.cont_techno}>
-                        <img className={s.technologi} src={sass} alt=""/>
-                    </div>
                 </div>
         </div>
         )}

@@ -64,7 +64,7 @@ const SectionAbout = () => {
                             <div  className={s.block_text}>
                             <p id="element" className={s.text_header} >
                             <Typed
-                                strings={[`Helloy`,`I'm Ilya, I'm a  frontEnd developer`,`I'm Ilya, I'm a  front-end developer`]}
+                                strings={[`Привет`,` Я Илья я начинающий frontend-разроботчик.Здесь вы можеье посмотреть мои проекты `,`а также стек веб технологий которые я изучил и как связатся со мной`, ]}
                                 typeSpeed={20}
                                 />
                             </p>

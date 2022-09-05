@@ -12,9 +12,9 @@ import Title from '../../../../global/Title/Title';
 
 import { useAppSelector } from '../../../../hooks/store';
 
-import img1 from '../../../../assets/img/1.jpg'
-import img2 from '../../../../assets/img/2.jpg'
-import img3 from '../../../../assets/img/3.png'
+import img1 from '../../../../assets/img/weather.webp'
+import img2 from '../../../../assets/img/book3.webp'
+import img3 from '../../../../assets/img/cards.webp'
 
 
 import { defaultStyleSection, transitionY } from '../../../../animate/animate';
@@ -45,9 +45,9 @@ const SectionProjects = () => {
                 {/* <button onClick={()=>{test()}}>211231</button> */}
                 <section style={{...defaultStyleSection,...transitionY[state]}} className={s.section_projects}>
                     <Title visible={visible} title='Мои проекты'/>
-                    <Propject visible={visible} link='https://choosebooks.herokuapp.com/' title='Weather-forecast' left={true}  text=' - прилолжения для прогноза погоды , даныые берутся из открытыз api' image={img1} />
-                    <Propject visible={visible}  link='https://bejewelled-biscochitos-22bf1c.netlify.app/' title='Choose book' left={false}  text=' - прилолжения для выбора книг основанное на гайде Sfsignal' image={img2} />
-                    <Propject visible={visible} link='https://zippy-naiad-c0d8ef.netlify.app/' title='2 card' left={true}  text=' - карточная мини игра' image={img3} />
+                    <Propject visible={visible} link='https://bejewelled-biscochitos-22bf1c.netlify.app/ ' title='Weather-forecast' left={true}  text=' - прилолжения для прогноза погоды , даныые берутся из открытыз api' image={img1} />
+                    <Propject visible={visible}  link='https://choosebooks.herokuapp.com/' title='Choose book' left={false}  text=' - прилолжения для выбора книг основанное на гайде Sfsignal' image={img2} />
+                    <Propject visible={visible} link='https://zippy-naiad-c0d8ef.netlify.app/' title='Memory card' left={true}  text=' - карточная мини игра для развития памяти' image={img3} />
                 </section>
                 </>
             )}

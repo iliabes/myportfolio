@@ -29,7 +29,9 @@ const Propject = (props:any) => {
         <div   className={props.left ? classNames(s.projects_cont) : classNames(s.projects_cont, s.left)}>
         <div style={{...defStyleImg,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={s.cont_img}>
             <div className={s.hoverCurtain}>
-            <img className={s.img_portfolio} src={props.image} alt=""/>
+            <a href={props.link}>
+                <img className={s.img_portfolio} src={props.image} alt=""/>
+            </a>
             <div className={classNames(s.curtain, s.curtain_left)}>
 
             </div>

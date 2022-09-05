@@ -4,7 +4,8 @@ import javascript from '../../../../../assets/img/javascript.png'
 import react2 from '../../../../../assets/img/react2.png'
 import angular from '../../../../../assets/img/angular.png'
 import jquery from '../../../../../assets/img/jquery.png'
-
+import redux from '../../../../../assets/img/redux.png'
+import typescript from '../../../../../assets/img/typescript.png'
 
 import { Transition } from 'react-transition-group';
 import { useEffect, useState } from 'react';
@@ -33,17 +34,18 @@ const SkillJs = (props:any) => {
                         <img className={s.technologi} src={react2} alt=""/>
                     </div>
 
+                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.4s'},...trasitonX[state]}} className={s.cont_techno}>
+                        <img className={s.technologi} src={typescript} alt=""/>
+                    </div>
                     <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.0s'},...trasitonX[state]}}  className={s.cont_techno}>
-                        <img className={s.technologi} src={angular} alt=""/>
+                        <img className={s.technologi} src={redux} alt=""/>
                     </div>
 
                     <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.2s'},...trasitonX[state]}}  className={s.cont_techno}>
                         <img className={s.technologi} src={jquery} alt=""/>
                     </div>
 
-                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.4s'},...trasitonX[state]}} className={s.cont_techno}>
-                        <img className={s.technologi} src={angular} alt=""/>
-                    </div>
+
                 </div>
         </div>
         )}
