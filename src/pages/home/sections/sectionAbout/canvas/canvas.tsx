@@ -3,6 +3,21 @@ import s from './canvas.module.sass'
 import { useRef, useEffect } from 'react'
 
 
+
+
+interface drawCurveIterface {
+    startX: number,
+    startY: number,
+    controlX1:number,
+    controlY1:number,
+    controlX2 :number, 
+    controlY2 :Number,
+    endX:number,
+    endY:number,
+    alpha:number,
+    hue:number
+}
+
 const Canvas = () => {
     let ref = useRef(null)
     useEffect(()=>{
@@ -14,12 +29,13 @@ const Canvas = () => {
         }
 
         class WaveNoise {
+            wavesSet: number[]
         
             constructor() {
             this.wavesSet = [];
             }
         
-            addWaves(requiredWaves) {
+            addWaves(requiredWaves:number) {
             for(let i = 0 ; i < requiredWaves ; ++i) {
                 let randomAngle = Math.random() * 360; //generate random degree
                 this.wavesSet.push(randomAngle);
@@ -98,10 +114,10 @@ const Canvas = () => {
         }
 
         updateControls() {
-            this.controls.forEach( e => e.update() );
+            this.controls.forEach( (e:any) => e.update() );
         }
 
-        changeColor(colorNow){
+        changeColor(colorNow:string){
         switch(colorNow){
             case 'dark':
             this.ctx.fillStyle = this.colorLight;
@@ -115,7 +131,7 @@ const Canvas = () => {
         }
         
             // get current type placement for Curve start and for Curve end 
-        getYPlacementType(type, i) {  //type recorded in (this.type4Start, this.type4End) animation properties
+        getYPlacementType(type:number, i:number) {  //type recorded in (this.type4Start, this.type4End) animation properties
             if (type > .6) {
                         return this.size.h / config.curvesNum * i; 
             } else if (type > .4) {
@@ -127,6 +143,8 @@ const Canvas = () => {
             }
         }
 
+
+
         updateCurves() {
             let c = this.controls;
             let _controlX1 = c[0].getWave() * this.size.w; // general controls x1 for all curves
@@ -135,14 +153,14 @@ const Canvas = () => {
 
             for (let i = 0 ; i < config.curvesNum ; ++i) {
                 let _controlY2 = c[3 + i].getWave(); // personal control y2 for current curve
-                let curveParam = {
+                let curveParam:drawCurveIterface = {
                 startX     : 0,
                 startY     : this.size.h - (10 * i),
                 controlX1  : _controlX1, 
                 controlY1  : _controlY1, 
                 controlX2  : _controlX2, 
                 controlY2  : _controlY2 * this.size.h, 
-                endX       : this.size.w + 20, 
+                endX       : this.size.w + 20,      
                 endY       : 40,
                 alpha      : _controlY2,
                     hue        : 360 / config.curvesNum * i
@@ -151,7 +169,7 @@ const Canvas = () => {
             }
         }
 
-        drawCurve({startX, startY, controlX1, controlY1, controlX2, controlY2, endX, endY, alpha, hue}) {
+        drawCurve({startX, startY, controlX1, controlY1, controlX2, controlY2, endX, endY, alpha, hue}:drawCurveIterface) {
             this.ctx.lineWidth = 3;
             this.ctx.strokeStyle = `hsla(${hue}, 100%, 50%, ${alpha})`; 
             this.ctx.beginPath();

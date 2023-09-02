@@ -1,5 +1,4 @@
 import s from './Title.module.sass'
-import GenerateSvg from '../GenerateSvg/GenerateSvg'
 import { Transition } from 'react-transition-group';
 import { defaultStyleTitle ,trasitonX} from '../../animate/animate';
 

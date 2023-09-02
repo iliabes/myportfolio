@@ -24,9 +24,7 @@ useEffect(()=>{
 })
 
 
-function test(){
-    setVisible(!visible)
-}
+
 
     return(
         <Transition in={visible} timeout={10000}>

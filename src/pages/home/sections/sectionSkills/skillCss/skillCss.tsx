@@ -7,14 +7,13 @@ import materialize from '../../../../../assets/img/materialize.png'
 
 
 import { Transition } from 'react-transition-group';
-import { useEffect, useState } from 'react';
+
 import { defaultStyleField, trasitonX ,defaultStyleSkillBar} from '../../../../../animate/animate';
 import SkillBarTitle from '../components/skillBarTitle/skillBarTitle'
 import SkillBar from '../components/skillBar/skillBar'
 
 
 const SkillCss = (props:any) => {
-    let [visible, setVisible] = useState(true)
     return(
         <Transition in={props.visible} timeout={1000}>
         {state => (

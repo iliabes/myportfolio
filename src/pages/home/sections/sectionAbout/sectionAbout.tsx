@@ -3,11 +3,12 @@ import s from './sectionAbout.module.sass'
 // import Header from '../../../../global/Header/Header'
 import Canvas from './canvas/canvas'
 import { Transition } from 'react-transition-group';
-import { bounce } from 'react-animations';
 import portr from '../../../../assets/img/portret.webp'
 import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
 import Title from '../../../../global/Title/Title'
+import {transitionStyles} from '../../../../../src/animate/animate'
+
 
 
 const duration = 2000;
@@ -16,21 +17,7 @@ const defaultStyle = {
     transform: 'translateX(-1000px)'
 }
 
-const transitionStyles = {
-    entering: {transform: 'translateX(0)'},
-    entered:  {transform: 'translateX(0)'},
-    // exiting:  {transform: 'translateX(-500px)'},
-    // exited:  {transform: 'translateX(-1000px)'},
-};
 
-const defaultStyleTitle = {
-    transition: `${duration}ms ease-in-out`,
-    transform: 'translateY(-1000px)'
-}
-
-const transitionStylesTitle = {
-    entering: {transform: 'translateX(0)'},
-};
 
 
 
@@ -41,7 +28,7 @@ const SectionAbout = () => {
         setInProp(true)
     })
     function test(){
-        
+
         setInProp(!inProp)
     }
 

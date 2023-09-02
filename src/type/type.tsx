@@ -23,13 +23,6 @@ export interface ICurrent {
 
 
 
-interface IWetherDayly {
-    wether: number,
-    "id": number,
-    "title": string,
-    "completed": boolean
-}
-
 
 
 export interface IResponse{

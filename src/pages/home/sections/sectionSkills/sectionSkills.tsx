@@ -1,9 +1,8 @@
 
 import s from './sectionSkills.module.sass'
 import { Transition } from 'react-transition-group';
-import { bounce } from 'react-animations';
 import { useEffect, useState } from 'react';
-import Typed from 'react-typed';
+
 
 import Title from '../../../../global/Title/Title';
 
@@ -33,9 +32,6 @@ const SectionSckills = () => {
         }
     })
 
-    function test(){
-        setVisible(!visible)
-    }
 
 
     return(

@@ -1,9 +1,7 @@
 
 import s from './project.module.sass'
 import classNames from 'classnames';
-import img1 from '../../../../assets/img/1.png'
 import { Transition } from 'react-transition-group';
-import { useEffect, useState } from 'react';
 import {defaultStyleFieldRight,defaultStyleField, trasitonX} from '../../../../../animate/animate'
 
 

@@ -1,14 +1,14 @@
-import React  from 'react';
 import Home from './pages/home/home';
 import {Routes,Route,} from "react-router-dom";
 import './style/index.sass'
-import Footer from './global/Footer/Footer';
-import Header from './global/Header/Header';
-import { useAppSelector } from "./hooks/store"
-import ThemeProvider from './provider/themeProvider';
 
+let bla = {
+  bla1:1,
+  bla2:2
+}
 
 function App() {
+  console.log(bla)
   return (
     <div className='App' >
     <Routes>

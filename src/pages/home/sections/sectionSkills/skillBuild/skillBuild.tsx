@@ -7,7 +7,7 @@ import vim from '../../../../../assets/img/vim.png'
 import bash from '../../../../../assets/img/bash.png'
 
 import { Transition } from 'react-transition-group';
-import { useEffect, useState } from 'react';
+
 import { defaultStyleField, trasitonX, defaultStyleSkillBar } from '../../../../../animate/animate';
 
 import SkillBar from '../components/skillBar/skillBar';
@@ -15,7 +15,7 @@ import SkillBarTitle from '../components/skillBarTitle/skillBarTitle';
 
 
 const SkillBuild = (props:any) => {
-    let [visible, setVisible] = useState(true)
+
     return(
         <Transition in={props.visible} timeout={1000}>
             {state => (

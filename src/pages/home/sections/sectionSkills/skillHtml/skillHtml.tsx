@@ -7,8 +7,7 @@ import materialize from '../../../../../assets/img/materialize.png'
 import SkillBar from '../components/skillBar/skillBar'
 import SkillBarTitle from '../components/skillBarTitle/skillBarTitle'
 import { Transition } from 'react-transition-group';
-import { useEffect, useState } from 'react';
-import Typed from 'react-typed';
+
 
 import { defaultStyleField, trasitonX ,defaultStyleSkillBar} from '../../../../../animate/animate';
 

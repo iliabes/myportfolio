@@ -22,10 +22,9 @@ function Header () {
 
     useEffect(()=>{
         console.log('useEffect');
-        window.addEventListener('wheel', function(e) {
+        window.addEventListener('wheel', function() {
                 console.log(window.pageYOffset)
                 if( window.pageYOffset <= 100){ 
-                    
                     changeSlide(count)
                     count = 0
                 } 
@@ -120,8 +119,9 @@ function Header () {
         opacity:0
     }
 
+// -----------------------------------------!!!!!!!!!!!!!!!!!!!!!!!eror
 
-    const transitionStyles = {
+    const transitionStyles:any = {
         entered: {transform: 'translateX(0)',opacity:1 },
         exited:  { transform: 'translateX(-1800px)',opacity:0},
 }
