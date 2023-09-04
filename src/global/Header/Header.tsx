@@ -17,13 +17,46 @@ function Header () {
     
     let [visible,setVisible] = useState(false)
     let count = 0
+    let startY:number = 0 ;
+    let startX:number = 0 ;
     // let [theme, setTheme] = useState('light')
 
+    function comparisonValue(startY:number,endY:number,startX:number,endX:number):void{
+        if((startY < endY) || (startX > endX)){
+            console.log('+++++++',startY,endY)
+            if(count < 3){changeSlide(++count)}
+        }else if((startY > endY) || (startX < endX)){
+            console.log('-------',startY,endY)
+            if(count > 0){changeSlide(--count)}
+        }
+    }
+
+    useEffect(()=>{
+        
+
+        window.addEventListener('touchstart', (event:any) => {
+            console.log('Вы приложили палец к элементу')
+            console.log(event.touches[0].clientY)
+            startY = event.touches[0].clientY
+            startX = event.touches[0].clientX
+          })
+          window.addEventListener('touchend', (event:any) => {
+            console.log('Вы убрали палец к элементу')
+            console.log(event.changedTouches[0].clientY)
+            comparisonValue(startY,event.changedTouches[0].clientY,startX,event.changedTouches[0].clientX)
+            startY = 0
+            startX = 0
+          })
+        //   window.addEventListener('touchmove', (event:any) => {
+        //     console.log('Вы двигаете палец к элементу',event)
+        //     console.log(event.changedTouches)
+        //   })
+    })
 
     useEffect(()=>{
         console.log('useEffect');
         window.addEventListener('wheel', function() {
-                console.log(window.pageYOffset)
+                // console.log(window.pageYOffset)
                 if( window.pageYOffset <= 100){ 
                     changeSlide(count)
                     count = 0
@@ -55,7 +88,7 @@ function Header () {
         window.addEventListener('keydown', function(e) {
             console.log(count)
             if(e.key === 'ArrowRight' && count < 3){
-                count = count + 1
+                count++
                 changeSlide(count)
             }else if(e.key === 'ArrowLeft' && count > 0){
                 count = count - 1

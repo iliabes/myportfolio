@@ -18,7 +18,7 @@ initialState,
 reducers: {
     visibleProject(state, action: PayloadAction<boolean>) {
         state.visProj = action.payload;
-        console.log('proj',action.payload)
+        // console.log('proj',action.payload)
     },
     visibleSkills(state, action: PayloadAction<boolean>) {
         state.visSkills = action.payload;

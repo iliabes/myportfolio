@@ -1,5 +1,13 @@
 @import '../../style/variable.sass'
-    
+
+$anime-time: 8s
+$box-size: 200px
+$clip-distance: .05
+$clip-size: $box-size * (1 + $clip-distance * 2)
+$path-width: 2px
+$main-color: #69ca62
+$reds: red
+
 .top_menu
     position: absolute
     top: 0
@@ -17,7 +25,6 @@
         display: none
         svg
             padding: 0 20px
-        
 
     .logo,.burger
         font-size: 1.3rem
@@ -36,9 +43,7 @@
         // display: none
         color: #FFFFFF
 
-
-
-.btn 
+.btn
     box-sizing: border-box
     background-color: #3C253E
     border-radius: 0.6em
@@ -56,16 +61,44 @@
     color: #fff
     -webkit-transition: all 150ms ease-in-out
     transition: all 150ms ease-in-out
-    &:hover, &:focus 
+    animation: pad 2 linear 
+    &::before,&::after
+        // @extend %full-fill;
+        content: ''
+        color: white
+        z-index: -1
+        margin: -1 * $clip-distance * 100%
+        box-shadow: inset 0 0 0 $path-width
+        animation: clipMe $anime-time linear infinite
+    &::before
+        animation-delay: $anime-time * -.5
+    &:hover, &:focus
         color: #fff
         outline: 0
-        box-shadow: 0 0 10px 0 #e74c3c inset, 0 0 10px 4px #e74c3c   
+        box-shadow: 0 0 10px 0 #e74c3c inset, 0 0 10px 4px #e74c3c
     svg
         width: 21px
-        height: 21px    
+        height: 21px
         color: 1px solid #e74c3c
         fill: red
         // background-color: #1d1b1b
+
+@keyframes clipMe
+    0%, 100%
+        clip: rect(0px, $clip-size, $path-width, 0px)
+    25%
+        clip: rect(0px, $path-width, $clip-size, 0px)
+    50%
+        clip: rect($clip-size - $path-width, $clip-size, $clip-size, 0px)
+    75%
+        clip: rect(0px, $clip-size, $clip-size, $clip-size - $path-width)
+
+
+@keyframes pad
+    0%
+        padding: 1.2vh 1vw
+    100%
+        padding: 3.2vh 2vw
 
 .humb_menu
     top: 0
@@ -78,7 +111,6 @@
     height: 100vh
     background-color: #020202
     z-index: 999
-
 
     .top_line
         display: flex
@@ -122,7 +154,7 @@
                     color: #fff
             .cancel
                 height: 50px
-                width:  50px
+                width: 50px
                 // position: absolute
                 top: 0
                 left: 0
@@ -133,29 +165,26 @@
                     fill: gold
 
 @media (max-width: 769px)
-    .top_menu 
-        padding:  0
+    .top_menu
+        padding: 0
         .top_item
             display: none
         .humb_menu_icon
             // font-size: 1rem
             display: block
-
 
 @media (max-width: 480px)
-    .top_menu 
-        padding:  0
+    .top_menu
+        padding: 0
         .top_item
             display: none
         .humb_menu_icon
             // font-size: 1rem
             display: block
 
-
-
 @media (max-width: 320px)
-    .top_menu 
-        padding:  0
+    .top_menu
+        padding: 0
         .top_item
             display: none
         .humb_menu_icon
