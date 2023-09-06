@@ -14,7 +14,7 @@ import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/s
 
 function Header () {
     console.log('visible');
-    
+    let [btnred,setBtnRev] = useState(true)
     let [visible,setVisible] = useState(false)
     let count = 0
     let startY:number = 0 ;
@@ -166,7 +166,7 @@ function Header () {
         <button onClick={()=>{humbMenu()}} className={classNames(s.btn ,s.humb_menu_icon,s.cont_icon_bmenu)} id='buttonMenu' ><GenerateSvg id='dark'/></button>
         <div className={s.top_item}>
             <button onClick={()=>{humbMenuCancel();changeSlide(0)}} id='topAbout' className={s.btn}>About </button>
-            <button onClick={()=>{changeSlide(1);humbMenuCancel()}} id='topProjects' className={s.btn}>Projects</button>
+            <button onClick={()=>{changeSlide(1);humbMenuCancel()}} id='topProjects' className={btnred? classNames(s.btn,s.active) : s.btn}>Projects</button>
             <button onClick={()=>{changeSlide(2);humbMenuCancel()}} id='topSkils' className={s.btn}>Skils</button>
             <button onClick={()=>{changeSlide(3);humbMenuCancel()}} id='topContacts' className={s.btn}>Contacts</button>
             {/* <button id='topLang' className={s.btn}>Ru</button>} */}
