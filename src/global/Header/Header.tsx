@@ -8,6 +8,7 @@ import {ImCancelCircle} from 'react-icons/im'
 import { Transition } from 'react-transition-group';
 import { useState, useEffect } from 'react'
 import {CgDarkMode} from 'react-icons/cg';
+import Button from './Button/Button'
 
 import {useAppDispatch} from '../../hooks/store'
 import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
@@ -165,6 +166,7 @@ function Header () {
         <button  id='logo' className={classNames(s.btn,s.logo)}>Bes <GenerateSvg id='devil'/></button>
         <button onClick={()=>{humbMenu()}} className={classNames(s.btn ,s.humb_menu_icon,s.cont_icon_bmenu)} id='buttonMenu' ><GenerateSvg id='dark'/></button>
         <div className={s.top_item}>
+            <Button name="bla"/>
             <button onClick={()=>{humbMenuCancel();changeSlide(0)}} id='topAbout' className={s.btn}>About </button>
             <button onClick={()=>{changeSlide(1);humbMenuCancel()}} id='topProjects' className={btnred? classNames(s.btn,s.active) : s.btn}>Projects</button>
             <button onClick={()=>{changeSlide(2);humbMenuCancel()}} id='topSkils' className={s.btn}>Skils</button>
