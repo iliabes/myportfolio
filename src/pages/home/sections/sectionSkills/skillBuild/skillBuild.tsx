@@ -21,6 +21,7 @@ const SkillBuild = (props:any) => {
             {state => (
             <div style={{...defaultStyleField,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={s.set_skil}>
                     <SkillBarTitle title="BUILD"/>
+                    <p className={s.note}>Опыт работы с git,bash,vim,linux </p>
                     <SkillBar visible={props.visible} number={67}/>
                     <div  className={s.cont_technologis}>
                         <div style={{...defaultStyleSkillBar,...{'transitionDelay': '2.6s'},...trasitonX[state]}} className={s.cont_techno}>

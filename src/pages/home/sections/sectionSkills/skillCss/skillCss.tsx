@@ -19,6 +19,7 @@ const SkillCss = (props:any) => {
         {state => (
         <div style={{...defaultStyleField,...{'transitionDelay': '1.2s'},...trasitonX[state]}} className={s.set_skil}>
             <SkillBarTitle title="CSS"/>
+            <p className={s.note}>Умею Materialize,Foundation, LESS, SASS, jQuery,БЭМ, Bootstrap 3, </p>
                 <SkillBar visible={props.visible} number={70}/>
                 <div style={{...defaultStyleSkillBar,...{'transitionDelay': '2.6s'},...trasitonX[state]}} className={s.cont_technologis}>
                     <div className={s.cont_techno}>

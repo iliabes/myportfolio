@@ -50,7 +50,9 @@ const SkillJs = (props: any) => {
                 console.log('tran',tran)
                 return(
                 <div style={{ ...defaultStyleField, ...{ 'transitionDelay': '1.4s' }, ...trasitonX[state] }} className={s.set_skil}>
+                    
                     <SkillBarTitle title="JS" />
+                    <p className={s.note}>Уверенное знание js(ES 6),React,Typescript </p>
                     <SkillBar visible={props.visible} number={89} />
                     <div className={s.cont_technologis}>
 

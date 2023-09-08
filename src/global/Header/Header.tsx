@@ -8,11 +8,7 @@ import {ImCancelCircle} from 'react-icons/im'
 import { Transition } from 'react-transition-group';
 import { useState, useEffect } from 'react'
 import {CgDarkMode} from 'react-icons/cg';
-<<<<<<< HEAD
-=======
 import Button from './Button/Button'
-
->>>>>>> 72450a95f79b2ea137403b9205781ee8a88cfa1f
 import {useAppDispatch} from '../../hooks/store'
 import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
 
@@ -20,7 +16,7 @@ function Header () {
     console.log('visible');
     let [btnred,setBtnRev] = useState(true)
     let [visible,setVisible] = useState(false)
-    let count = 0
+    let count = 2
     let startY:number = 0 ;
     let startX:number = 0 ;
     // let [theme, setTheme] = useState('light')
@@ -57,34 +53,36 @@ function Header () {
         //   })
     })
 
-    useEffect(()=>{
-        console.log('useEffect');
-        window.addEventListener('wheel', function() {
-                // console.log(window.pageYOffset)
-                if( window.pageYOffset <= 100){ 
-                    changeSlide(count)
-                    count = 0
-                } 
-                if(window.pageYOffset >= 100 && window.pageYOffset <= 300){ 
+    // useEffect(()=>{
+    //     console.log('useEffect');
+    //     window.addEventListener('wheel', function() {
+    //             // console.log(window.pageYOffset)
+    //             if( window.pageYOffset <= 100){ 
+    //                 changeSlide(count)
+    //                 count = 0
+    //             } 
+    //             if(window.pageYOffset >= 100 && window.pageYOffset <= 300){ 
                     
-                    changeSlide(count)
-                    count = 1
-                } if(window.pageYOffset >= 300 && window.pageYOffset <= 500){
+    //                 changeSlide(count)
+    //                 count = 1
+    //             } if(window.pageYOffset >= 300 && window.pageYOffset <= 500){
                     
-                    changeSlide(count)
-                    count = 2
-                }
-                if(window.pageYOffset >= 500 && window.pageYOffset <= 800){
+    //                 changeSlide(count)
+    //                 count = 2
+    //             }
+    //             if(window.pageYOffset >= 500 && window.pageYOffset <= 800){
                     
-                    changeSlide(count)
-                    count = 3
+    //                 changeSlide(count)
+    //                 count = 3
                 
-                }
-        });
-    },[])
+    //             }
+    //     });
+    // },[])
 
     useEffect(()=>{
-
+        // -------------------------------------
+        changeSlide(1)
+        // -------------------------------------
         window.addEventListener('click',()=>{
             console.log(count)
         })
@@ -167,15 +165,15 @@ function Header () {
     return (
         <div id='topLine' className={s.top_menu}>
         <button  id='logo' className={classNames(s.btn,s.logo)}>Bes <GenerateSvg id='devil'/></button>
-        <button onClick={()=>{humbMenu()}} className={classNames(s.btn ,s.humb_menu_icon,s.cont_icon_bmenu)} id='buttonMenu' ><GenerateSvg id='dark'/></button>
+        {/* <button onClick={()=>{humbMenu()}} className={classNames(s.btn ,s.humb_menu_icon,s.cont_icon_bmenu)} id='buttonMenu' ><GenerateSvg id='dark'/></button> */}
         <div className={s.top_item}>
-            <Button name="bla"/>
+            {/* <Button name="bla"/> */}
             <button onClick={()=>{humbMenuCancel();changeSlide(0)}} id='topAbout' className={s.btn}>About </button>
             <button onClick={()=>{changeSlide(1);humbMenuCancel()}} id='topProjects' className={btnred? classNames(s.btn,s.active) : s.btn}>Projects</button>
             <button onClick={()=>{changeSlide(2);humbMenuCancel()}} id='topSkils' className={s.btn}>Skils</button>
             <button onClick={()=>{changeSlide(3);humbMenuCancel()}} id='topContacts' className={s.btn}>Contacts</button>
             {/* <button id='topLang' className={s.btn}>Ru</button>} */}
-            <button onClick={()=>{switchMode()}} id='darkMode' className={s.btn}><CgDarkMode/></button>
+            {/* <button onClick={()=>{switchMode()}} id='darkMode' className={s.btn}><CgDarkMode/></button> */}
         </div>
         
         <Transition in={visible} timeout={duration}>
@@ -201,9 +199,9 @@ function Header () {
                 /*<div className={s.cont_point}>
                     <p id='hambSwitchLang' className={s.points}><span className={s.white_points}></span>Ru<span className={s.white_points}></span></p>
                 </div>*/
-                <div className={s.cont_point}>
+                {/* <div className={s.cont_point}>
                     <p id='hambSwithDark' className={s.points}><span className={s.white_points}></span><FaAdjust /><span className={s.white_points}></span></p>
-                </div>
+                </div> */}
                 <div onClick={()=>{humbMenu()}} className={s.cont_point}>
                     <p className={s.points}><span className={s.white_points}></span><ImCancelCircle /><span className={s.white_points}></span></p>
                 </div>
