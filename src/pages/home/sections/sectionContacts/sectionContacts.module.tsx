@@ -11,6 +11,7 @@ import { useAppSelector } from '../../../../hooks/store';
 
 
 
+   
 
 
 const SectionContacts = () => {
@@ -35,8 +36,7 @@ useEffect(()=>{
                 <section style={{...defaultStyleSection,...transitionY[state]}}  className={s.contacts}>
                     <div  className={s.cont}>
            
-                     <Title visible={visible}  title='Contacts'/>
-                    
+                   
                     <Transition in={visible} timeout={1000}>
                         <p style={{...defaultStyleField,...{'transitiondelay': '1s'},...trasitonX[state]}} className={s.quet}>Have a question or want to work together?</p>
                     </Transition>
@@ -65,6 +65,8 @@ useEffect(()=>{
                         </div>
                     </Transition>
                 </div>
+                <p className={s.if}>Или</p>
+                <button className={s.downloadBtn}>Скачать резюме</button>
                 <Footer visible={visible}/>
 
             </section>

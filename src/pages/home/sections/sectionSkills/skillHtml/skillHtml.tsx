@@ -21,6 +21,7 @@ const SkillHtml = (props:any) => {
         {state => (
         <div style={{...defaultStyleField,...{'transitionDelay': '1s'},...trasitonX[state]}} className={s.set_skil}>
                 <SkillBarTitle title='HTML'/>
+                <p className={s.note}>Кросбаузерная валидная, семантическая, адаптивная верстка</p>
                 <SkillBar number={30} visible={props.visible}/>
                 <div className={s.cont_technologis}>
 

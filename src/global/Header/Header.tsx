@@ -8,7 +8,6 @@ import {ImCancelCircle} from 'react-icons/im'
 import { Transition } from 'react-transition-group';
 import { useState, useEffect } from 'react'
 import {CgDarkMode} from 'react-icons/cg';
-
 import {useAppDispatch} from '../../hooks/store'
 import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
 

@@ -52,7 +52,6 @@ const SkillJs = (props: any) => {
                 <div style={{ ...defaultStyleField, ...{ 'transitionDelay': '1.4s' }, ...trasitonX[state] }} className={s.set_skil}>
                     <SkillBarTitle title="JS" />
                     <SkillBar visible={props.visible} number={89} />
-
                     <div className={s.cont_technologis}>
 
                         <div style={{ ...defaultStyleSkillBar, ...{ 'transitionDelay': '2.6s' }, ...trasitonX[state] }} className={s.cont_techno}>

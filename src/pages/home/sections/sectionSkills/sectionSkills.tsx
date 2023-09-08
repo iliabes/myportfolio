@@ -39,8 +39,9 @@ const SectionSckills = () => {
             {state => (
             <>
                 {/* <button onClick={()=>{test()}}>211231</button> */}
+
                 <section  style={{...defaultStyleSection,...transitionY[state]}} className={s.scils}>
-                    <Title visible={visible} title='Skills'/>
+                   
                     <SkillHtml visible={visible}/>
                     <SkillCss visible={visible}/>
                     <SkillJs visible={visible}/>
@@ -53,3 +54,5 @@ const SectionSckills = () => {
 }
 
 export default  SectionSckills
+
+ // <Title visible={visible} title='Skills'/>

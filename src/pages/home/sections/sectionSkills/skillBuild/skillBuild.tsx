@@ -23,7 +23,6 @@ const SkillBuild = (props:any) => {
                     <SkillBarTitle title="BUILD"/>
                     <SkillBar visible={props.visible} number={67}/>
                     <div  className={s.cont_technologis}>
-
                         <div style={{...defaultStyleSkillBar,...{'transitionDelay': '2.6s'},...trasitonX[state]}} className={s.cont_techno}>
                             <img className={s.technologi} src={gulp} alt="" />
                         </div>
