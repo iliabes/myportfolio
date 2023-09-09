@@ -14,7 +14,10 @@ import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/s
 
 function Header () {
     console.log('visible');
-    let [btnred,setBtnRev] = useState(true)
+    let [btnAbout,setBtnAbout] = useState(false)
+    let [btnProject,setBtnProject] = useState(false)
+    let [btnContact,setBtnContact] = useState(false)
+    let [btnSkils,setBtnSkils] = useState(false)
     let [visible,setVisible] = useState(false)
     let count = 2
     let startY:number = 0 ;
@@ -81,7 +84,7 @@ function Header () {
 
     useEffect(()=>{
         // -------------------------------------
-        changeSlide(1)
+        changeSlide(0)
         // -------------------------------------
         window.addEventListener('click',()=>{
             console.log(count)
@@ -107,24 +110,28 @@ function Header () {
                 dispatch(visibleProject(false))
                 dispatch(visibleSkills(false))
                 dispatch(visibleContacts(false))
+                setBtnAbout(true);setBtnProject(false);setBtnContact(false);setBtnSkils(false);
                 break;
             case(1): 
                 count = 1
                 dispatch(visibleProject(true))
                 dispatch(visibleSkills(false))
                 dispatch(visibleContacts(false))
+                setBtnAbout(false);setBtnProject(true);setBtnContact(false);setBtnSkils(false);
                 break;
             case(2): 
                 count = 2
                 dispatch(visibleProject(true))
                 dispatch(visibleSkills(true))
                 dispatch(visibleContacts(false))
+                setBtnAbout(false);setBtnProject(false);setBtnContact(true);setBtnSkils(false);
                 break;
             case(3): 
                 count = 3
                 dispatch(visibleProject(true))
                 dispatch(visibleSkills(true))
                 dispatch(visibleContacts(true))
+                setBtnAbout(false);setBtnProject(false);setBtnContact(false);setBtnSkils(true);
                 break;
         }
     }
@@ -169,7 +176,7 @@ function Header () {
         <div className={s.top_item}>
             {/* <Button name="bla"/> */}
             <button onClick={()=>{humbMenuCancel();changeSlide(0)}} id='topAbout' className={s.btn}>About </button>
-            <button onClick={()=>{changeSlide(1);humbMenuCancel()}} id='topProjects' className={btnred? classNames(s.btn,s.active) : s.btn}>Projects</button>
+            <button onClick={()=>{changeSlide(1);humbMenuCancel()}} id='topProjects' className={btnProject? classNames(s.btn,s.active) : s.btn}>Projects</button>
             <button onClick={()=>{changeSlide(2);humbMenuCancel()}} id='topSkils' className={s.btn}>Skils</button>
             <button onClick={()=>{changeSlide(3);humbMenuCancel()}} id='topContacts' className={s.btn}>Contacts</button>
             {/* <button id='topLang' className={s.btn}>Ru</button>} */}

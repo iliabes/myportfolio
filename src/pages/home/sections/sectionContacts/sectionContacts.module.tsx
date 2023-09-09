@@ -38,7 +38,7 @@ useEffect(()=>{
            
                    
                     <Transition in={visible} timeout={1000}>
-                        <p style={{...defaultStyleField,...{'transitiondelay': '1s'},...trasitonX[state]}} className={s.quet}>Have a question or want to work together?</p>
+                        <p style={{...defaultStyleField,...{'transitiondelay': '1s'},...trasitonX[state]}} className={s.quet}>Можете отправить мне сообщение</p>
                     </Transition>
                     <Transition in={visible} timeout={1000}>
                         {state => (

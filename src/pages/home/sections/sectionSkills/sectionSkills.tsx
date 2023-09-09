@@ -1,4 +1,4 @@
-
+    
 import s from './sectionSkills.module.sass'
 import { Transition } from 'react-transition-group';
 import { useEffect, useState } from 'react';
