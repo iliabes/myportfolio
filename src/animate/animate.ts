@@ -9,15 +9,15 @@ export const defaultStyleSkillBar:any  = {
 }
 
 export  const defaultStyleField:any  = {
-    'transitionTimingFunction': `ease-in-out`,
+    'transitionTimingFunction': `ease-out`,
     'transitionDuration':'1200ms',
-    transform: 'translateX(2500px)',
+    transform: 'translateX(-700px)',
 }
 
 export  const defaultStyleFieldRight:any  = {
-  'transitionTimingFunction': `ease-in-out`,
+  'transitionTimingFunction': `ease-out`,
   'transitionDuration':'1200ms',
-  transform: 'translateX(-2500px)',
+  transform: 'translateX(700px)',
 }
 
 export  const defaultStyleSkillImg:any  = {
@@ -38,15 +38,21 @@ export  const defaultStyleTitle:any  = {
 export  const defaultStyleFooter:any  = {
   'transitionTimingFunction': `ease-in-out`,
   'transitionDuration':'1200ms',
-  transform: 'translateX(2500px)',
+  transform: 'translateX(-2500px)',
 }
 
 
 
 
 export const transitionStyles:any = {
-  entering: {transform: 'translateX(0)'},
-  entered:  {transform: 'translateX(0)'},
+  entering: {
+    width: '35vw',
+    height: '75vh'
+  },
+  entered:   {
+    width: '35vw',
+    height: '75vh'
+  },
 };
 
 

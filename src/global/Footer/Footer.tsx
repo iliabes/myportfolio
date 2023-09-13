@@ -14,11 +14,10 @@ function Footer(props:any) {
       <Transition  in={props.visible} timeout={1000}>
         {state => (
       <footer style={{...defaultStyleFooter,...{'transitionDelay': '2.2s'},...transitionY[state]}} className={s.footer}>
-       <a  id='buttonUp' className={s.buttonUp} href="#"></a>
         <div className={s.cont_icon}>
-            <div className={s.footer_icon}> <GenerateSvg id='vk'/></div>
-            <div className={s.footer_icon}> <BsGithub/></div>
-            <div className={s.footer_icon}> <FaTelegram/></div>
+          <a className={s.footer_icon} href=""><GenerateSvg id='#'/> </a>
+          <a className={s.footer_icon} href="https://github.com/IliaBes"><BsGithub/> </a>
+          <a className={s.footer_icon} href="https://t.me/@warpBes"> <FaTelegram/> </a>
         </div>
       </footer>
         )}

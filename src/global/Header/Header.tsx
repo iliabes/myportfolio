@@ -19,68 +19,86 @@ function Header () {
     let [btnContact,setBtnContact] = useState(false)
     let [btnSkils,setBtnSkils] = useState(false)
     let [visible,setVisible] = useState(false)
-    let count = 2
+    let count = 0
     let startY:number = 0 ;
     let startX:number = 0 ;
     // let [theme, setTheme] = useState('light')
 
-    function comparisonValue(startY:number,endY:number,startX:number,endX:number):void{
-        if((startY < endY) || (startX > endX)){
-            console.log('+++++++',startY,endY)
-            if(count < 3){changeSlide(++count)}
-        }else if((startY > endY) || (startX < endX)){
-            console.log('-------',startY,endY)
-            if(count > 0){changeSlide(--count)}
+
+    function choiceDeretion(startY:number,endY:number,startX:number,endX:number):[string,number]{
+        let num1:number;
+        let num2:number;
+        let direction:string ;
+        let res:number;
+
+        if(startX > endX){
+            num1 = startX - endX
+        }else{
+            num1 = endX - startX
         }
+        
+        if(startY > endY){
+            num2 = startY - endY
+        }else{
+            num2 = endY - startY
+        }
+
+        if(num1 > num2){
+            res = num1
+            direction = 'x'
+        }else{
+            res = num2
+            direction = 'y'
+        }
+        
+        return [res,direction]
+    }
+
+    function comparisonValue(startY:number,endY:number,startX:number,endX:number):void{
+        let direction = choiceDeretion(startY,endY,startX,endX)
+        if(direction[1] === 'x'){
+            if(startX < endX){
+                console.log('+++++++','x',startY,endY,count)
+                if(count < 3){changeSlide(++count)}
+            }else if(startX > endX){
+                console.log('+++++++','x',startY,endY)
+                if(count > 0){changeSlide(--count)}
+            }
+        }else{
+            if((startY > endY)){
+                console.log('+++++++','y',startY,endY)
+                if(count < 3){changeSlide(++count)}
+            }else if((startY < endY)){
+                console.log('-------','y',startY,endY)
+                if(count > 0){changeSlide(--count)}
+            }
+        }
+
+    }
+
+    function touchEnd(event:any){
+        console.log('Вы убрали палец к элементу')
+        console.log(event.changedTouches[0].clientY)
+        comparisonValue(startY,event.changedTouches[0].clientY,startX,event.changedTouches[0].clientX)
+        startY = 0
+        startX = 0
     }
 
     useEffect(()=>{
-        
-
+        switchMode()
         window.addEventListener('touchstart', (event:any) => {
             console.log('Вы приложили палец к элементу')
             console.log(event.touches[0].clientY)
             startY = event.touches[0].clientY
             startX = event.touches[0].clientX
-          })
-          window.addEventListener('touchend', (event:any) => {
-            console.log('Вы убрали палец к элементу')
-            console.log(event.changedTouches[0].clientY)
-            comparisonValue(startY,event.changedTouches[0].clientY,startX,event.changedTouches[0].clientX)
-            startY = 0
-            startX = 0
-          })
-        //   window.addEventListener('touchmove', (event:any) => {
-        //     console.log('Вы двигаете палец к элементу',event)
-        //     console.log(event.changedTouches)
-        //   })
-    })
+        });
+        window.addEventListener('touchend', touchEnd);
+        return ()=>{
+            window.removeEventListener('touchend',touchEnd)
+        };
+    },[])
 
-    // useEffect(()=>{
-    //     console.log('useEffect');
-    //     window.addEventListener('wheel', function() {
-    //             // console.log(window.pageYOffset)
-    //             if( window.pageYOffset <= 100){ 
-    //                 changeSlide(count)
-    //                 count = 0
-    //             } 
-    //             if(window.pageYOffset >= 100 && window.pageYOffset <= 300){ 
-                    
-    //                 changeSlide(count)
-    //                 count = 1
-    //             } if(window.pageYOffset >= 300 && window.pageYOffset <= 500){
-                    
-    //                 changeSlide(count)
-    //                 count = 2
-    //             }
-    //             if(window.pageYOffset >= 500 && window.pageYOffset <= 800){
-                    
-    //                 changeSlide(count)
-    //                 count = 3
-                
-    //             }
-    //     });
-    // },[])
+
 
     useEffect(()=>{
         // -------------------------------------
@@ -151,7 +169,8 @@ function Header () {
     }
 
     function switchMode(){
-        theme.switchTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
+        // theme.switchTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
+        theme.switchTheme(theme.theme = Theme.DARK)
     }
 
     const duration = 300;
@@ -174,8 +193,9 @@ function Header () {
         <button  id='logo' className={classNames(s.btn,s.logo)}>Bes <GenerateSvg id='devil'/></button>
         {/* <button onClick={()=>{humbMenu()}} className={classNames(s.btn ,s.humb_menu_icon,s.cont_icon_bmenu)} id='buttonMenu' ><GenerateSvg id='dark'/></button> */}
         <div className={s.top_item}>
-            {/* <Button name="bla"/> */}
-            <button onClick={()=>{humbMenuCancel();changeSlide(0)}} id='topAbout' className={s.btn}>About </button>
+            <Button section={'about'} name="About"/>
+            <Button section={'actAbout'} name="Projects"/>
+            {/* <button onClick={()=>{humbMenuCancel();changeSlide(0)}} id='topAbout' className={s.btn}>About </button> */}
             <button onClick={()=>{changeSlide(1);humbMenuCancel()}} id='topProjects' className={btnProject? classNames(s.btn,s.active) : s.btn}>Projects</button>
             <button onClick={()=>{changeSlide(2);humbMenuCancel()}} id='topSkils' className={s.btn}>Skils</button>
             <button onClick={()=>{changeSlide(3);humbMenuCancel()}} id='topContacts' className={s.btn}>Contacts</button>

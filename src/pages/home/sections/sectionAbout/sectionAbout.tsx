@@ -14,7 +14,9 @@ import {transitionStyles} from '../../../../../src/animate/animate'
 const duration = 2000;
 const defaultStyle = {
     transition: `${duration}ms ease-in-out`,
-    transform: 'translateX(-1000px)'
+    // transform: 'translateX(-1000px)'
+    width:'0px',
+    height: '0px'
 }
 
 

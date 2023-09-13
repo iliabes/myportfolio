@@ -3,7 +3,6 @@ import s from './sectionContacts.module.sass'
 import { Transition } from 'react-transition-group';
 import { useState ,useEffect} from 'react';
 import classNames from 'classnames';
-import Title from '../../../../global/Title/Title'
 import Footer from '../../../../global/Footer/Footer'
 import { defaultStyleSection , trasitonX, transitionY ,defaultStyleField} from '../../../../animate/animate';
 import { useAppSelector } from '../../../../hooks/store';
@@ -11,7 +10,7 @@ import { useAppSelector } from '../../../../hooks/store';
 
 
 
-   
+
 
 
 const SectionContacts = () => {
@@ -32,11 +31,10 @@ useEffect(()=>{
             
             {state => (
                 <>
-                {/* <button onClick={()=>{test()}}>+++</button> */}
+                
                 <section style={{...defaultStyleSection,...transitionY[state]}}  className={s.contacts}>
                     <div  className={s.cont}>
-           
-                   
+                    <div className={s.cont_bg}></div> 
                     <Transition in={visible} timeout={1000}>
                         <p style={{...defaultStyleField,...{'transitiondelay': '1s'},...trasitonX[state]}} className={s.quet}>Можете отправить мне сообщение</p>
                     </Transition>

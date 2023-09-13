@@ -1,9 +1,8 @@
 
 import s from './project.module.sass'
-import classNames from 'classnames';
 import { Transition } from 'react-transition-group';
 import {defaultStyleFieldRight,defaultStyleField, trasitonX} from '../../../../../animate/animate'
-
+import classNames from 'classnames';
 
 
 
@@ -42,8 +41,9 @@ const Propject = (props:any) => {
 
         </div>
 
-        <div style={{...defStyleSign,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={s.cont_sign}>
-            <p className={s.sign_project}><span className={s.gold}>{props.title}</span>{props.text}</p>
+        <div style={{...defStyleSign,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={props.directionRigth? s.cont_sign : classNames(s.cont_sign ,s.cont_sign_left )}>
+            <h2 className={s.gold}>{props.title}</h2>
+            <p className={s.sign_project}>{props.text}</p>
             <div className={s.cont_techologi}>
                 <div className={s.techologi}><p className={s.text_techo}>React</p></div>
                 <div className={s.techologi}><p className={s.text_techo}>Redux</p></div>
