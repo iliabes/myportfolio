@@ -187,43 +187,44 @@ function Header () {
             <button onClick={()=>{changeSlide(3)}} id='topContacts' className={btnContact? classNames(s.btn,s.active) : s.btn}>Contacts</button>
         </div>
         
-        <Transition in={visible} timeout={duration}>
-            { ()=> (
-            <div   id='humbMenu' className={s.humb_menu}>
-            
-            <div   className="top_line"><div className={s.logo}>Bes</div><div id='buttonCros' className="cont_icon_cross"><i  className="fa fa_times icon"></i></div></div>
-            
-            <div id="contHumb" className={s.cont_humb}>
-                
-                <div onClick={()=>{humbMenu(); changeSlide(0)}} className={s.cont_point}>
-                    <p  id='hambAbout' className={s.points}><span className={s.white_points}></span>About<span className={s.white_points}></span></p>
-                </div>
-                <div onClick={()=>{humbMenu(); changeSlide(1)}}  className={s.cont_point}>
-                    <p id='hambProjects' className={s.points}><span className={s.white_points}></span>Projects<span className={s.white_points}></span></p>
-                </div>
-                <div onClick={()=>{humbMenu(); changeSlide(2)}}  className={s.cont_point}>
-                    <p id='hambScills' className={s.points}><span className={s.white_points}></span>Scills<span className={s.white_points}></span></p>
-                </div>
-                <div onClick={()=>{humbMenu(); changeSlide(3)}}  className={s.cont_point}>
-                    <p id='hambContacts' className={s.points}><span className={s.white_points}></span>Contacts<span className={s.white_points}></span></p>
-                </div>
-                /*<div className={s.cont_point}>
-                    <p id='hambSwitchLang' className={s.points}><span className={s.white_points}></span>Ru<span className={s.white_points}></span></p>
-                </div>*/
-                <div onClick={()=>{humbMenu()}} className={s.cont_point}>
-                    <p className={s.points}><span className={s.white_points}></span><ImCancelCircle /><span className={s.white_points}></span></p>
-                </div>
 
-
-            </div>
-        </div>  
-        )}
-        </Transition>
     </div>
     )
 }
 
 
+
+        // <Transition in={visible} timeout={duration}>
+        //     { ()=> (
+        //     <div   id='humbMenu' className={s.humb_menu}>
+            
+        //     <div   className="top_line"><div className={s.logo}>Bes</div><div id='buttonCros' className="cont_icon_cross"><i  className="fa fa_times icon"></i></div></div>
+            
+        //     <div id="contHumb" className={s.cont_humb}>
+                
+        //         <div onClick={()=>{ changeSlide(0)}} className={s.cont_point}>
+        //             <p  id='hambAbout' className={s.points}><span className={s.white_points}></span>About<span className={s.white_points}></span></p>
+        //         </div>
+        //         <div onClick={()=>{ changeSlide(1)}}  className={s.cont_point}>
+        //             <p id='hambProjects' className={s.points}><span className={s.white_points}></span>Projects<span className={s.white_points}></span></p>
+        //         </div>
+        //         <div onClick={()=>{humbMenu(); changeSlide(2)}}  className={s.cont_point}>
+        //             <p id='hambScills' className={s.points}><span className={s.white_points}></span>Scills<span className={s.white_points}></span></p>
+        //         </div>
+        //         <div onClick={()=>{humbMenu(); changeSlide(3)}}  className={s.cont_point}>
+        //             <p id='hambContacts' className={s.points}><span className={s.white_points}></span>Contacts<span className={s.white_points}></span></p>
+        //         </div>
+        //         /*<div className={s.cont_point}>
+        //             <p id='hambSwitchLang' className={s.points}><span className={s.white_points}></span>Ru<span className={s.white_points}></span></p>
+        //         </div>*/
+        //         <div onClick={()=>{humbMenu()}} className={s.cont_point}>
+        //             <p className={s.points}><span className={s.white_points}></span><ImCancelCircle /><span className={s.white_points}></span></p>
+        //         </div>
+
+
+            {/* </div>
+        </div>  )}
+        </Transition> */}
 
 export default Header
 
