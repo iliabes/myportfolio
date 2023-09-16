@@ -3,18 +3,16 @@ import classNames from 'classnames'
 import useTheme from '../../hooks/themeHook'
 import { Theme } from '../../context/themeContext'
 import GenerateSvg from '../GenerateSvg/GenerateSvg'
-import { FaAdjust } from 'react-icons/fa';
+
 import {ImCancelCircle} from 'react-icons/im'
 import { Transition } from 'react-transition-group';
 import { useState, useEffect } from 'react'
-import {CgDarkMode} from 'react-icons/cg';
-import Button from './Button/Button'
 import {useAppDispatch} from '../../hooks/store'
 import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
 
 function Header () {
     console.log('visible');
-    let [btnAbout,setBtnAbout] = useState(false)
+    let [btnAbout,setBtnAbout] = useState(true)
     let [btnProject,setBtnProject] = useState(false)
     let [btnContact,setBtnContact] = useState(false)
     let [btnSkils,setBtnSkils] = useState(false)
@@ -51,12 +49,12 @@ function Header () {
             direction = 'y'
         }
         
-        return [res,direction]
+        return [direction,res ]
     }
 
     function comparisonValue(startY:number,endY:number,startX:number,endX:number):void{
         let direction = choiceDeretion(startY,endY,startX,endX)
-        if(direction[1] === 'x'){
+        if(direction[0] === 'x'){
             if(startX < endX){
                 console.log('+++++++','x',startY,endY,count)
                 if(count < 3){changeSlide(++count)}
@@ -121,35 +119,39 @@ function Header () {
     },[])
     
 
+    function visibleOff():void{
+        dispatch(visibleProject(false));dispatch(visibleSkills(false));dispatch(visibleContacts(false))
+        setBtnAbout(false);setBtnProject(false);setBtnContact(false);setBtnSkils(false);
+    }
+
     function changeSlide(num:number){
         switch(num){
             case(0): 
                 count = 0
-                dispatch(visibleProject(false))
-                dispatch(visibleSkills(false))
-                dispatch(visibleContacts(false))
-                setBtnAbout(true);setBtnProject(false);setBtnContact(false);setBtnSkils(false);
+                visibleOff()
+                setBtnAbout(true);
                 break;
             case(1): 
                 count = 1
+                visibleOff()
                 dispatch(visibleProject(true))
-                dispatch(visibleSkills(false))
-                dispatch(visibleContacts(false))
-                setBtnAbout(false);setBtnProject(true);setBtnContact(false);setBtnSkils(false);
+                setBtnProject(true)
                 break;
             case(2): 
                 count = 2
+                visibleOff()
                 dispatch(visibleProject(true))
                 dispatch(visibleSkills(true))
                 dispatch(visibleContacts(false))
-                setBtnAbout(false);setBtnProject(false);setBtnContact(true);setBtnSkils(false);
+                setBtnContact(true)
                 break;
             case(3): 
                 count = 3
+                visibleOff()
                 dispatch(visibleProject(true))
                 dispatch(visibleSkills(true))
                 dispatch(visibleContacts(true))
-                setBtnAbout(false);setBtnProject(false);setBtnContact(false);setBtnSkils(true);
+                setBtnSkils(true);
                 break;
         }
     }
@@ -163,10 +165,7 @@ function Header () {
         setVisible(!visible)
     }
 
-    function humbMenuCancel(){
-        console.log('cancel');
-        setVisible(false)
-    }
+
 
     function switchMode(){
         // theme.switchTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
@@ -175,37 +174,22 @@ function Header () {
 
     const duration = 300;
 
-    const defaultStyle = {
-        transform: 'translateX(-1500px)',
-        opacity:0
-    }
-
-// -----------------------------------------!!!!!!!!!!!!!!!!!!!!!!!eror
-
-    const transitionStyles:any = {
-        entered: {transform: 'translateX(0)',opacity:1 },
-        exited:  { transform: 'translateX(-1800px)',opacity:0},
-}
 
 
     return (
         <div id='topLine' className={s.top_menu}>
-        <button  id='logo' className={classNames(s.btn,s.logo)}>Bes <GenerateSvg id='devil'/></button>
-        {/* <button onClick={()=>{humbMenu()}} className={classNames(s.btn ,s.humb_menu_icon,s.cont_icon_bmenu)} id='buttonMenu' ><GenerateSvg id='dark'/></button> */}
+        <button onClick={()=>{changeSlide(0)}}   id='logo' className={classNames(s.btn,s.logo)}>Bes <GenerateSvg id='devil'/></button>
+    
         <div className={s.top_item}>
-            <Button section={'about'} name="About"/>
-            <Button section={'actAbout'} name="Projects"/>
-            {/* <button onClick={()=>{humbMenuCancel();changeSlide(0)}} id='topAbout' className={s.btn}>About </button> */}
-            <button onClick={()=>{changeSlide(1);humbMenuCancel()}} id='topProjects' className={btnProject? classNames(s.btn,s.active) : s.btn}>Projects</button>
-            <button onClick={()=>{changeSlide(2);humbMenuCancel()}} id='topSkils' className={s.btn}>Skils</button>
-            <button onClick={()=>{changeSlide(3);humbMenuCancel()}} id='topContacts' className={s.btn}>Contacts</button>
-            {/* <button id='topLang' className={s.btn}>Ru</button>} */}
-            {/* <button onClick={()=>{switchMode()}} id='darkMode' className={s.btn}><CgDarkMode/></button> */}
+            <button onClick={()=>{changeSlide(0)}} id='topAbout' className={btnAbout? classNames(s.btn,s.active) : s.btn}>About </button>
+            <button onClick={()=>{changeSlide(1)}} id='topProjects' className={btnProject? classNames(s.btn,s.active) : s.btn}>Projects</button>
+            <button onClick={()=>{changeSlide(2)}} id='topSkils' className={btnSkils? classNames(s.btn,s.active) : s.btn}>Skils</button>
+            <button onClick={()=>{changeSlide(3)}} id='topContacts' className={btnContact? classNames(s.btn,s.active) : s.btn}>Contacts</button>
         </div>
         
         <Transition in={visible} timeout={duration}>
-            {state => (
-            <div style={{...defaultStyle,...transitionStyles[state]}}  id='humbMenu' className={s.humb_menu}>
+            { ()=> (
+            <div   id='humbMenu' className={s.humb_menu}>
             
             <div   className="top_line"><div className={s.logo}>Bes</div><div id='buttonCros' className="cont_icon_cross"><i  className="fa fa_times icon"></i></div></div>
             
@@ -226,9 +210,6 @@ function Header () {
                 /*<div className={s.cont_point}>
                     <p id='hambSwitchLang' className={s.points}><span className={s.white_points}></span>Ru<span className={s.white_points}></span></p>
                 </div>*/
-                {/* <div className={s.cont_point}>
-                    <p id='hambSwithDark' className={s.points}><span className={s.white_points}></span><FaAdjust /><span className={s.white_points}></span></p>
-                </div> */}
                 <div onClick={()=>{humbMenu()}} className={s.cont_point}>
                     <p className={s.points}><span className={s.white_points}></span><ImCancelCircle /><span className={s.white_points}></span></p>
                 </div>

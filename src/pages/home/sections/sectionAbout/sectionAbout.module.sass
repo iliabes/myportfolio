@@ -29,12 +29,11 @@
             height: 70vh
             grid-area: curcleImg
             display: inline-block
-            animation: about-img-right 3s ease-in-out 
             overflow: hidden
             border: 8px solid #337AB7
             border-radius: 30% 70% 70% 30%/30% 30% 70% 70%
             box-shadow: 15px 15px 50px rgba(0,0,0,0.2)
-            animation: anim-ramka-1 5s infinite
+            animation: anim-ramka-1 8s infinite, logoAnim 8s forwards
             .img_aftar
                 border-radius: 1 0%
                 box-shadow: rgb(221, 45, 224) 0px 0px 0px 0.1vw
@@ -42,7 +41,6 @@
                 height: 100%
                 background-color: #fff
                 transition: 1s
-                // transform: translateX(-1700px)
                 &:hover 
                     cursor: pointer
                     animation: bounceOut .4s linear 
@@ -52,10 +50,17 @@
         width: 40vw
         .block_text
             width: 100%
+            .hr
+                width: 0
+                border: none
+                animation: hrAnim 3s linear 2s  forwards
+            .hr2
+                width: 0
+                animation: hrAnim 3s linear 4s forwards
             .text_header
-                line-height: 25px    
+                // line-height: 25px    
                 // letter-spacing: .4vh
-                font-size: 2rem
+                font-size: calc(14px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280))
                 color: var(--compponent-text-default)
                 // color: #fff
                 margin: 0
@@ -86,8 +91,8 @@
                 width: 100%
                 text-align: center
                 .text_header
-                    font-size: 40px
-                    line-height: 7vh
+                    // font-size: 40px
+                    // line-height: 7vh
 
 
 @media (max-width: 1024px)
@@ -106,8 +111,8 @@
                 width: 100%
                 text-align: center
                 .text_header
-                    font-size: 40px
-                    line-height: 7vh
+                    // font-size: 40px
+                    // line-height: 7vh
 
 
 
@@ -126,8 +131,8 @@
                 width: 100%
                 text-align: center
                 .text_header
-                    font-size: 40px
-                    line-height: 7vh
+                    // font-size: 40px
+                    // line-height: 7vh
 
 
 
@@ -145,8 +150,8 @@
                 margin-top: 9vh
                 text-align: center
                 .text_header
-                    font-size: 40px
-                    line-height: 7vh
+                    // font-size: 40px
+                    // line-height: 7vh
 
 
 
@@ -164,15 +169,15 @@
                 margin-top: 25px
                 text-align: center
                 .text_header
-                    font-size: 35px
-                    line-height: 7vh
+                    // font-size: 35px
+                    // line-height: 7vh
 
 
 @keyframes anim-ramka-1 
     0% 
         border-radius: 30% 70% 70% 30%/30% 30% 70% 70%
         box-shadow: 15px 15px 50px rgba(0,0,0,0.2)
-
+    
     25% 
         border-radius: 58% 42% 75% 25%/76% 46% 54% 24%
     
@@ -183,3 +188,26 @@
     75% 
         border-radius: 33% 67% 58% 42%/63% 68% 32% 37%
     
+
+
+
+@keyframes logoAnim
+    0% 
+        width: 0px,
+        height: 0px,
+        transform: translate(250px,250px)
+
+    
+    100%
+        width: 35vw,
+        height: 75vh,
+        transform: translate(0,0)
+
+
+@keyframes hrAnim
+    0% 
+        border: 1px solid red
+        width: 00%,
+    100%
+        border: 1px solid red
+        width: 100%

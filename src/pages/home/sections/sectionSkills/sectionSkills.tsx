@@ -4,7 +4,7 @@ import { Transition } from 'react-transition-group';
 import { useEffect, useState } from 'react';
 
 
-import Title from '../../../../global/Title/Title';
+
 
 
 import SkillCss from './skillCss/skillCss';

@@ -41,20 +41,20 @@ useEffect(()=>{
                     <Transition in={visible} timeout={1000}>
                         {state => (
                         <div style={{...defaultStyleField,...{'transitiondelay': '1.2s'},...trasitonX[state]}}   className={s.cont_input}>
-                            <input placeholder="Your name"  className={s.text_inp} type="text"/>
+                            <input placeholder="Ваше имя"  className={s.text_inp} type="text"/>
                         </div>
                         )}
                     </Transition>
 
                     <Transition in={visible} timeout={1000}>
                         <div style={{...defaultStyleField,...{'transitiondelay': '1.4s'},...trasitonX[state]}}   className={s.cont_input}>
-                            <input placeholder="Your emeil"  className={s.text_inp} type="text"/>
+                            <input placeholder="Ваша emeil"  className={s.text_inp} type="text"/>
                         </div>
                     </Transition>
                     
                     <Transition in={visible} timeout={1000}>
                         <div style={{...defaultStyleField,...{'transitiondelay': '1.6s'},...trasitonX[state]}}  className={s.cont_input}>
-                            <input placeholder="Your message"  className={classNames(s.text_inp ,  s.area)} type="text"/>
+                            <input placeholder="Ваша сообщение"  className={classNames(s.text_inp ,  s.area)} type="text"/>
                         </div>
                     </Transition>
                     <Transition in={visible} timeout={1000}>

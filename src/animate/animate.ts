@@ -47,11 +47,14 @@ export  const defaultStyleFooter:any  = {
 export const transitionStyles:any = {
   entering: {
     width: '35vw',
-    height: '75vh'
+    height: '75vh',
+    transform: 'translate(0%,0%)'
+
   },
   entered:   {
     width: '35vw',
-    height: '75vh'
+    height: '75vh',
+    transform: 'translate(0%,0%)'
   },
 };
 
@@ -65,6 +68,4 @@ export const trasitonX:any  = {
 export  const transitionY:any  = {
     entering: { transform: 'translateY(0)' },
     entered:  { transform: 'translateY(0)' },
-
 };
-  

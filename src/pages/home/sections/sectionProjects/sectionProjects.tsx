@@ -4,7 +4,7 @@ import s from './sectionProjects.module.sass'
 import { Transition } from 'react-transition-group';
 import { useEffect, useState } from 'react';
 import Propject from './projetc/project';
-import Title from '../../../../global/Title/Title';
+
 import { useAppSelector } from '../../../../hooks/store';
 import img1 from '../../../../assets/img/weather.webp'
 import img2 from '../../../../assets/img/book3.webp'
@@ -38,7 +38,7 @@ const SectionProjects = () => {
                 <>
                 {/* <button onClick={()=>{test()}}>211231</button> */}
                 <section style={{...defaultStyleSection,...transitionY[state]}} className={s.section_projects}>
-                    <Propject directionRigth={true} visible={visible} link='https://bejewelled-biscochitos-22bf1c.netlify.app/ ' title='Weather-forecast' left={true}  text='прилолжения для прогноза погоды , даныые берутся из открытыз api' image={img1} />
+                    <Propject directionRigth={true} visible={visible} link='https://bejewelled-biscochitos-22bf1c.netlify.app/ ' title='Weather-forecast' left={true}  text='Наш сайт погоды предоставляет вам актуальную информацию о погодных условиях в екатеринбурге,на нем вы можете  получить доступ к прогнозам температуры, осадкам, ветру и другим метеорологическим данным  , даныые берутся из OpenWeatherMap' image={img1} />
                     <Propject directionRigth={false} visible={visible} link='https://choosebooks.herokuapp.com/' title='Choose book' left={false}  text='прилолжения для выбора книг основанное на гайде Sfsignal' image={img2} />
                     <Propject directionRigth={true} visible={visible} link='https://zippy-naiad-c0d8ef.netlify.app/' title='Memory card' left={true}  text='dкарточная мини игра для развития памяти' image={img3} />
                 </section>
