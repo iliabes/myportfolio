@@ -4,8 +4,7 @@ import useTheme from '../../hooks/themeHook'
 import { Theme } from '../../context/themeContext'
 import GenerateSvg from '../GenerateSvg/GenerateSvg'
 
-import {ImCancelCircle} from 'react-icons/im'
-import { Transition } from 'react-transition-group';
+
 import { useState, useEffect } from 'react'
 import {useAppDispatch} from '../../hooks/store'
 import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
@@ -16,7 +15,6 @@ function Header () {
     let [btnProject,setBtnProject] = useState(false)
     let [btnContact,setBtnContact] = useState(false)
     let [btnSkils,setBtnSkils] = useState(false)
-    let [visible,setVisible] = useState(false)
     let count = 0
     let startY:number = 0 ;
     let startX:number = 0 ;
@@ -161,9 +159,7 @@ function Header () {
     const theme = useTheme()
     
 
-    function humbMenu(){
-        setVisible(!visible)
-    }
+
 
 
 
@@ -172,7 +168,7 @@ function Header () {
         theme.switchTheme(theme.theme = Theme.DARK)
     }
 
-    const duration = 300;
+    // const duration = 300;
 
 
 
@@ -193,38 +189,6 @@ function Header () {
 }
 
 
-
-        // <Transition in={visible} timeout={duration}>
-        //     { ()=> (
-        //     <div   id='humbMenu' className={s.humb_menu}>
-            
-        //     <div   className="top_line"><div className={s.logo}>Bes</div><div id='buttonCros' className="cont_icon_cross"><i  className="fa fa_times icon"></i></div></div>
-            
-        //     <div id="contHumb" className={s.cont_humb}>
-                
-        //         <div onClick={()=>{ changeSlide(0)}} className={s.cont_point}>
-        //             <p  id='hambAbout' className={s.points}><span className={s.white_points}></span>About<span className={s.white_points}></span></p>
-        //         </div>
-        //         <div onClick={()=>{ changeSlide(1)}}  className={s.cont_point}>
-        //             <p id='hambProjects' className={s.points}><span className={s.white_points}></span>Projects<span className={s.white_points}></span></p>
-        //         </div>
-        //         <div onClick={()=>{humbMenu(); changeSlide(2)}}  className={s.cont_point}>
-        //             <p id='hambScills' className={s.points}><span className={s.white_points}></span>Scills<span className={s.white_points}></span></p>
-        //         </div>
-        //         <div onClick={()=>{humbMenu(); changeSlide(3)}}  className={s.cont_point}>
-        //             <p id='hambContacts' className={s.points}><span className={s.white_points}></span>Contacts<span className={s.white_points}></span></p>
-        //         </div>
-        //         /*<div className={s.cont_point}>
-        //             <p id='hambSwitchLang' className={s.points}><span className={s.white_points}></span>Ru<span className={s.white_points}></span></p>
-        //         </div>*/
-        //         <div onClick={()=>{humbMenu()}} className={s.cont_point}>
-        //             <p className={s.points}><span className={s.white_points}></span><ImCancelCircle /><span className={s.white_points}></span></p>
-        //         </div>
-
-
-            {/* </div>
-        </div>  )}
-        </Transition> */}
 
 export default Header
 
