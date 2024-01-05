@@ -10,47 +10,18 @@ import { Transition } from 'react-transition-group';
 import { defaultStyleField,trasitonX, defaultStyleSkillBar } from '../../../../../animate/animate';
 import SkillBar from '../components/skillBar/skillBar'
 import SkillBarTitle from '../components/skillBarTitle/skillBarTitle'
-// trasitonX
-
-// interface ITransitionX {
-//     entering: Ientering,
-//     entered: Ientered,
-//     exiting?: Iexiting,
-//     exited?: Iexited
-// }
-
-// interface Ientering{
-//     transform:string
-// }
-// interface Ientered{
-//     transform:string
-// }
-// interface Iexiting{
-//     transform:string
-// }
-// interface Iexited{
-//     transform:string
-// }
-
-
-
-// export const trasitonX: any = {
-//     entering: { transform: 'translateX(0)' },
-//     entered: { transform: 'translateX(0)' },
-// };
 
 
 
 const SkillJs = (props: any) => {
 
     return (
-        <Transition in={props.visible} timeout={1000}>
+        <Transition in={props.visible} timeout={700}>
             {function (state: string){
-                let tran = trasitonX[state]
-                console.log('tran',tran)
+
+
                 return(
                 <div style={{ ...defaultStyleField, ...{ 'transitionDelay': '1.4s' }, ...trasitonX[state] }} className={s.set_skil}>
-                    
                     <SkillBarTitle title="JS" />
                     <p className={s.note}>Уверенное знание js(ES 6),React,Typescript </p>
                     <SkillBar visible={props.visible} number={89} />

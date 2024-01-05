@@ -1,46 +1,38 @@
 
 import s from './sectionProjects.module.sass'
-
 import { Transition } from 'react-transition-group';
 import { useEffect, useState } from 'react';
 import Propject from './projetc/project';
-
 import { useAppSelector } from '../../../../hooks/store';
-import img1 from '../../../../assets/img/weather.webp'
-import img2 from '../../../../assets/img/book3.webp'
-import img3 from '../../../../assets/img/cards.webp'
-
-
+import img1 from '../../../../assets/img/weather.jpg'
+import img2 from '../../../../assets/img/appBook.jpg'
+import img3 from '../../../../assets/img/waha.jpg'
+import food from '../../../../assets/img/food.png'
+import neuro from '../../../../assets/img/neuro.png'
 import { defaultStyleSection, transitionY } from '../../../../animate/animate';
 
 
 const SectionProjects = () => {
     let sectionState = useAppSelector(state => (state.counterSlice.visProj))
     let [visible , setVisible] = useState(useAppSelector(state => (state.counterSlice.visProj)))
+
     useEffect(()=>{
         if (sectionState != visible){
             setVisible(sectionState)
         }
     })
-    
-    // let [visible , setVisible] = useState(true)
-    // function test(){
-    //     setVisible(!visible)
-    // }
-    
-
-    
 
     return(
-        <Transition in={visible} timeout={1000}>
+        <Transition in={visible} timeout={700}>
             
             {state => (
                 <>
-                {/* <button onClick={()=>{test()}}>211231</button> */}
                 <section style={{...defaultStyleSection,...transitionY[state]}} className={s.section_projects}>
-                    <Propject directionRigth={true} visible={visible} link='https://bejewelled-biscochitos-22bf1c.netlify.app/ ' title='Weather-forecast' left={true}  text='Наш сайт погоды предоставляет вам актуальную информацию о погодных условиях в екатеринбурге,на нем вы можете  получить доступ к прогнозам температуры, осадкам, ветру и другим метеорологическим данным  , даныые берутся из OpenWeatherMap' image={img1} />
-                    <Propject directionRigth={false} visible={visible} link='https://choosebooks.herokuapp.com/' title='Choose book' left={false}  text='прилолжения для выбора книг основанное на гайде Sfsignal' image={img2} />
-                    <Propject directionRigth={true} visible={visible} link='https://zippy-naiad-c0d8ef.netlify.app/' title='Memory card' left={true}  text='dкарточная мини игра для развития памяти' image={img3} />
+                    <Propject directionRigth={true} visible={visible} link='https://admirable-madeleine-faeb93.netlify.app/' title='Delicious day recipes' left={true}  text='Приложение Delicious day recipes показывает рецепты различных блюд и напитков. Все рецепты сгруппированы по категориям по которым их легко найти. Сайт сделан с использованием Vue и Vite. Данные и изображения берутся из Edamam API и TheMealDB API. Также для ускорения верстки был использован TailwInd.' image={food} />
+                    <Propject directionRigth={false} visible={visible} link='http://79.132.140.191:3001/' title='Grand Park' left={false}  text='Лендинг жилищного комплекса Grand Park. Макет сайта был создан при помощи нейросети Midjourney, для верстки использовался препроцессор SASS, в качестве сборщика использован Vite' image={neuro} />
+                    <Propject directionRigth={true} visible={visible} link='https://bejewelled-biscochitos-22bf1c.netlify.app/ ' title='Weather-forecast' left={true}  text='Сайт погоды предоставляет вам актуальную информацию о погодных условиях в екатеринбурге,на нем вы можете  получить доступ к прогнозам температуры, осадкам, ветру и другим метеорологическим данным  , даныые берутся из OpenWeatherMap' image={img1} />
+                    <Propject directionRigth={false} visible={visible} link='https://choosebooks.herokuapp.com/' title='Choose book' left={false}  text='Прилолжения для выбора книг основанное на гайде Sfsignal, на этом сайте вы найдете разнообразные категории книг, начиная от классической литературы и заканчивая современными бестселлерами. ' image={img2} />
+                    <Propject directionRigth={true} visible={visible} link='https://zippy-naiad-c0d8ef.netlify.app/' title='Memory card' left={true}  text='Карточная мини игра для развития памяти в стиле Warhammer 40000.Цель игры проста - вы должны открыть две карты одновременно и найти пару изображений, которые совпадают.' image={img3} />
                 </section>
                 </>
             )}
@@ -54,10 +46,6 @@ const SectionProjects = () => {
 
 
 
-
-
-
-
-
+// Лендинг жилищного коплекса Grand Park .Макет сайта был создан при помощи нейросети Midjourney, для верстки использовался препроцессор SASS ,в качестве сборщика использван Vite
 
 export default  SectionProjects

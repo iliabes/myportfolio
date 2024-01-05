@@ -1,9 +1,12 @@
+
+$width: 35vw
+$height: 60vh
+    
 .section_about
     box-sizing: border-box
     z-index: 1
     height: 100vh
     width: 100vw
-    // background-color: #40a994
     border-bottom: 1px solid #000
     padding: 0 3%
     display: flex
@@ -17,16 +20,14 @@
     color: var(--compponent-text-default)
     padding-top: 135px
     .cont_header
-        // margin-top: 5%
         z-index: 0
         display: flex
         flex-direction: row
         justify-content: center
         justify-content: space-between
-        width: 90%
         .cont_curcle_img
-            width: 35vw
-            height: 70vh
+            width: $width
+            height: $height
             grid-area: curcleImg
             display: inline-block
             overflow: hidden
@@ -34,37 +35,38 @@
             border-radius: 30% 70% 70% 30%/30% 30% 70% 70%
             box-shadow: 15px 15px 50px rgba(0,0,0,0.2)
             animation: anim-ramka-1 8s infinite, logoAnim 8s forwards
-            .img_aftar
-                border-radius: 1 0%
-                box-shadow: rgb(221, 45, 224) 0px 0px 0px 0.1vw
-                width: 100%
-                height: 100%
-                background-color: #fff
-                transition: 1s
-                &:hover 
-                    cursor: pointer
-                    animation: bounceOut .4s linear 
-                    
+            
+            .picture
+                .img_aftar
+                    border-radius: 1 0%
+                    box-shadow: rgb(221, 45, 224) 0px 0px 0px 0.1vw
+                    width: 100%
+                    height: 100%
+                    background-color: #fff
+                    transition: 1s
+                    &:hover 
+                        cursor: pointer
+                        animation: bounceOut .4s linear 
     .cont_text
         margin-left: 1vw
         width: 40vw
         .block_text
+           
             width: 100%
             .hr
                 width: 0
                 border: none
-                animation: hrAnim 3s linear 2s  forwards
+                animation: hrAnim 3s linear 1s  forwards
             .hr2
                 width: 0
-                animation: hrAnim 3s linear 4s forwards
+                border: none
+                animation: hrAnim 3s linear 5s forwards
             .text_header
-                // line-height: 25px    
-                // letter-spacing: .4vh
-                font-size: calc(14px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280))
+                // height: 20vh
+                font-size: calc(14px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280))
                 color: var(--compponent-text-default)
-                // color: #fff
                 margin: 0
-                height: 100%
+                // height: 100%
                 &:hover .name
                     text-shadow: 2px 3px 8px gold, 0 0 1px gold
                 .name
@@ -82,13 +84,13 @@
         .cont_header
             align-items: center
             .cont_curcle_img
+                animation: anim-ramka-1 8s infinite
                 margin-top: 4vh
-                width: 60vw
-                height: 40vh
+                width: 55vw
+                height: 65vh
             .cont_text
-                margin-left: 1vw
+
                 margin-top: 7vh
-                width: 100%
                 text-align: center
                 .text_header
                     // font-size: 40px
@@ -97,19 +99,21 @@
 
 @media (max-width: 1024px)
     .section_about
+       
         justify-content: center
         padding-top: 60px
         .cont_header
+            z-index: 1
             align-items: center
             .cont_curcle_img
                 margin-top: 4vh
-                width: 60vw
-                height: 40vh
+                width: 55vw
+                height: 65vh
             .cont_text
-                margin-left: 1vw
+                // margin-left: 1vw
                 margin-top: 7vh
-                width: 100%
-                text-align: center
+                // width: 100%
+                text-align: end
                 .text_header
                     // font-size: 40px
                     // line-height: 7vh
@@ -118,16 +122,21 @@
 
 @media (max-width: 769px)
     .section_about
+        z-index: 1
         padding-top: 60px
+        display: block
         .cont_header
-            flex-direction: column
+            flex-direction: row
             align-items: center
+            justify-content: space-around
             .cont_curcle_img
-                margin-top: 4vh
-                width: 45vw
-                height: 50vw
+                z-index: 1
+                margin-top: 13vh
+                width: 110vw
+                height: 100vw
             .cont_text
-                margin-top: 7vh
+                z-index: 1
+                margin-top: 3vh
                 width: 100%
                 text-align: center
                 .text_header
@@ -138,20 +147,26 @@
 
 @media (max-width: 480px)
     .section_about
+        
         padding-top: 60px
+        display: block
         .cont_header
-            flex-direction: column
+            z-index: 1
+            height: 100%
+            flex-direction: row
+            justify-content: center
             align-items: center
             .cont_curcle_img
-                width: 55vw
-                height: 60vw
+                margin-top: 4vh
+                width: 85vw 
+                height: 105vw 
             .cont_text
                 width: 100%
-                margin-top: 9vh
-                text-align: center
+                margin-top: 0vh
+                text-align: end
+                justify-content: start
                 .text_header
-                    // font-size: 40px
-                    // line-height: 7vh
+                    font-size: 12px
 
 
 
@@ -159,6 +174,7 @@
     .section_about
         padding-top: 60px
         .cont_header
+            z-index: 1
             flex-direction: column
             align-items: center
             .cont_curcle_img
@@ -195,19 +211,19 @@
     0% 
         width: 0px,
         height: 0px,
-        transform: translate(250px,250px)
+        transform: translate(-250px,250px)
 
     
     100%
-        width: 35vw,
-        height: 75vh,
+        // width: 100%,
+        // height: 100%,
         transform: translate(0,0)
 
 
 @keyframes hrAnim
     0% 
         border: 1px solid red
-        width: 00%,
+        width: 0%,
     100%
         border: 1px solid red
         width: 100%

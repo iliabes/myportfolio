@@ -14,37 +14,52 @@ $reds: red
     width: 100vw
     height: 8vh
     z-index: 10
-    // background-color: #131313
     background: var(--compponent-header-default)
     display: flex
-    justify-content: space-between
+    justify-content: flex-end
     padding: 0 8%
     box-sizing: border-box
     align-items: center
     border-bottom: 5px solid
     border-image: linear-gradient(10deg ,red,blue,white,green,pink,yellow,brown,red) 1
     animation: 6s bdr ease-out infinite
-    .humb_menu_icon
-        display: none
-        svg
-            padding: 0 20px
-
-    .logo,.burger
-        font-size: 1.3rem
-        color: white
-        background-color: none
-        svg
-            // display: none
-            width: 21px
-            height: 5%
-            background-color: #e4dede
-            border-radius: 5px
-            margin-left: 3px
     .top_item
         font-size: 16px
         display: flex
-        // display: none
         color: #FFFFFF
+        display: flex
+        align-items: center
+        justify-content: right
+        width: 100%
+    .arrow
+        width: 4vh
+        height: 4vh
+        border-radius: 10px
+        background-color: #fff
+        opacity: .2
+        position: absolute
+        transition: 1s
+        top: 90vh
+        &:hover
+            opacity: 1
+    .arrow_left
+        left: 1vh
+        &::before
+            content: '⇠'
+            color: red
+            font-size: 2rem
+            position: absolute
+            right: 15%
+
+    .arrow_right
+        right: 1vh
+        &::before
+            content: '⇢'
+            color: red
+            font-size: 2rem
+            position: absolute
+            left: 15%
+
 
 .btn
     box-sizing: border-box
@@ -53,17 +68,19 @@ $reds: red
     cursor: pointer
     display: flex
     line-height: 1
-    margin: 1%
     padding: 1.2vh 1vw
+    padding-left: 14px
     text-decoration: none
     text-align: start
     text-transform: uppercase
     font-family: 'Montserrat', sans-serif
     font-weight: 700
+    text-align: center
     border-color: #e74c3c
     color: #fff
     -webkit-transition: all 150ms ease-in-out
     transition: all 150ms ease-in-out
+    
 
     &::before,&::after
         // @extend %full-fill;
@@ -175,29 +192,46 @@ $reds: red
                     font-size: 20px
                     fill: gold
 
+
+
+@media (max-width: 1024px)
+    .top_menu
+        padding: 0
+        .top_item
+            justify-content: center
+            .btn
+                
+                padding: 1.2vh 1vw
+                padding-left: 14px
+                font-size: 1.4rem
+
 @media (max-width: 769px)
     .top_menu
         padding: 0
         .top_item
-            // display: none
-        .humb_menu_icon
-            // font-size: 1rem
-            display: block
+            justify-content: center
+            .btn
+                padding: 1.2vh 1vw
+                padding-left: 14px
+                font-size: 1.2rem
+
 
 @media (max-width: 480px)
     .top_menu
         padding: 0
         .top_item
-            // display: none
-        .humb_menu_icon
-            // font-size: 1rem
-            display: block
+            justify-content: center
+            .btn
+                padding: 1vh 1vw
+                padding-left: 14px
+                font-size: .9rem
 
 @media (max-width: 320px)
     .top_menu
         padding: 0
         .top_item
-            // display: none
-        .humb_menu_icon
-            // font-size: 1rem
-            display: block
+            justify-content: center
+            .btn
+                padding: 1vh .7vw
+                padding-left: 14px
+                font-size: .7rem

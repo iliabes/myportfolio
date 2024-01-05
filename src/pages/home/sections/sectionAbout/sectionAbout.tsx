@@ -1,9 +1,8 @@
 
 import s from './sectionAbout.module.sass'
-// import Header from '../../../../global/Header/Header'
 import Canvas from './canvas/canvas'
 import { Transition } from 'react-transition-group';
-import portr from '../../../../assets/img/port.png'
+import portr from '../../../../assets/img/mozport.jpg'
 import { useEffect, useState } from 'react';
 import Typed from 'react-typed';
 
@@ -34,18 +33,18 @@ const SectionAbout = () => {
                 <Canvas/>
                 {/* <Title visible={true} title='About me'/> */}
                 <div  className={s.cont_header}>
-
-                            <div className={s.cont_curcle_img}>
-                                <img   className={s.img_aftar} src={portr}/>
+                            <div id='citcle_img' className={s.cont_curcle_img}>
+                                <picture className={s.picture}>
+                                    <source type='image/webp' media="(min-width:650px)" srcSet={portr}></source>
+                                    <img alt="portret"  className={s.img_aftar} src={portr}/>
+                                </picture>
                             </div>
-
-
                     <div  className={s.cont_text}>
                             <div  className={s.block_text}>
-                            <p id="element" className={s.text_header} >
+                            <p  className={s.text_header} >
                             <Typed
-                                strings={[`Привет я Илья , я начинающий frontend-разроботчик.В моем портфолио вы найдете мои работы, которые я разработал в течение последних нескольких лет. Я специализируюсь в области веб-разработки, включая фронтенд и бэкенд разработку. Я также знаком с базами данных и разработкой мобильных приложений.` ]}
-                                typeSpeed={10} 
+                                strings={[`Привет я Илья начинающий фронтенд разработчик, и я ищу возможность присоединиться к команде, где смогу применить свои навыки .В моем портфолио вы найдете примеры моих работ, которые я создал в процессе обучения и самостоятельной практики.` ]}
+                                typeSpeed={8} 
                                 startDelay={500}
                                 showCursor={false}
                                 />
@@ -53,23 +52,22 @@ const SectionAbout = () => {
                             <Transition  timeout={4000}>
                                 <hr className={s.hr} />
                             </Transition>
-                            
-                            <p id="element" className={s.text_header} >
+                            <p  className={s.text_header} >
                             <Typed
                                 strings={[`Я стремлюсь создавать качественный код, который не только эффективен и масштабируем, но и обеспечивает удобство использования для пользователей. Я всегда открыт новым вызовам и готов учиться, чтобы улучшить свои навыки и стать более опытным разработчиком.` ]}
-                                typeSpeed={10}
-                                startDelay={11000}
+                                typeSpeed={8}
+                                startDelay={5000}
                                 showCursor={false}
                                 />
                             </p>
                             <Transition  timeout={8000}>
-                                <hr className={s.hr2}  />
+                                <hr className={s.hr2}  />       
                             </Transition>
-                            <p id="element" className={s.text_header} >
+                            <p className={s.text_header} >
                             <Typed
-                                strings={[`Я горжусь своими проектами, и я уверен, что мои навыки и предыдущий опыт помогут мне успешно внести свой вклад в вашу команду. Я ищу возможность работать в дружной и инновационной среде, где я смогу продолжать развиваться и вносить свой вклад в развитие проектов` ]}
-                                typeSpeed={10}
-                                startDelay={15000}
+                                strings={[`Я  уверен, что мои навыки и  опыт помогут мне успешно внести свой вклад в вашу команду. Я ищу возможность работать в дружной и инновационной среде, где я смогу продолжать развиваться и вносить свой вклад в развитие проектов` ]}
+                                typeSpeed={7}
+                                startDelay={10000}
                                 shuffle={true}
                                 showCursor={false}
                                 />
@@ -85,7 +83,3 @@ const SectionAbout = () => {
 
 export default  SectionAbout
 
-// Привет я Илья , я начинающий frontend-разроботчик.
-//  Я начинающий программист, стремящийся найти работу в этой захватывающей и динамичной области.
-// В моем портфолио вы найдете мои работы, которые я разработал в течение последних нескольких лет
-// Я стремлюсь создавать качественный код, который не только эффективен и масштабируем, но и обеспечивает удобство использования для пользователей. Я всегда открыт новым вызовам и готов учиться, чтобы улучшить свои навыки и стать более опытным разработчиком.  

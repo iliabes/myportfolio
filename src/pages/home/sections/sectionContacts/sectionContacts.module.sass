@@ -2,8 +2,8 @@
     background: var(--compponent-bg2-default)
     z-index: 4
     padding:0 4%
-    width: 100vw
-    height: 100vh
+    width: 100%
+    height: 100%
     box-sizing: border-box
     overflow: hidden
     padding-bottom: 30px
@@ -122,23 +122,37 @@
         background-position: 100% -30px, 0 -30px
 
 @media (min-width: 1024px) and (max-width: 1240px)
-    .contacts .footer .buttonUp
-        height: 38px
-        width: 36px
+    .contacts 
+        .cont
+            width: 65vw 
+            .footer .buttonUp
+                bottom: 19px
+                height: 38px
+                width: 36px
 
 @media (min-width: 768px ) and (max-width: 1024px)
-    .contacts .footer .buttonUp
-        bottom: 19px
-        height: 38px
-        width: 36px
+    .contacts 
+        .cont
+            width: 65vw 
+            .footer .buttonUp
+                bottom: 19px
+                height: 38px
+                width: 36px
 
 @media (min-width: 568px) and (max-width: 768px )
-    .contacts .footer .buttonUp
-
-        height: 38px
-        width: 36px
+    .contacts 
+        .cont
+            width: 75vw
+            .footer .buttonUp
+                height: 38px
+                width: 36px
 
 @media (max-width: 568px)
+    .contacts 
+        .cont
+            width: 85vw
+        .downloadBtn
+            width: 90%
     .contacts .footer .buttonUp
         bottom: -28px
         height: 36px
@@ -146,10 +160,15 @@
 
 @media (max-width: 400px)
     .contacts
+        .downloadBtn
+            font-size: 1rem
+            height: 6vh
         .cont
-            grid-gap: 1px
+            .submit
+                height: 6vh
+                font-size: 1rem
             .quet
-                font-size: 1.5rem
+                font-size: 1rem
                 margin: 0
             .cont-input 
                 margin: 0
@@ -161,13 +180,18 @@
                 bottom: -40px
                 height: 38px
                 width: 36px
+    
 
 
 @media (max-width: 300px)
     .contacts
+        .downloadBtn
+            height: 5vh
         .cont
+            .submit
+                height: 4vh
             .quet
-                font-size: 2rem
+                font-size: 1rem
                 margin: 0
             .cont-input 
                 margin: 0

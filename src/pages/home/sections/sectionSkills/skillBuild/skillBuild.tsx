@@ -17,9 +17,9 @@ import SkillBarTitle from '../components/skillBarTitle/skillBarTitle';
 const SkillBuild = (props:any) => {
 
     return(
-        <Transition in={props.visible} timeout={1000}>
+        <Transition in={props.visible} timeout={700}>
             {state => (
-            <div style={{...defaultStyleField,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={s.set_skil}>
+            <div style={{...defaultStyleField,...{'transitionDelay': '1.2s'},...trasitonX[state]}} className={s.set_skil}>
                     <SkillBarTitle title="BUILD"/>
                     <p className={s.note}>Опыт работы с git,bash,vim,linux </p>
                     <SkillBar visible={props.visible} number={67}/>

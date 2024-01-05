@@ -2,7 +2,6 @@ import s from './Header.module.sass'
 import classNames from 'classnames'
 import useTheme from '../../hooks/themeHook'
 import { Theme } from '../../context/themeContext'
-import GenerateSvg from '../GenerateSvg/GenerateSvg'
 
 
 import { useState, useEffect } from 'react'
@@ -10,15 +9,15 @@ import {useAppDispatch} from '../../hooks/store'
 import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
 
 function Header () {
-    console.log('visible');
+    console.log('header');
     let [btnAbout,setBtnAbout] = useState(true)
     let [btnProject,setBtnProject] = useState(false)
     let [btnContact,setBtnContact] = useState(false)
     let [btnSkils,setBtnSkils] = useState(false)
-    let count = 0
+    let [count,setCount] = useState(0)
     let startY:number = 0 ;
     let startX:number = 0 ;
-    // let [theme, setTheme] = useState('light')
+
 
 
     function choiceDeretion(startY:number,endY:number,startX:number,endX:number):[string,number]{
@@ -98,24 +97,29 @@ function Header () {
 
     useEffect(()=>{
         // -------------------------------------
-        changeSlide(0)
+        // changeSlide(0)
         // -------------------------------------
-        window.addEventListener('click',()=>{
-            console.log(count)
-        })
+        // window.addEventListener('click',()=>{
+        //     console.log(count)
+        // })
 
-        window.addEventListener('keydown', function(e) {
-            console.log(count)
-            if(e.key === 'ArrowRight' && count < 3){
-                count++
-                changeSlide(count)
-            }else if(e.key === 'ArrowLeft' && count > 0){
-                count = count - 1
-                changeSlide(count)
-            }
-        })
+        // window.addEventListener('keydown', function(e) {
+        //     console.log(count)
+        //     if(e.key === 'ArrowRight' && count < 3){
+        //         count++
+        //         changeSlide(count)
+        //     }else if(e.key === 'ArrowLeft' && count > 0){
+        //         count = count - 1
+        //         changeSlide(count)
+        //     }
+        // })
     },[])
     
+
+    function changeSlideBtn(direction:string):void{
+        if(direction === '+' && count < 3){changeSlide(++count)}else if(direction === '-' && count > 0){changeSlide(--count)}
+        
+    }
 
     function visibleOff():void{
         dispatch(visibleProject(false));dispatch(visibleSkills(false));dispatch(visibleContacts(false))
@@ -123,33 +127,34 @@ function Header () {
     }
 
     function changeSlide(num:number){
+        console.log('input',count)
         switch(num){
             case(0): 
-                count = 0
+                setCount(0)
                 visibleOff()
                 setBtnAbout(true);
                 break;
             case(1): 
-                count = 1
+                setCount(1)
                 visibleOff()
                 dispatch(visibleProject(true))
                 setBtnProject(true)
                 break;
             case(2): 
-                count = 2
+                setCount(2)
                 visibleOff()
                 dispatch(visibleProject(true))
                 dispatch(visibleSkills(true))
                 dispatch(visibleContacts(false))
-                setBtnContact(true)
+                setBtnSkils(true);
                 break;
             case(3): 
-                count = 3
+                setCount(3)
                 visibleOff()
                 dispatch(visibleProject(true))
                 dispatch(visibleSkills(true))
                 dispatch(visibleContacts(true))
-                setBtnSkils(true);
+                setBtnContact(true)
                 break;
         }
     }
@@ -164,18 +169,18 @@ function Header () {
 
 
     function switchMode(){
-        // theme.switchTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
+
         theme.switchTheme(theme.theme = Theme.DARK)
     }
 
-    // const duration = 300;
+ 
 
 
 
     return (
         <div id='topLine' className={s.top_menu}>
-        <button onClick={()=>{changeSlide(0)}}   id='logo' className={classNames(s.btn,s.logo)}>Bes <GenerateSvg id='devil'/></button>
-    
+        <div onClick={()=>{changeSlideBtn('+')}} className={classNames(s.arrow ,s.arrow_right) }></div>
+        <div onClick={()=>{changeSlideBtn('-')}} className={classNames(s.arrow ,s.arrow_left) }></div>
         <div className={s.top_item}>
             <button onClick={()=>{changeSlide(0)}} id='topAbout' className={btnAbout? classNames(s.btn,s.active) : s.btn}>About </button>
             <button onClick={()=>{changeSlide(1)}} id='topProjects' className={btnProject? classNames(s.btn,s.active) : s.btn}>Projects</button>

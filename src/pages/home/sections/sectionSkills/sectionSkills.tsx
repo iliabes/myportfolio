@@ -35,11 +35,9 @@ const SectionSckills = () => {
 
 
     return(
-        <Transition in={visible} timeout={1000}>
+        <Transition  in={visible} timeout={1000}>
             {state => (
             <>
-                {/* <button onClick={()=>{test()}}>211231</button> */}
-
                 <section  style={{...defaultStyleSection,...transitionY[state]}} className={s.scils}>
                     <SkillJs visible={visible}/>
                     <SkillHtml visible={visible}/>

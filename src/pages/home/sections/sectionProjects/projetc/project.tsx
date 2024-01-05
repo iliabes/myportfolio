@@ -24,7 +24,7 @@ const Propject = (props:any) => {
         {state => (
             
         <div   className={props.left ? classNames(s.projects_cont) : classNames(s.projects_cont, s.left)}>
-        <div style={{...defStyleImg,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={s.cont_img}>
+        <div style={{...defStyleImg,...{'transitionDelay': '.6s'},...trasitonX[state]}} className={s.cont_img}>
             <div className={s.hoverCurtain}>
             <a href={props.link}>
                 <img className={s.img_portfolio} src={props.image} alt=""/>
@@ -41,7 +41,7 @@ const Propject = (props:any) => {
 
         </div>
 
-        <div style={{...defStyleSign,...{'transitionDelay': '1.6s'},...trasitonX[state]}} className={props.directionRigth? s.cont_sign : classNames(s.cont_sign ,s.cont_sign_left )}>
+        <div style={{...defStyleSign,...{'transitionDelay': '.6s'},...trasitonX[state]}} className={props.directionRigth? s.cont_sign : classNames(s.cont_sign ,s.cont_sign_left )}>
             <h2 className={s.gold}>{props.title}</h2>
             <p className={s.sign_project}>{props.text}</p>
             <div className={s.cont_techologi}>
@@ -51,6 +51,7 @@ const Propject = (props:any) => {
                 <div className={s.techologi}><p className={s.text_techo}>ReduxTooolkit</p></div>
                 <div className={s.techologi}><p className={s.text_techo}>Sass</p></div>
             </div>  
+
         </div>
         </div>
         )}
@@ -59,3 +60,8 @@ const Propject = (props:any) => {
 }
 
 export default  Propject
+
+
+// const listItems = numbers.map((number) =>
+//   <li>{number}</li>
+// );
