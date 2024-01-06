@@ -1,10 +1,10 @@
 import s from './Footer.module.sass'
 import GenerateSvg from '../GenerateSvg/GenerateSvg'
 import { Transition } from 'react-transition-group';
-import {BsGithub} from 'react-icons/bs'
-import {FaTelegram} from 'react-icons/fa'
 import { defaultStyleFooter, transitionY } from '../../animate/animate';
 
+import {BsGithub} from 'react-icons/bs'
+import { FaTelegramPlane } from "react-icons/fa";
 
 
 
@@ -17,7 +17,7 @@ function Footer(props:any) {
         <div className={s.cont_icon}>
           <a className={s.footer_icon} href=""><GenerateSvg id='#'/> </a>
           <a className={s.footer_icon} href="https://github.com/IliaBes"><BsGithub/> </a>
-          <a className={s.footer_icon} href="https://t.me/@warpBes"> <FaTelegram/> </a>
+          <a className={s.footer_icon} href="https://t.me/@warpBes"> <FaTelegramPlane/> </a>
         </div>
       </footer>
         )}

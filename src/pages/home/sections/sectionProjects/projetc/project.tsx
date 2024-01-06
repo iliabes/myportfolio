@@ -8,6 +8,8 @@ import classNames from 'classnames';
 
 
 
+let numb = [1,2,3,4,5]
+
 
 
 const Propject = (props:any) => {
@@ -17,7 +19,8 @@ const Propject = (props:any) => {
         defStyleImg = defaultStyleField
         defStyleSign = defaultStyleFieldRight
     }
-
+    console.log(props.techologi)
+    const listItems = props.techologi.map((item:string,index:number) =><div key={index} className={s.techologi}><p className={s.text_techo}>{item}</p></div>)
 
     return(
         <Transition  in={props.visible} timeout={100}>
@@ -45,12 +48,10 @@ const Propject = (props:any) => {
             <h2 className={s.gold}>{props.title}</h2>
             <p className={s.sign_project}>{props.text}</p>
             <div className={s.cont_techologi}>
-                <div className={s.techologi}><p className={s.text_techo}>React</p></div>
-                <div className={s.techologi}><p className={s.text_techo}>Redux</p></div>
-                <div className={s.techologi}><p className={s.text_techo}>Typescript</p></div>
-                <div className={s.techologi}><p className={s.text_techo}>ReduxTooolkit</p></div>
-                <div className={s.techologi}><p className={s.text_techo}>Sass</p></div>
+
+                {listItems}
             </div>  
+            
 
         </div>
         </div>
@@ -62,6 +63,8 @@ const Propject = (props:any) => {
 export default  Propject
 
 
-// const listItems = numbers.map((number) =>
-//   <li>{number}</li>
-// );
+// <div className={s.techologi}><p className={s.text_techo}>React</p></div>
+// <div className={s.techologi}><p className={s.text_techo}>Redux</p></div>
+// <div className={s.techologi}><p className={s.text_techo}>Typescript</p></div>
+// <div className={s.techologi}><p className={s.text_techo}>ReduxTooolkit</p></div>
+// <div className={s.techologi}><p className={s.text_techo}>Sass</p></div>
