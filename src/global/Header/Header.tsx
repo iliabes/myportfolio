@@ -1,7 +1,5 @@
 import s from './Header.module.sass'
 import classNames from 'classnames'
-import useTheme from '../../hooks/themeHook'
-import { Theme } from '../../context/themeContext'
 import { useState } from 'react'
 import {useAppDispatch} from '../../hooks/store'
 import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
