@@ -8,7 +8,7 @@ import classNames from 'classnames';
 
 
 
-let numb = [1,2,3,4,5]
+
 
 
 
@@ -19,7 +19,6 @@ const Propject = (props:any) => {
         defStyleImg = defaultStyleField
         defStyleSign = defaultStyleFieldRight
     }
-    console.log(props.techologi)
     const listItems = props.techologi.map((item:string,index:number) =><div key={index} className={s.techologi}><p className={s.text_techo}>{item}</p></div>)
 
     return(
@@ -63,8 +62,3 @@ const Propject = (props:any) => {
 export default  Propject
 
 
-// <div className={s.techologi}><p className={s.text_techo}>React</p></div>
-// <div className={s.techologi}><p className={s.text_techo}>Redux</p></div>
-// <div className={s.techologi}><p className={s.text_techo}>Typescript</p></div>
-// <div className={s.techologi}><p className={s.text_techo}>ReduxTooolkit</p></div>
-// <div className={s.techologi}><p className={s.text_techo}>Sass</p></div>

@@ -15,7 +15,6 @@ var project_module_sass_1 = require("./project.module.sass");
 var react_transition_group_1 = require("react-transition-group");
 var animate_1 = require("../../../../../animate/animate");
 var classnames_1 = require("classnames");
-var numb = [1, 2, 3, 4, 5];
 var Propject = function (props) {
     var defStyleImg = animate_1.defaultStyleFieldRight;
     var defStyleSign = animate_1.defaultStyleField;
@@ -23,7 +22,6 @@ var Propject = function (props) {
         defStyleImg = animate_1.defaultStyleField;
         defStyleSign = animate_1.defaultStyleFieldRight;
     }
-    console.log(props.techologi);
     var listItems = props.techologi.map(function (item, index) { return React.createElement("div", { key: index, className: project_module_sass_1["default"].techologi },
         React.createElement("p", { className: project_module_sass_1["default"].text_techo }, item)); });
     return (React.createElement(react_transition_group_1.Transition, { "in": props.visible, timeout: 100 }, function (state) { return (React.createElement("div", { className: props.left ? classnames_1["default"](project_module_sass_1["default"].projects_cont) : classnames_1["default"](project_module_sass_1["default"].projects_cont, project_module_sass_1["default"].left) },
@@ -41,8 +39,3 @@ var Propject = function (props) {
             React.createElement("div", { className: project_module_sass_1["default"].cont_techologi }, listItems)))); }));
 };
 exports["default"] = Propject;
-// <div className={s.techologi}><p className={s.text_techo}>React</p></div>
-// <div className={s.techologi}><p className={s.text_techo}>Redux</p></div>
-// <div className={s.techologi}><p className={s.text_techo}>Typescript</p></div>
-// <div className={s.techologi}><p className={s.text_techo}>ReduxTooolkit</p></div>
-// <div className={s.techologi}><p className={s.text_techo}>Sass</p></div>

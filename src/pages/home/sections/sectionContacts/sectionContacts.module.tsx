@@ -37,7 +37,7 @@ const SectionContacts = () => {
                                 <div className={s.cont_input}>
                                     <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Telegram</p>
-                                        <a className={s.contact_icon} href="https://github.com/IliaBes"><FaTelegramPlane/> </a>
+                                        <a className={s.contact_icon} href="https://t.me/@warpBes"><FaTelegramPlane/> </a>
                                     </div>
                                     <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Githab</p>

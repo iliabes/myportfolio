@@ -37,7 +37,7 @@ var SectionContacts = function () {
                 React.createElement("div", { className: sectionContacts_module_sass_1["default"].cont_input },
                     React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },
                         React.createElement("p", { className: sectionContacts_module_sass_1["default"].sign_icon }, "Telegram"),
-                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://github.com/IliaBes" },
+                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://t.me/@warpBes" },
                             React.createElement(fa_1.FaTelegramPlane, null),
                             " ")),
                     React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },

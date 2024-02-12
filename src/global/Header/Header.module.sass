@@ -32,8 +32,8 @@ $reds: red
         justify-content: right
         width: 100%
     .arrow
-        width: 4vh
-        height: 4vh
+        width: 30px
+        height: 30px
         border-radius: 10px
         background-color: #fff
         opacity: .2
@@ -45,20 +45,25 @@ $reds: red
     .arrow_left
         left: 1vh
         &::before
+            display: inline-block
+            text-align: center
             content: '⇠'
             color: red
-            font-size: 2rem
+            font-size: 1.5rem
             position: absolute
-            right: 15%
+            transform: translate(6px, 3px)
 
     .arrow_right
         right: 1vh
         &::before
+            display: inline-block
+            text-align: center
             content: '⇢'
             color: red
-            font-size: 2rem
+            font-size: 1.5rem
             position: absolute
-            left: 15%
+            transform: translate(6px, 3px)
+
 
 
 .btn
@@ -83,7 +88,6 @@ $reds: red
     
 
     &::before,&::after
-        // @extend %full-fill;
         content: ''
         color: white
         z-index: -1
@@ -133,7 +137,6 @@ $reds: red
     left: 0
     transition: 1s
     opacity: 1
-    // display: none
     position: absolute
     width: 100vw
     height: 100vh
@@ -192,9 +195,11 @@ $reds: red
                     font-size: 20px
                     fill: gold
 
+@media  (  min-width: 1025px)
+    .arrow
+        display: none
 
-
-@media (max-width: 1024px)
+@media (min-width:770px) and (  max-width: 1024px)
     .top_menu
         padding: 0
         .top_item
@@ -204,6 +209,8 @@ $reds: red
                 padding: 1.2vh 1vw
                 padding-left: 14px
                 font-size: 1.4rem
+        .arrow
+            display: none
 
 @media (max-width: 769px)
     .top_menu

@@ -178,7 +178,6 @@
 }
 @media (max-width: 1240px) {
   .projects_cont .cont_sign {
-    padding-top: 30px;
     width: 36vw;
   }
   .projects_cont .cont_sign .sign_project {

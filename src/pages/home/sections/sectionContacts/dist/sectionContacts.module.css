@@ -83,6 +83,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 6;
 }
 .contacts .cont .cont_input .contact_icon .sign_icon {
   color: violet;
