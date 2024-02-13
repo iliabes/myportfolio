@@ -15,6 +15,7 @@ var project_module_sass_1 = require("./project.module.sass");
 var react_transition_group_1 = require("react-transition-group");
 var animate_1 = require("../../../../../animate/animate");
 var classnames_1 = require("classnames");
+var Button_1 = require("../../../../../global/Button/Button");
 var Propject = function (props) {
     var defStyleImg = animate_1.defaultStyleFieldRight;
     var defStyleSign = animate_1.defaultStyleField;
@@ -36,6 +37,7 @@ var Propject = function (props) {
         React.createElement("div", { style: __assign(__assign(__assign({}, defStyleSign), { 'transitionDelay': '.6s' }), animate_1.trasitonX[state]), className: props.directionRigth ? project_module_sass_1["default"].cont_sign : classnames_1["default"](project_module_sass_1["default"].cont_sign, project_module_sass_1["default"].cont_sign_left) },
             React.createElement("h2", { className: project_module_sass_1["default"].gold }, props.title),
             React.createElement("p", { className: project_module_sass_1["default"].sign_project }, props.text),
+            React.createElement(Button_1["default"], { link: props.linkGit }),
             React.createElement("div", { className: project_module_sass_1["default"].cont_techologi }, listItems)))); }));
 };
 exports["default"] = Propject;

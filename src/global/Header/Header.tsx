@@ -1,6 +1,10 @@
 import s from './Header.module.sass'
 import classNames from 'classnames'
-import { useState } from 'react'
+import useTheme from '../../hooks/themeHook'
+import { Theme } from '../../context/themeContext'
+
+
+import { useState, useEffect } from 'react'
 import {useAppDispatch} from '../../hooks/store'
 import {visibleSkills,visibleContacts,visibleProject} from '../../store/slices/slice'
 
@@ -11,8 +15,12 @@ function Header () {
     let [btnContact,setBtnContact] = useState(false)
     let [btnSkils,setBtnSkils] = useState(false)
     let [count,setCount] = useState(0)
-    
-    const dispatch = useAppDispatch()
+
+
+
+
+
+
 
     function changeSlideBtn(direction:string):void{
         if(direction === '+' && count < 3){changeSlide(++count)}else if(direction === '-' && count > 0){changeSlide(--count)}
@@ -58,11 +66,19 @@ function Header () {
     }
 
 
+    const dispatch = useAppDispatch()
+    const theme = useTheme()
     
+    useEffect(()=>{
+        theme.switchTheme(theme.theme = Theme.DARK)
+    },[])
 
-    
 
- 
+
+
+
+
+
 
 
 
@@ -85,5 +101,3 @@ function Header () {
 
 
 export default Header
-
-

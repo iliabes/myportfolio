@@ -2,6 +2,8 @@
 exports.__esModule = true;
 var Header_module_sass_1 = require("./Header.module.sass");
 var classnames_1 = require("classnames");
+var themeHook_1 = require("../../hooks/themeHook");
+var themeContext_1 = require("../../context/themeContext");
 var react_1 = require("react");
 var store_1 = require("../../hooks/store");
 var slice_1 = require("../../store/slices/slice");
@@ -12,7 +14,6 @@ function Header() {
     var _c = react_1.useState(false), btnContact = _c[0], setBtnContact = _c[1];
     var _d = react_1.useState(false), btnSkils = _d[0], setBtnSkils = _d[1];
     var _e = react_1.useState(0), count = _e[0], setCount = _e[1];
-    var dispatch = store_1.useAppDispatch();
     function changeSlideBtn(direction) {
         if (direction === '+' && count < 3) {
             changeSlide(++count);
@@ -62,6 +63,11 @@ function Header() {
                 break;
         }
     }
+    var dispatch = store_1.useAppDispatch();
+    var theme = themeHook_1["default"]();
+    react_1.useEffect(function () {
+        theme.switchTheme(theme.theme = themeContext_1.Theme.DARK);
+    }, []);
     return (React.createElement("div", { id: 'topLine', className: Header_module_sass_1["default"].top_menu },
         React.createElement("div", { onClick: function () { changeSlideBtn('+'); }, className: classnames_1["default"](Header_module_sass_1["default"].arrow, Header_module_sass_1["default"].arrow_right) }),
         React.createElement("div", { onClick: function () { changeSlideBtn('-'); }, className: classnames_1["default"](Header_module_sass_1["default"].arrow, Header_module_sass_1["default"].arrow_left) }),

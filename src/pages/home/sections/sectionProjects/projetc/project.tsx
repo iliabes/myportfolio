@@ -3,7 +3,7 @@ import s from './project.module.sass'
 import { Transition } from 'react-transition-group';
 import {defaultStyleFieldRight,defaultStyleField, trasitonX} from '../../../../../animate/animate'
 import classNames from 'classnames';
-
+import ButtonGit from '../../../../../global/Button/Button'
 
 
 
@@ -27,10 +27,13 @@ const Propject = (props:any) => {
             
         <div   className={props.left ? classNames(s.projects_cont) : classNames(s.projects_cont, s.left)}>
         <div style={{...defStyleImg,...{'transitionDelay': '.6s'},...trasitonX[state]}} className={s.cont_img}>
+        
             <div className={s.hoverCurtain}>
             <a href={props.link}>
                 <img className={s.img_portfolio} src={props.image} alt=""/>
+                
             </a>
+            
             <div className={classNames(s.curtain, s.curtain_left)}>
 
             </div>
@@ -39,13 +42,13 @@ const Propject = (props:any) => {
                     <h2>{props.title}</h2>
                     </figcaption>
             </div>
-
-
         </div>
+        
 
         <div style={{...defStyleSign,...{'transitionDelay': '.6s'},...trasitonX[state]}} className={props.directionRigth? s.cont_sign : classNames(s.cont_sign ,s.cont_sign_left )}>
             <h2 className={s.gold}>{props.title}</h2>
             <p className={s.sign_project}>{props.text}</p>
+            <ButtonGit link={props.linkGit}/>  
             <div className={s.cont_techologi}>
 
                 {listItems}

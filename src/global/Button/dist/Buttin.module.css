@@ -1,0 +1,29 @@
+.btngit {
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: #ff1b00;
+  background: linear-gradient(0deg, #ff1b00 0%, #fb4b02 100%);
+}
+.btngit:hover {
+  color: #f0094a;
+  background: transparent;
+}
+.btngit:before, .btngit::after {
+  content: "";
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #f0094a;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+.btngit::after {
+  left: 0;
+  bottom: 0;
+}
+.btngit:hover:after, .btngit:hover:before {
+  width: 100%;
+  transition: 800ms ease all;
+}
