@@ -9,10 +9,11 @@
     transition: all 0.3s ease
     position: relative
     display: inline-block
-    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1)
+    // box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1)
     outline: none
     text-decoration: none
     align-self: flex-end
+    margin: 10px 0
 
 
 .btngit 
@@ -20,14 +21,18 @@
     line-height: 25px
     padding:0 10px
     border: none
-    background: rgb(255,27,0)
-    background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%)
+    // background: rgb(255,27,0)
+    // background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%)
+    background-color: #3C253E
+    color: white
+    border: 1px solid red
 
 
 .btngit:hover 
     color: #f0094a
     background: transparent
     box-shadow: none
+    border: none
 
 .btngit:before,
 .btngit:after
@@ -52,3 +57,9 @@
     width: 100%
     transition: 800ms ease all
 
+
+@media (max-width: 375px) 
+    .btngit 
+        margin: 2px 0
+        font-size: 14px
+        padding: 0 7px
