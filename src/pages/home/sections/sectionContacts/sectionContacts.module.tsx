@@ -37,7 +37,7 @@ const SectionContacts = () => {
                                 <div className={s.cont_input}>
                                     <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Telegram</p>
-                                        <a className={s.contact_icon} href="https://t.me/@warpBes"><FaTelegramPlane/> </a>
+                                        <a className={s.contact_icon} href="https://t.me/warpBes"><FaTelegramPlane/> </a>
                                     </div>
                                     <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Githab</p>
@@ -45,17 +45,16 @@ const SectionContacts = () => {
                                     </div>
                                     <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Insta</p>
-                                        <a className={s.contact_icon} href="https://github.com/IliaBes"><CiInstagram/> </a>
+                                        <a className={s.contact_icon} href="https://www.instagram.com/"><CiInstagram/> </a>
                                     </div>
                                     <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Mail</p>
-                                        <a className={s.contact_icon} href="https://github.com/IliaBes"><IoMdMail/> </a>
+                                        <a className={s.contact_icon} href="mailto:f0rgetful@yandex.ru"><IoMdMail/> </a>
                                     </div>
                                     <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Linkedin</p>
-                                        <a className={s.contact_icon} href="https://github.com/IliaBes"><CiLinkedin/> </a>
+                                        <a className={s.contact_icon} href="https://www.linkedin.com/"><CiLinkedin/> </a>
                                     </div>
-                                  
                                 </div>
                             </div>
 
@@ -75,18 +74,8 @@ const SectionContacts = () => {
 
 
 
-{/* <div className={s.cont_input}>
-<input placeholder="Ваше имя" className={s.text_inp} type="text" />
-</div>
-<div className={s.cont_input}>
-<input placeholder="Ваша emeil" className={s.text_inp} type="text" />
-</div>
-<div className={s.cont_input}>
-<input placeholder="Ваша сообщение" className={classNames(s.text_inp, s.area)} type="text" />
-</div>
-<div  className={s.cont_input}>
-<button className={s.submit}>Отправить</button>
-</div> */}
+
+
 
 
 export default SectionContacts

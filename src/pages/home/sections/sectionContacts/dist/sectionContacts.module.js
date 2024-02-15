@@ -37,7 +37,7 @@ var SectionContacts = function () {
                 React.createElement("div", { className: sectionContacts_module_sass_1["default"].cont_input },
                     React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },
                         React.createElement("p", { className: sectionContacts_module_sass_1["default"].sign_icon }, "Telegram"),
-                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://t.me/@warpBes" },
+                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://t.me/warpBes" },
                             React.createElement(fa_1.FaTelegramPlane, null),
                             " ")),
                     React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },
@@ -47,33 +47,20 @@ var SectionContacts = function () {
                             " ")),
                     React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },
                         React.createElement("p", { className: sectionContacts_module_sass_1["default"].sign_icon }, "Insta"),
-                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://github.com/IliaBes" },
+                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://www.instagram.com/" },
                             React.createElement(ci_1.CiInstagram, null),
                             " ")),
                     React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },
                         React.createElement("p", { className: sectionContacts_module_sass_1["default"].sign_icon }, "Mail"),
-                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://github.com/IliaBes" },
+                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "mailto:f0rgetful@yandex.ru" },
                             React.createElement(io_1.IoMdMail, null),
                             " ")),
                     React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },
                         React.createElement("p", { className: sectionContacts_module_sass_1["default"].sign_icon }, "Linkedin"),
-                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://github.com/IliaBes" },
+                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://www.linkedin.com/" },
                             React.createElement(ci_2.CiLinkedin, null),
                             " ")))),
             React.createElement("p", { className: sectionContacts_module_sass_1["default"]["if"] }, "\u0418\u043B\u0438"),
             React.createElement("button", { style: __assign(__assign(__assign({}, animate_1.defaultStyleField), { 'transitionDelay': '.75s' }), animate_1.trasitonX[state]), className: sectionContacts_module_sass_1["default"].downloadBtn }, "\u0421\u043A\u0430\u0447\u0430\u0442\u044C \u0440\u0435\u0437\u044E\u043C\u0435")))); }));
 };
-{ /* <div className={s.cont_input}>
-<input placeholder="Ваше имя" className={s.text_inp} type="text" />
-</div>
-<div className={s.cont_input}>
-<input placeholder="Ваша emeil" className={s.text_inp} type="text" />
-</div>
-<div className={s.cont_input}>
-<input placeholder="Ваша сообщение" className={classNames(s.text_inp, s.area)} type="text" />
-</div>
-<div  className={s.cont_input}>
-<button className={s.submit}>Отправить</button>
-</div> */
-}
 exports["default"] = SectionContacts;
