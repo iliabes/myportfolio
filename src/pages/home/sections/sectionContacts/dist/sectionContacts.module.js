@@ -18,9 +18,9 @@ var animate_1 = require("../../../../animate/animate");
 var store_1 = require("../../../../hooks/store");
 var bs_1 = require("react-icons/bs");
 var fa_1 = require("react-icons/fa");
-var ci_1 = require("react-icons/ci");
 var io_1 = require("react-icons/io");
-var ci_2 = require("react-icons/ci");
+// import { CiLinkedin } from "react-icons/ci";
+// import { CiInstagram } from "react-icons/ci";
 var SectionContacts = function () {
     var sectionState = store_1.useAppSelector(function (state) { return (state.counterSlice.visContact); });
     var _a = react_1.useState(store_1.useAppSelector(function (state) { return (state.counterSlice.visContact); })), visible = _a[0], setVisible = _a[1];
@@ -46,21 +46,9 @@ var SectionContacts = function () {
                             React.createElement(bs_1.BsGithub, null),
                             " ")),
                     React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },
-                        React.createElement("p", { className: sectionContacts_module_sass_1["default"].sign_icon }, "Insta"),
-                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://www.instagram.com/" },
-                            React.createElement(ci_1.CiInstagram, null),
-                            " ")),
-                    React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },
                         React.createElement("p", { className: sectionContacts_module_sass_1["default"].sign_icon }, "Mail"),
                         React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "mailto:f0rgetful@yandex.ru" },
                             React.createElement(io_1.IoMdMail, null),
-                            " ")),
-                    React.createElement("div", { className: sectionContacts_module_sass_1["default"].contact_icon },
-                        React.createElement("p", { className: sectionContacts_module_sass_1["default"].sign_icon }, "Linkedin"),
-                        React.createElement("a", { className: sectionContacts_module_sass_1["default"].contact_icon, href: "https://www.linkedin.com/" },
-                            React.createElement(ci_2.CiLinkedin, null),
-                            " ")))),
-            React.createElement("p", { className: sectionContacts_module_sass_1["default"]["if"] }, "\u0418\u043B\u0438"),
-            React.createElement("button", { style: __assign(__assign(__assign({}, animate_1.defaultStyleField), { 'transitionDelay': '.75s' }), animate_1.trasitonX[state]), className: sectionContacts_module_sass_1["default"].downloadBtn }, "\u0421\u043A\u0430\u0447\u0430\u0442\u044C \u0440\u0435\u0437\u044E\u043C\u0435")))); }));
+                            " "))))))); }));
 };
 exports["default"] = SectionContacts;

@@ -14,8 +14,8 @@ exports.__esModule = true;
 var sectionSkills_module_sass_1 = require("../sectionSkills.module.sass");
 var javascript_png_1 = require("../../../../../assets/img/javascript.png");
 var react2_png_1 = require("../../../../../assets/img/react2.png");
-var jquery_png_1 = require("../../../../../assets/img/jquery.png");
 var redux_png_1 = require("../../../../../assets/img/redux.png");
+var vue_png_1 = require("../../../../../assets/img/vue.png");
 var typescript_png_1 = require("../../../../../assets/img/typescript.png");
 var react_transition_group_1 = require("react-transition-group");
 var animate_1 = require("../../../../../animate/animate");
@@ -31,13 +31,13 @@ var SkillJs = function (props) {
                 React.createElement("div", { style: __assign(__assign(__assign({}, animate_1.defaultStyleSkillBar), { 'transitionDelay': '2.6s' }), animate_1.trasitonX[state]), className: sectionSkills_module_sass_1["default"].cont_techno },
                     React.createElement("img", { className: sectionSkills_module_sass_1["default"].technologi, src: javascript_png_1["default"], alt: "" })),
                 React.createElement("div", { style: __assign(__assign(__assign({}, animate_1.defaultStyleSkillBar), { 'transitionDelay': '2.8s' }), animate_1.trasitonX[state]), className: sectionSkills_module_sass_1["default"].cont_techno },
-                    React.createElement("img", { className: sectionSkills_module_sass_1["default"].technologi, src: react2_png_1["default"], alt: "" })),
-                React.createElement("div", { style: __assign(__assign(__assign({}, animate_1.defaultStyleSkillBar), { 'transitionDelay': '3.4s' }), animate_1.trasitonX[state]), className: sectionSkills_module_sass_1["default"].cont_techno },
                     React.createElement("img", { className: sectionSkills_module_sass_1["default"].technologi, src: typescript_png_1["default"], alt: "" })),
                 React.createElement("div", { style: __assign(__assign(__assign({}, animate_1.defaultStyleSkillBar), { 'transitionDelay': '3.0s' }), animate_1.trasitonX[state]), className: sectionSkills_module_sass_1["default"].cont_techno },
-                    React.createElement("img", { className: sectionSkills_module_sass_1["default"].technologi, src: redux_png_1["default"], alt: "" })),
+                    React.createElement("img", { className: sectionSkills_module_sass_1["default"].technologi, src: react2_png_1["default"], alt: "" })),
                 React.createElement("div", { style: __assign(__assign(__assign({}, animate_1.defaultStyleSkillBar), { 'transitionDelay': '3.2s' }), animate_1.trasitonX[state]), className: sectionSkills_module_sass_1["default"].cont_techno },
-                    React.createElement("img", { className: sectionSkills_module_sass_1["default"].technologi, src: jquery_png_1["default"], alt: "" })))));
+                    React.createElement("img", { className: sectionSkills_module_sass_1["default"].technologi, src: vue_png_1["default"], alt: "" })),
+                React.createElement("div", { style: __assign(__assign(__assign({}, animate_1.defaultStyleSkillBar), { 'transitionDelay': '3.4s' }), animate_1.trasitonX[state]), className: sectionSkills_module_sass_1["default"].cont_techno },
+                    React.createElement("img", { className: sectionSkills_module_sass_1["default"].technologi, src: redux_png_1["default"], alt: "" })))));
     }));
 };
 exports["default"] = SkillJs;

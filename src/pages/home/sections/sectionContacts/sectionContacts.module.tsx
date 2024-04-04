@@ -6,10 +6,9 @@ import { defaultStyleSection, trasitonX, transitionY, defaultStyleField } from '
 import { useAppSelector } from '../../../../hooks/store';
 import {BsGithub} from 'react-icons/bs'
 import { FaTelegramPlane } from "react-icons/fa";
-import { CiInstagram } from "react-icons/ci";
 import { IoMdMail } from "react-icons/io";
-import { CiLinkedin } from "react-icons/ci";
-
+// import { CiLinkedin } from "react-icons/ci";
+// import { CiInstagram } from "react-icons/ci";
 
 
 
@@ -43,23 +42,23 @@ const SectionContacts = () => {
                                         <p className={s.sign_icon}>Githab</p>
                                         <a className={s.contact_icon} href="https://github.com/IliaBes"><BsGithub/> </a>
                                     </div>
-                                    <div className={s.contact_icon}>
+                                    {/* <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Insta</p>
                                         <a className={s.contact_icon} href="https://www.instagram.com/"><CiInstagram/> </a>
-                                    </div>
+                                    </div> */}
                                     <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Mail</p>
                                         <a className={s.contact_icon} href="mailto:f0rgetful@yandex.ru"><IoMdMail/> </a>
                                     </div>
-                                    <div className={s.contact_icon}>
+                                    {/* <div className={s.contact_icon}>
                                         <p className={s.sign_icon}>Linkedin</p>
                                         <a className={s.contact_icon} href="https://www.linkedin.com/"><CiLinkedin/> </a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
 
-                        <p className={s.if}>Или</p>
-                        <button style={{ ...defaultStyleField, ...{ 'transitionDelay': '.75s' }, ...trasitonX[state] }} className={s.downloadBtn}>Скачать резюме</button>
+                        {/* <p className={s.if}>Или</p> */}
+                        {/* <button style={{ ...defaultStyleField, ...{ 'transitionDelay': '.75s' }, ...trasitonX[state] }} className={s.downloadBtn}>Скачать резюме</button> */}
 
 
                     </section>

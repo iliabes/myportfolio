@@ -4,7 +4,7 @@ import css from '../../../../../assets/img/css3.png'
 import bootstrap from '../../../../../assets/img/bootstrap.png'
 import sass from '../../../../../assets/img/sass.png'
 import materialize from '../../../../../assets/img/materialize.png'
-
+import tailwind from '../../../../../assets/img/tailwind.png'
 
 import { Transition } from 'react-transition-group';
 
@@ -39,7 +39,9 @@ const SkillCss = (props:any) => {
                         <img className={s.technologi} src={materialize} alt=""/>
                     </div>
 
-
+                    <div style={{...defaultStyleSkillBar,...{'transitionDelay': '3.2s'},...trasitonX[state]}}  className={s.cont_techno}>
+                        <img className={s.technologi} src={tailwind} alt=""/>
+                    </div>
                 </div>
         </div>
         )}
